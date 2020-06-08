@@ -10,7 +10,7 @@
 	<script type="text/javascript" src="../Resources/JS/Page_2.js"></script>
 </head>
 
-<body>
+<body onload="fillExisting()">
 	<div class="jumbotron" style="width:100vw;">
 		<label class="col-form-label" for="progress" style="margin-top:-20px;"><h3>IPP Form Progress</h3></label>
 		<div class="progress">
@@ -34,35 +34,34 @@
 					<div class="form-group">
 						<div class="inline-buttons">
 						<div class="custom-control custom-checkbox">
-							<input type="checkbox" class="custom-control-input" id="customCheck1">
+							<input type="checkbox" class="custom-control-input" id="customCheck1" name="PAttendance" value="Monday ">
 							<label class="custom-control-label" for="customCheck1">Mon.</label>
 						</div>
 						</div>
-	
 						<div class="inline-buttons">
 						<div class="custom-control custom-checkbox">
-							<input type="checkbox" class="custom-control-input" id="customCheck2">
+							<input type="checkbox" class="custom-control-input" id="customCheck2" name="PAttendance" value="Tuesday ">
 							<label class="custom-control-label" for="customCheck2">Tue.</label>
 						</div>
 						</div>
 						
 						<div class="inline-buttons">
 						<div class="custom-control custom-checkbox">
-							<input type="checkbox" class="custom-control-input" id="customCheck3">
+							<input type="checkbox" class="custom-control-input" id="customCheck3" name="PAttendance" value="Wednesday ">
 							<label class="custom-control-label" for="customCheck3">Wed.</label>
 						</div>
 						</div>
 						
 						<div class="inline-buttons">
 						<div class="custom-control custom-checkbox">
-							<input type="checkbox" class="custom-control-input" id="customCheck4">
+							<input type="checkbox" class="custom-control-input" id="customCheck4" name="PAttendance" value="Thursday">
 							<label class="custom-control-label" for="customCheck4">Thu.</label>
 						</div>
 						</div>
 						
 						<div class="inline-buttons">
 						<div class="custom-control custom-checkbox">
-							<input type="checkbox" class="custom-control-input" id="customCheck5">
+							<input type="checkbox" class="custom-control-input" id="customCheck5" name="PAttendance" value="Friday">
 							<label class="custom-control-label" for="customCheck5">Fri.</label>
 						</div>
 						</div>
@@ -73,12 +72,12 @@
 					<div class="form-group">
 						<div class="inline-buttons">
 						<label class="col-form-label" for="inputDefault">Start Time</label>
-						<input type="text" class="form-control" placeholder="00:00" id="preschoolStart">
+						<input type="text" class="form-control" placeholder="00:00" id="preschoolStart" style="width:10vw;">
 						</div>
 						
 						<div class="inline-buttons">
 						<label class="col-form-label" for="inputDefault">End Time</label>
-						<input type="text" class="form-control" placeholder="24:00" id="preschoolEnd">
+						<input type="text" class="form-control" placeholder="24:00" id="preschoolEnd" style="width:10vw;">
 						</div>
 					</div>
 				</div>
@@ -91,35 +90,35 @@
 					<div class="form-group">
 						<div class="inline-buttons">
 						<div class="custom-control custom-checkbox">
-							<input type="checkbox" class="custom-control-input" id="customCheck11">
+							<input type="checkbox" class="custom-control-input" id="customCheck11" name="KAttendance">
 							<label class="custom-control-label" for="customCheck11">Mon.</label>
 						</div>
 						</div>
 	
 						<div class="inline-buttons">
 						<div class="custom-control custom-checkbox">
-							<input type="checkbox" class="custom-control-input" id="customCheck12">
+							<input type="checkbox" class="custom-control-input" id="customCheck12" name="KAttendance">
 							<label class="custom-control-label" for="customCheck12">Tue.</label>
 						</div>
 						</div>
 						
 						<div class="inline-buttons">
 						<div class="custom-control custom-checkbox">
-							<input type="checkbox" class="custom-control-input" id="customCheck13">
+							<input type="checkbox" class="custom-control-input" id="customCheck13" name="KAttendance">
 							<label class="custom-control-label" for="customCheck13">Wed.</label>
 						</div>
 						</div>
 						
 						<div class="inline-buttons">
 						<div class="custom-control custom-checkbox">
-							<input type="checkbox" class="custom-control-input" id="customCheck14">
+							<input type="checkbox" class="custom-control-input" id="customCheck14" name="KAttendance">
 							<label class="custom-control-label" for="customCheck14">Thu.</label>
 						</div>
 						</div>
 						
 						<div class="inline-buttons">
 						<div class="custom-control custom-checkbox">
-							<input type="checkbox" class="custom-control-input" id="customCheck15">
+							<input type="checkbox" class="custom-control-input" id="customCheck15" name="KAttendance">
 							<label class="custom-control-label" for="customCheck15">Fri.</label>
 						</div>
 						</div>
@@ -130,12 +129,12 @@
 					<div class="form-group">
 						<div class="inline-buttons">
 						<label class="col-form-label" for="inputDefault">Start Time</label>
-						<input type="text" class="form-control" placeholder="00:00" id="KiDSStart">
+						<input type="text" class="form-control" placeholder="00:00" id="KiDSStart" style="width:10vw;">
 						</div>
 						
 						<div class="inline-buttons">
 						<label class="col-form-label" for="inputDefault">End Time</label>
-						<input type="text" class="form-control" placeholder="24:00" id="KiDSEnd">
+						<input type="text" class="form-control" placeholder="24:00" id="KiDSEnd" style="width:10vw;">
 						</div>
 					</div>		
 				
@@ -143,35 +142,35 @@
 					<div class="form-group">
 						<div class="inline-buttons">
 						<div class="custom-control custom-checkbox">
-							<input type="checkbox" class="custom-control-input" id="customCheck21">
+							<input type="checkbox" class="custom-control-input" id="customCheck21" name="HAttendance">
 							<label class="custom-control-label" for="customCheck21">Mon.</label>
 						</div>
 						</div>
 	
 						<div class="inline-buttons">
 						<div class="custom-control custom-checkbox">
-							<input type="checkbox" class="custom-control-input" id="customCheck22">
+							<input type="checkbox" class="custom-control-input" id="customCheck22" name="HAttendance">
 							<label class="custom-control-label" for="customCheck22">Tue.</label>
 						</div>
 						</div>
 						
 						<div class="inline-buttons">
 						<div class="custom-control custom-checkbox">
-							<input type="checkbox" class="custom-control-input" id="customCheck23">
+							<input type="checkbox" class="custom-control-input" id="customCheck23" name="HAttendance">
 							<label class="custom-control-label" for="customCheck23">Wed.</label>
 						</div>
 						</div>
 						
 						<div class="inline-buttons">
 						<div class="custom-control custom-checkbox">
-							<input type="checkbox" class="custom-control-input" id="customCheck24">
+							<input type="checkbox" class="custom-control-input" id="customCheck24" name="HAttendance">
 							<label class="custom-control-label" for="customCheck24">Thu.</label>
 						</div>
 						</div>
 						
 						<div class="inline-buttons">
 						<div class="custom-control custom-checkbox">
-							<input type="checkbox" class="custom-control-input" id="customCheck25">
+							<input type="checkbox" class="custom-control-input" id="customCheck25" name="HAttendance">
 							<label class="custom-control-label" for="customCheck25">Fri.</label>
 						</div>
 						</div>
@@ -182,12 +181,12 @@
 					<div class="form-group">
 						<div class="inline-buttons">
 						<label class="col-form-label" for="inputDefault">Start Time</label>
-						<input type="text" class="form-control" placeholder="00:00" id="homeProgrammingStart">
+						<input type="text" class="form-control" placeholder="00:00" id="homeProgrammingStart" style="width:10vw;">
 						</div>
 						
 						<div class="inline-buttons">
 						<label class="col-form-label" for="inputDefault">End Time</label>
-						<input type="text" class="form-control" placeholder="24:00" id="homeProgrammingEnd">
+						<input type="text" class="form-control" placeholder="24:00" id="homeProgrammingEnd"style="width:10vw;">
 						</div>
 					</div>	
 				
@@ -201,23 +200,83 @@
 		
 		<div class="inline">
 		<div class="left">
-		<div class="card border-primary mb-3" style="width: 30vw; height: 68vh;">
+		<div class="card border-primary mb-3" style="width: 30vw; height: 73vh;">
 			<div class="card-header"><h3>Instructional and Programming Team</h3></div>
 			<div class="card-body">
 			
+				<div class="card border-info mb-3" style="width: 27vw; height: 63vh;">
+				<div class="card-body">
+						
+						<label class="col-form-label" for="inputDefault" style="margin-top:-10px;">Preschool Teacher</label>
+						<input type="text" class="form-control" placeholder="Teacher's Name" id="preschoolTeacher" style="width:23vw;">
+						
+						<label class="col-form-label" for="inputDefault">Certificated Teacher</label>
+						<input type="text" class="form-control" placeholder="Teacher's Name" id="certificatedTeacher" style="width:23vw;">
+						
+						<label class="col-form-label" for="inputDefault">Developmental Assistant</label>
+						<input type="text" class="form-control" placeholder="Assistant's Name" id="developmentalAssistant" style="width:23vw;">						
+					
+						<label class="col-form-label" for="inputDefault">Speech-Language Pathologist</label>
+						<input type="text" class="form-control" placeholder="Pathologist's Name" id="speechPathologist" style="width:23vw;">					
+
+						<label class="col-form-label" for="inputDefault">Occupational Therapist</label>
+						<input type="text" class="form-control" placeholder="Therapist's Name" id="occupationalTherapist" style="width:23vw;">
+						
+						<label class="col-form-label" for="inputDefault">Physiotherapist</label>
+						<input type="text" class="form-control" placeholder="Physiotherapist's Name" id="physiotherapist" style="width:23vw;">
+						
+						<label class="col-form-label" for="inputDefault">Psychologist</label>
+						<input type="text" class="form-control" placeholder="Psychologist's Name" id="psychologist" style="width:23vw;">						
+					
+						<label class="col-form-label" for="inputDefault">Behaviour Specialist</label>
+						<input type="text" class="form-control" placeholder="Specialist's Name" id="behaviouralSpecialist" style="width:23vw;">	
+			
+				</div>
+				</div>
+			
 			</div>
-			</div>
+		</div>
 		</div>
 		</div>
 
 		<div class="inline">
 		<div class="left">
-		<div class="card border-primary mb-3" style="width: 30vw; height: 68vh;">
+		<div class="card border-primary mb-3" style="width: 30vw; height: 53vh;">
 			<div class="card-header"><h3>Program Development</h3></div>
 			<div class="card-body">
 
+				<div class="card border-info mb-3" style="width: 27vw; height: 20vh;">
+				<div class="card-header">Instructional/Programming Hours</div>
+				<div class="card-body">
+					<div class="inline">
+					<label class="col-form-label" for="inputDefault" style="margin-right:1vh;">Access: </label>
+					</div>
+					<input type="text" class="form-control" placeholder="475" style="width:10vw;" disabled="">
+					<hr></hr>
+					<div class="inline">
+					<label class="col-form-label" for="inputDefault" style="margin-right:1vh;">Actual: </label>
+					</div>
+					<input type="text" class="form-control" placeholder="Number of Hours" id="IPActualHours" style="width:10vw;">
+				</div>
+				</div>
+
+				<div class="card border-info mb-3" style="width: 27vw; height: 20vh;">
+				<div class="card-header">Family Oriented Programming Sessions</div>
+				<div class="card-body">
+					<div class="inline">
+					<label class="col-form-label" for="inputDefault" style="margin-right:1vh;">Access: </label>
+					</div>
+					<input type="text" class="form-control" placeholder="10" style="width:10vw;" disabled="">
+					<hr></hr>
+					<div class="inline">
+					<label class="col-form-label" for="inputDefault" style="margin-right:1vh;">Actual: </label>
+					</div>
+					<input type="text" class="form-control" placeholder="Number of Hours" id="FOPActualHours" style="width:10vw;">
+				</div>
+				</div>
+
 			</div>
-			</div>
+		</div>
 		</div>
 		</div>
 
@@ -227,7 +286,7 @@
 	
 	<div class="pagenation_center">
 	<div class="center">
-	<div class="card border-dark mb-3" style="max-width: 18vw; margin-top:-10px;">
+	<div class="card border-dark mb-3" style="max-width: 18vw; height:8vh;">
 	<div class="card-body">
 		<button type="button" class="btn btn-primary" id="Last" onclick="previous()">Previous Page</button>
 		<button type="button" class="btn btn-success" style="margin-left:20px;" id="Next" onclick="next()">Next Page</button>

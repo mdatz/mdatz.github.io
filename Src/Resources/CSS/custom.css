@@ -20,3 +20,8 @@
 	 .pagenation_center{
 		margin-left:40%;
 	 }
+	 body{
+		position: fixed; 
+		overflow-y: scroll;
+		width: 100%;
+	 }
