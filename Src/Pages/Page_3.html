@@ -23,7 +23,106 @@
 		<div class="card border-primary mb-3" style="width: 50vw; height: 73vh;">
 			<div class="card-header"><h3>Background Information</h3></div>
 			<div class="card-body">
-			
+				
+				<div class="inline">
+				<div class="card border-info mb-3" style="width: 15vw; height: 25vh;">
+				<div class="card-header"><h4>Preschool 1</h4></div>
+				<div class="card-body">
+				
+					<label class="col-form-label" for="inputDefault" style="margin-top:-10px;">Preschool Name</label>
+					<input type="text" class="form-control" placeholder="School Name" id="preschoolName1">
+						
+					<div class="inline">
+					<label class="col-form-label" for="inputDefault">Start Date</label>
+					<input type="text" class="form-control" placeholder="DD/MM/YYYY" id="preschoolStartDate1" style="width:5.5vw;">
+					</div>
+						
+					<div class="inline-buttons">
+					<label class="col-form-label" for="inputDefault">End Date</label>
+					<input type="text" class="form-control" placeholder="DD/MM/YYYY" id="preschoolEndDate1" style="width:5.5vw;">
+					</div>
+				
+				</div>
+				</div>
+				
+				<div class="card border-info mb-3" style="width: 15vw; height: 35vh;">
+				<div class="card-header"><h4>Family Information</h4></div>
+				<div class="card-body">
+					<textarea class="form-control" id="familyInformation" rows="10" style="resize:none;"></textarea>
+				</div>
+				</div>
+				</div>
+				
+				<div class="inline">
+				<div class="left">
+				<div class="card border-info mb-3" style="width: 31vw; height: 61.5vh;">
+				<div class="card-header"><h4>Physical/Medical Information</h4></div>
+				<div class="card-body">
+					
+					<div class="inline">
+					<label class="col-form-label" for="inputDefault" style="margin-top:-10px;">Family Doctor</label>
+					<input type="text" class="form-control" placeholder="Name of Family Doctor" id="familyDoctor" style="width:15vw;">
+					</div>
+					<div class="inline">
+					<div class="left">
+					<label class="col-form-label" for="inputDefault" style="margin-top:-10px;">Date of Last Visit</label>
+					<input type="text" class="form-control" placeholder="DD/MM/YYYY" id="familyDoctorVisit" style="width:10vw;">
+					</div>
+					</div>
+					
+					<div class="inline">
+					<label class="col-form-label" for="inputDefault">Pediatrician</label>
+					<input type="text" class="form-control" placeholder="Name of Pediatrician" id="pediatrician" style="width:15vw;">
+					</div>
+					<div class="inline">
+					<div class="left">
+					<label class="col-form-label" for="inputDefault">Date of Last Visit</label>
+					<input type="text" class="form-control" placeholder="DD/MM/YYYY" id="pediatricianVisit" style="width:10vw;">
+					</div>
+					</div>
+					
+					<div class="inline">
+					<label class="col-form-label" for="inputDefault">Hearing Screen</label>
+					<input type="text" class="form-control" placeholder="Name" id="hearingScreen" style="width:15vw;">
+					</div>
+					<div class="inline">
+					<div class="left">
+					<label class="col-form-label" for="inputDefault">Date of Last Visit</label>
+					<input type="text" class="form-control" placeholder="DD/MM/YYYY" id="hearingScreenVisit" style="width:10vw;">
+					</div>
+					</div>
+
+					<div class="inline">
+					<label class="col-form-label" for="inputDefault">Vision Screen</label>
+					<input type="text" class="form-control" placeholder="Name" id="visionScreen" style="width:15vw;">
+					</div>
+					<div class="inline">
+					<div class="left">
+					<label class="col-form-label" for="inputDefault">Date of Last Visit</label>
+					<input type="text" class="form-control" placeholder="DD/MM/YYYY" id="visionScreenVisit" style="width:10vw;">
+					</div>
+					</div>
+					
+					<div class="clear"></div>
+					
+					<div class="form-group">
+					<label for="childStrengths" style="margin-top:1vh;">Allergies</label>
+					<textarea class="form-control" id="medicalAllergies" rows="1" style="resize:none;height:3.5vh;"></textarea>
+					</div>
+					<div class="form-group">
+					<label for="childAreasGrowth">Medication</label>
+					<textarea class="form-control" id="medicalMedications" rows="1" style="resize:none;height:3.5vh;"></textarea>
+					</div>
+					<div class="form-group">
+					<label for="parentPriorities">Other</label>
+					<textarea class="form-control" id="medicalOther" rows="1" style="resize:none;height:3.5vh;"></textarea>
+					</div>
+					
+				</div>
+				</div>
+				</div>
+				</div>
+				
 			</div>
 		</div>
 		</div>
@@ -44,26 +143,26 @@
 			<div class="card border-info mb-3" style="width: 38vw; height: 45vh;">
 			<div class="card-header"><h3>Strengths, Areas of Growth, Parent Priorities</h3></div>
 			<div class="card-body">
+				
 				<div class="form-group">
 					<label for="childStrengths">Child's Strengths</label>
-					<textarea class="form-control" id="childStrengths" rows="2"></textarea>
+					<textarea class="form-control" id="childStrengths" rows="2" style="resize:none;"></textarea>
 				</div>
 				<div class="form-group">
 					<label for="childAreasGrowth">Child's Areas of Growth</label>
-					<textarea class="form-control" id="childAreasGrowth" rows="2"></textarea>
+					<textarea class="form-control" id="childAreasGrowth" rows="2" style="resize:none;"></textarea>
 				</div>
 				<div class="form-group">
 					<label for="parentPriorities">Parent Priorities</label>
-					<textarea class="form-control" id="parentPriorities" rows="2"></textarea>
+					<textarea class="form-control" id="parentPriorities" rows="2" style="resize:none;"></textarea>
 				</div>
+				
 			</div>
 			</div>
-			
 			</div>
 		</div>
 		</div>
 		</div>
-
 	</div>
 	
 	<div class="clear"></div>
