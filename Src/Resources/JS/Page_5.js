@@ -1,23 +1,23 @@
 function fillExisting(){
 	
 	//If Form Variables still Exist, fill the HTML Elements with the Stored Values
-	document.getElementById("goal1").value = sessionStorage.getItem("Long Term Goal 1");
+	if(sessionStorage.getItem("Long Term Goal 1") != null){document.getElementById("goal1").value = sessionStorage.getItem("Long Term Goal 1");}
 	document.getElementById("goalBaseline1").value = sessionStorage.getItem("Baseline Goal 1");
-	document.getElementById("shortTermObjective1").value = sessionStorage.getItem("Short Term Objective Goal 1");
+	if(sessionStorage.getItem("Short Term Objective Goal 1") != null){document.getElementById("shortTermObjective1").value = sessionStorage.getItem("Short Term Objective Goal 1");}
 	document.getElementById("objectiveReview1").value = sessionStorage.getItem("Objective Review Goal 1");
-	document.getElementById("goalStrategy1").value = sessionStorage.getItem("Accommodations and Strategies Goal 1");
+	if(sessionStorage.getItem("Accommodations and Strategies Goal 1") != null){document.getElementById("goalStrategy1").value = sessionStorage.getItem("Accommodations and Strategies Goal 1");}
 	
-	document.getElementById("goal2").value = sessionStorage.getItem("Long Term Goal 2");
+	if(sessionStorage.getItem("Long Term Goal 2") != null){document.getElementById("goal2").value = sessionStorage.getItem("Long Term Goal 2");}
 	document.getElementById("goalBaseline2").value = sessionStorage.getItem("Baseline Goal 2");
-	document.getElementById("shortTermObjective2").value = sessionStorage.getItem("Short Term Objective Goal 2");
+	if(sessionStorage.getItem("Short Term Objective Goal 2") != null){document.getElementById("shortTermObjective2").value = sessionStorage.getItem("Short Term Objective Goal 2");}
 	document.getElementById("objectiveReview2").value = sessionStorage.getItem("Objective Review Goal 2");
-	document.getElementById("goalStrategy2").value = sessionStorage.getItem("Accommodations and Strategies Goal 2");
+	if(sessionStorage.getItem("Accommodations and Strategies Goal 2") != null){document.getElementById("goalStrategy2").value = sessionStorage.getItem("Accommodations and Strategies Goal 2");}
 	
-	document.getElementById("goal3").value = sessionStorage.getItem("Long Term Goal 3");
+	if(sessionStorage.getItem("Long Term Goal 3") != null){document.getElementById("goal3").value = sessionStorage.getItem("Long Term Goal 3");}
 	document.getElementById("goalBaseline3").value = sessionStorage.getItem("Baseline Goal 3");
-	document.getElementById("shortTermObjective3").value = sessionStorage.getItem("Short Term Objective Goal 3");
+	if(sessionStorage.getItem("Short Term Objective Goal 3") != null){document.getElementById("shortTermObjective3").value = sessionStorage.getItem("Short Term Objective Goal 3");}
 	document.getElementById("objectiveReview3").value = sessionStorage.getItem("Objective Review Goal 3");
-	document.getElementById("goalStrategy3").value = sessionStorage.getItem("Accommodations and Strategies Goal 3");
+	if(sessionStorage.getItem("Accommodations and Strategies Goal 3") != null){document.getElementById("goalStrategy3").value = sessionStorage.getItem("Accommodations and Strategies Goal 3");}
 }
 
 function next(){
