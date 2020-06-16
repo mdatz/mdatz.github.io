@@ -14,7 +14,7 @@
 	<div class="jumbotron" style="width:100vw;">
 		<label class="col-form-label" for="progress" style="margin-top:-20px;"><h3>IPP Form Progress</h3></label>
 		<div class="progress">
-			<div class="progress-bar progress-bar-striped progress-bar-animated" role="progressbar" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100" style="width: 27.3%"></div>
+			<div class="progress-bar progress-bar-striped progress-bar-animated" role="progressbar" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100" style="width: 50%"></div>
 		</div>
 		
 		<br></br>
@@ -26,10 +26,21 @@
 				
 				<div class="inline">
 				<div class="card border-info mb-3" style="width: 15vw; height: 25vh;">
-				<div class="card-header"><h4>Preschool 1</h4></div>
-				<div class="card-body">
+				<div class="card-header">
+					<div class="inline">
+					<h4>Preschool</h4>
+					</div>
+					<div style="float:right; margin-right:-5px;">
+					<div class="btn-group mr-2" role="group" aria-label="First group" name="preschoolNum">
+						<button type="button" class="btn btn-secondary" onclick="preschool1()">1</button>
+						<button type="button" class="btn btn-secondary" onclick="preschool2()">2</button>
+						<button type="button" class="btn btn-secondary" onclick="preschool3()">3</button>
+					</div>
+					</div>
+				</div>
+				<div class="card-body" id="preschool1">
 				
-					<label class="col-form-label" for="inputDefault" style="margin-top:-10px;">Preschool Name</label>
+					<label class="col-form-label" for="inputDefault" style="margin-top:-10px;">Preschool 1 Name</label>
 					<input type="text" class="form-control" placeholder="School Name" id="preschoolName1">
 						
 					<div class="inline">
@@ -43,6 +54,39 @@
 					</div>
 				
 				</div>
+				<div class="card-body" id="preschool2" style="display:none;">
+				
+					<label class="col-form-label" for="inputDefault" style="margin-top:-10px;">Preschool 2 Name</label>
+					<input type="text" class="form-control" placeholder="School Name" id="preschoolName2">
+						
+					<div class="inline">
+					<label class="col-form-label" for="inputDefault">Start Date</label>
+					<input type="text" class="form-control" placeholder="DD/MM/YYYY" id="preschoolStartDate2" style="width:5.5vw;">
+					</div>
+						
+					<div class="inline-buttons">
+					<label class="col-form-label" for="inputDefault">End Date</label>
+					<input type="text" class="form-control" placeholder="DD/MM/YYYY" id="preschoolEndDate2" style="width:5.5vw;">
+					</div>
+				
+				</div>
+
+				<div class="card-body" id="preschool3" style="display:none;">
+				
+					<label class="col-form-label" for="inputDefault" style="margin-top:-10px;">Preschool 3 Name</label>
+					<input type="text" class="form-control" placeholder="School Name" id="preschoolName3">
+						
+					<div class="inline">
+					<label class="col-form-label" for="inputDefault">Start Date</label>
+					<input type="text" class="form-control" placeholder="DD/MM/YYYY" id="preschoolStartDate3" style="width:5.5vw;">
+					</div>
+						
+					<div class="inline-buttons">
+					<label class="col-form-label" for="inputDefault">End Date</label>
+					<input type="text" class="form-control" placeholder="DD/MM/YYYY" id="preschoolEndDate3" style="width:5.5vw;">
+					</div>
+				
+				</div>				
 				</div>
 				
 				<div class="card border-info mb-3" style="width: 15vw; height: 35vh;">

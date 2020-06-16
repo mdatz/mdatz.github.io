@@ -4,47 +4,345 @@
 	<base target="_top">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="icon" href="../Resources/Images/Icon.ico">
 	<link rel="stylesheet" href="../Resources/CSS/bootstrap.css">
-	
-    <style>
-     .inline{
-       float:left;
-     }
-     .left{
-       margin-left:20px;
-     }
-     .lower{
-       margin-bottom:15px;
-     }
-	 .center{
-	   text-align:center;
-	 }
-     .clear{
-       clear:both
-     }
-	 .pagenation_center{
-		margin-left:40%;
-	 }
-	 .center_30{
-		margin-left:30%;
-	 }
-	 .center_33{
-		margin-left:33%;
-	 }
-	 .center_8{
-		margin-left:8%;
-	 }
-    </style>
+	<link rel="stylesheet" href="../Resources/CSS/custom.css">
+	<script type="text/javascript" src="../Resources/JS/Page_6.js"></script>
 </head>
 
-<body>
+<body onload="fillExisting()">
 	<div class="jumbotron" style="width:100vw;">
 		<label class="col-form-label" for="progress" style="margin-top:-20px;"><h3>IPP Form Progress</h3></label>
 		<div class="progress">
-			<div class="progress-bar progress-bar-striped progress-bar-animated" role="progressbar" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100" style="width: 54.6%"></div>
+			<div class="progress-bar progress-bar-striped progress-bar-animated" role="progressbar" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100" style="width: 100%"></div>
 		</div>
+		
+		<br></br>
+		<div class="inline">
+		<div class="left">
+		<div class="card border-primary mb-3" style="width: 95vw; height: 73vh;">
+			<div class="card-header"><h3>IPP Meeting and Attendance Signatures</h3></div>
+			<div class="card-body">
+				
+				<div class="inline">
+				<div class="card border-info mb-3" style="width: 39vw; height: 62vh;margin-left:1vw;">
+				<div class="card-body">
+				
+					<div class="inline">
+						<h4 style="margin-top:3vh;width:15vw;"><b>Parent/Gaurdian 1</b></h4>
+					</div>
+					<div class="inline">
+					<div class="left">
+						<label class="col-form-label" for="inputDefault" style="margin-top:-10px;"><b>Initial Review</b></label>
+						<input type="text" class="form-control" placeholder="DD/MM/YYYY" id="familyDoctorVisit" style="width:6vw;">
+					</div>
+					</div>
+					<div class="inline">
+					<div class="left">
+						<label class="col-form-label" for="inputDefault" style="margin-top:-10px;"><b>First Review</b></label>
+						<input type="text" class="form-control" placeholder="DD/MM/YYYY" id="familyDoctorVisit" style="width:6vw;">
+					</div>
+					</div>
+					<div class="inline">
+					<div class="left">
+						<label class="col-form-label" for="inputDefault" style="margin-top:-10px;"><b>Final Review</b></label>
+						<input type="text" class="form-control" placeholder="DD/MM/YYYY" id="familyDoctorVisit" style="width:6vw;">
+					</div>
+					</div>
+					
+					<div class="clear"></div>
+				
+					<div class="inline">
+						<h4 style="margin-top:5vh;width:15vw;"><b>Parent/Gaurdian 2</b></h4>
+					</div>
+					<div class="inline">
+					<div class="left">
+						<label class="col-form-label" for="inputDefault" style="margin-top:10px;"><b>Initial Review</b></label>
+						<input type="text" class="form-control" placeholder="DD/MM/YYYY" id="familyDoctorVisit" style="width:6vw;">
+					</div>
+					</div>
+					<div class="inline">
+					<div class="left">
+						<label class="col-form-label" for="inputDefault" style="margin-top:10px;"><b>First Review</b></label>
+						<input type="text" class="form-control" placeholder="DD/MM/YYYY" id="familyDoctorVisit" style="width:6vw;">
+					</div>
+					</div>
+					<div class="inline">
+					<div class="left">
+						<label class="col-form-label" for="inputDefault" style="margin-top:10px;"><b>Final Review</b></label>
+						<input type="text" class="form-control" placeholder="DD/MM/YYYY" id="familyDoctorVisit" style="width:6vw;">
+					</div>
+					</div>
+	
+					<div class="clear"></div>
 
+					<div class="inline">
+						<h4 style="margin-top:5vh;width:15vw;"><b>Preschool Teacher</b></h4>
+					</div>
+					<div class="inline">
+					<div class="left">
+						<label class="col-form-label" for="inputDefault" style="margin-top:10px;"><b>Initial Review</b></label>
+						<input type="text" class="form-control" placeholder="DD/MM/YYYY" id="familyDoctorVisit" style="width:6vw;">
+					</div>
+					</div>
+					<div class="inline">
+					<div class="left">
+						<label class="col-form-label" for="inputDefault" style="margin-top:10px;"><b>First Review</b></label>
+						<input type="text" class="form-control" placeholder="DD/MM/YYYY" id="familyDoctorVisit" style="width:6vw;">
+					</div>
+					</div>
+					<div class="inline">
+					<div class="left">
+						<label class="col-form-label" for="inputDefault" style="margin-top:10px;"><b>Final Review</b></label>
+						<input type="text" class="form-control" placeholder="DD/MM/YYYY" id="familyDoctorVisit" style="width:6vw;">
+					</div>
+					</div>
 
+					<div class="clear"></div>
+
+					<div class="inline">
+						<h4 style="margin-top:5vh;width:15vw;"><b>Certificated Teacher</b></h4>
+					</div>
+					<div class="inline">
+					<div class="left">
+						<label class="col-form-label" for="inputDefault" style="margin-top:10px;"><b>Initial Review</b></label>
+						<input type="text" class="form-control" placeholder="DD/MM/YYYY" id="familyDoctorVisit" style="width:6vw;">
+					</div>
+					</div>
+					<div class="inline">
+					<div class="left">
+						<label class="col-form-label" for="inputDefault" style="margin-top:10px;"><b>First Review</b></label>
+						<input type="text" class="form-control" placeholder="DD/MM/YYYY" id="familyDoctorVisit" style="width:6vw;">
+					</div>
+					</div>
+					<div class="inline">
+					<div class="left">
+						<label class="col-form-label" for="inputDefault" style="margin-top:10px;"><b>Final Review</b></label>
+						<input type="text" class="form-control" placeholder="DD/MM/YYYY" id="familyDoctorVisit" style="width:6vw;">
+					</div>
+					</div>
+
+					<div class="clear"></div>
+
+					<div class="inline">
+						<h4 style="margin-top:5vh;width:15vw;"><b>Developmental Assistant</b></h4>
+					</div>
+					<div class="inline">
+					<div class="left">
+						<label class="col-form-label" for="inputDefault" style="margin-top:10px;"><b>Initial Review</b></label>
+						<input type="text" class="form-control" placeholder="DD/MM/YYYY" id="familyDoctorVisit" style="width:6vw;">
+					</div>
+					</div>
+					<div class="inline">
+					<div class="left">
+						<label class="col-form-label" for="inputDefault" style="margin-top:10px;"><b>First Review</b></label>
+						<input type="text" class="form-control" placeholder="DD/MM/YYYY" id="familyDoctorVisit" style="width:6vw;">
+					</div>
+					</div>
+					<div class="inline">
+					<div class="left">
+						<label class="col-form-label" for="inputDefault" style="margin-top:10px;"><b>Final Review</b></label>
+						<input type="text" class="form-control" placeholder="DD/MM/YYYY" id="familyDoctorVisit" style="width:6vw;">
+					</div>
+					</div>
+
+					<div class="clear"></div>
+
+					<div class="inline">
+						<h4 style="margin-top:5vh;width:15vw;"><b>Speech-Language Pathologist</b></h4>
+					</div>
+					<div class="inline">
+					<div class="left">
+						<label class="col-form-label" for="inputDefault" style="margin-top:10px;"><b>Initial Review</b></label>
+						<input type="text" class="form-control" placeholder="DD/MM/YYYY" id="familyDoctorVisit" style="width:6vw;">
+					</div>
+					</div>
+					<div class="inline">
+					<div class="left">
+						<label class="col-form-label" for="inputDefault" style="margin-top:10px;"><b>First Review</b></label>
+						<input type="text" class="form-control" placeholder="DD/MM/YYYY" id="familyDoctorVisit" style="width:6vw;">
+					</div>
+					</div>
+					<div class="inline">
+					<div class="left">
+						<label class="col-form-label" for="inputDefault" style="margin-top:10px;"><b>Final Review</b></label>
+						<input type="text" class="form-control" placeholder="DD/MM/YYYY" id="familyDoctorVisit" style="width:6vw;">
+					</div>
+					</div>
+
+					<div class="clear"></div>
+
+					<div class="inline">
+						<h4 style="margin-top:5vh;width:15vw;"><b>Occupational Therapist</b></h4>
+					</div>
+					<div class="inline">
+					<div class="left">
+						<label class="col-form-label" for="inputDefault" style="margin-top:10px;"><b>Initial Review</b></label>
+						<input type="text" class="form-control" placeholder="DD/MM/YYYY" id="familyDoctorVisit" style="width:6vw;">
+					</div>
+					</div>
+					<div class="inline">
+					<div class="left">
+						<label class="col-form-label" for="inputDefault" style="margin-top:10px;"><b>First Review</b></label>
+						<input type="text" class="form-control" placeholder="DD/MM/YYYY" id="familyDoctorVisit" style="width:6vw;">
+					</div>
+					</div>
+					<div class="inline">
+					<div class="left">
+						<label class="col-form-label" for="inputDefault" style="margin-top:10px;"><b>Final Review</b></label>
+						<input type="text" class="form-control" placeholder="DD/MM/YYYY" id="familyDoctorVisit" style="width:6vw;">
+					</div>
+					</div>
+
+				
+				</div>
+				</div>
+				</div>
+				
+				<div class="inline">
+				<div class="left">
+				<div class="card border-info mb-3" style="width: 40vw; height: 28vh;">
+				<div class="card-body">
+
+					<div class="inline">
+						<h4 style="margin-top:3vh;width:15vw;"><b>Physiotherapist</b></h4>
+					</div>
+					<div class="inline">
+					<div class="left">
+						<label class="col-form-label" for="inputDefault" style="margin-top:-10px;"><b>Initial Review</b></label>
+						<input type="text" class="form-control" placeholder="DD/MM/YYYY" id="familyDoctorVisit" style="width:6vw;">
+					</div>
+					</div>
+					<div class="inline">
+					<div class="left">
+						<label class="col-form-label" for="inputDefault" style="margin-top:-10px;"><b>First Review</b></label>
+						<input type="text" class="form-control" placeholder="DD/MM/YYYY" id="familyDoctorVisit" style="width:6vw;">
+					</div>
+					</div>
+					<div class="inline">
+					<div class="left">
+						<label class="col-form-label" for="inputDefault" style="margin-top:-10px;"><b>Final Review</b></label>
+						<input type="text" class="form-control" placeholder="DD/MM/YYYY" id="familyDoctorVisit" style="width:6vw;">
+					</div>
+					</div>
+					
+					<div class="clear"></div>
+				
+					<div class="inline">
+						<h4 style="margin-top:5vh;width:15vw;"><b>Psychologist</b></h4>
+					</div>
+					<div class="inline">
+					<div class="left">
+						<label class="col-form-label" for="inputDefault" style="margin-top:10px;"><b>Initial Review</b></label>
+						<input type="text" class="form-control" placeholder="DD/MM/YYYY" id="familyDoctorVisit" style="width:6vw;">
+					</div>
+					</div>
+					<div class="inline">
+					<div class="left">
+						<label class="col-form-label" for="inputDefault" style="margin-top:10px;"><b>First Review</b></label>
+						<input type="text" class="form-control" placeholder="DD/MM/YYYY" id="familyDoctorVisit" style="width:6vw;">
+					</div>
+					</div>
+					<div class="inline">
+					<div class="left">
+						<label class="col-form-label" for="inputDefault" style="margin-top:10px;"><b>Final Review</b></label>
+						<input type="text" class="form-control" placeholder="DD/MM/YYYY" id="familyDoctorVisit" style="width:6vw;">
+					</div>
+					</div>
+	
+					<div class="clear"></div>
+
+					<div class="inline">
+						<h4 style="margin-top:5vh;width:15vw;"><b>Behaviour Specialist</b></h4>
+					</div>
+					<div class="inline">
+					<div class="left">
+						<label class="col-form-label" for="inputDefault" style="margin-top:10px;"><b>Initial Review</b></label>
+						<input type="text" class="form-control" placeholder="DD/MM/YYYY" id="familyDoctorVisit" style="width:6vw;">
+					</div>
+					</div>
+					<div class="inline">
+					<div class="left">
+						<label class="col-form-label" for="inputDefault" style="margin-top:10px;"><b>First Review</b></label>
+						<input type="text" class="form-control" placeholder="DD/MM/YYYY" id="familyDoctorVisit" style="width:6vw;">
+					</div>
+					</div>
+					<div class="inline">
+					<div class="left">
+						<label class="col-form-label" for="inputDefault" style="margin-top:10px;"><b>Final Review</b></label>
+						<input type="text" class="form-control" placeholder="DD/MM/YYYY" id="familyDoctorVisit" style="width:6vw;">
+					</div>
+					</div>
+					
+				</div>
+				</div>
+				</div>
+				</div>
+
+				<div class="inline">
+				<div class="left">
+						<div class="card border-info mb-3" style="width:15vw;height:32.5vh;">
+						<div class="card-header"><h4>Transition Planning</h4></div>
+						<div class="card-body">
+							<label class="col-form-label" for="inputDefault" style="float:left;margin-right:1vw;"><b>Date</b></label>
+							<input type="text" class="form-control" placeholder="DD/MM/YYYY" id="date1" style="width:8vw;">
+							
+							<label class="col-form-label" for="inputDefault" style="margin-top:10px;"><b>Receiving Program</b></label>
+							<textarea class="form-control" id="familyInformation" rows="5" style="resize:none;"></textarea>
+						</div>
+						</div>
+				</div>
+				</div>
+				
+				<div class="inline">
+				<div class="left">
+				<div class="card border-info mb-3" style="width: 35vw; height: 32.4vh;">
+				<div class="card-header"><h4>Transition Team/Operator</h4></div>
+				<div class="card-body">
+					
+					<div class="inline">
+					<div class="inline">
+					<label class="col-form-label" for="inputDefault" style="margin-top:-10px;"><b>Receiving Private ECS Operator</b></label>
+					<input type="text" class="form-control" placeholder="Transition Team/Operator Member" id="ECSOperator" style="width:25vw;">
+					</div>
+						
+					<div class="inline-buttons">
+					<label class="col-form-label" for="inputDefault" style="margin-top:-10px;margin-left:1vw;"><b>Final IPP Date</b></label>
+					<input type="text" class="form-control" placeholder="DD/MM/YYYY" id="preschoolStartDate3" style="width:5.5vw;margin-left:1vw;">
+					</div>
+					
+					<div class="inline">
+					<label class="col-form-label" for="inputDefault" style="margin-top:5px;"><b>Receiving Private ECS Operator</b></label>
+					<input type="text" class="form-control" placeholder="Transition Team/Operator Member" id="ECSOperator" style="width:25vw;">
+					</div>
+						
+					<div class="inline-buttons">
+					<label class="col-form-label" for="inputDefault" style="margin-top:5px;margin-left:1vw;"><b>Final IPP Date</b></label>
+					<input type="text" class="form-control" placeholder="DD/MM/YYYY" id="preschoolStartDate3" style="width:5.5vw;margin-left:1vw;">
+					</div>
+					
+					<div class="inline">
+					<label class="col-form-label" for="inputDefault" style="margin-top:5px;"><b>Receiving Private ECS Operator</b></label>
+					<input type="text" class="form-control" placeholder="Transition Team/Operator Member" id="ECSOperator" style="width:25vw;">
+					</div>
+						
+					<div class="inline-buttons">
+					<label class="col-form-label" for="inputDefault" style="margin-top:5px;margin-left:1vw;"><b>Final IPP Date</b></label>
+					<input type="text" class="form-control" placeholder="DD/MM/YYYY" id="preschoolStartDate3" style="width:5.5vw;margin-left:1vw;">
+					</div>
+					
+				</div>
+				</div>
+				</div>
+				</div>
+				</div>
+				
+			</div>
+		</div>
+		</div>
+		</div>
+		
+		
 	</div>
 	
 	<div class="clear"></div>
@@ -53,22 +351,12 @@
 	<div class="center">
 	<div class="card border-dark mb-3" style="max-width: 18vw;">
 	<div class="card-body">
-		<button type="button" class="btn btn-primary" id="Last">Previous Page</button>
-		<button type="button" class="btn btn-success" style="margin-left:20px;" id="Next">Next Page</button>
+		<button type="button" class="btn btn-primary" id="Last" onclick="previous()">Previous Page</button>
+		<button type="button" class="btn btn-success" style="margin-left:20px;" id="Next" onclick="next()">Create Form</button>
     </div>
 	</div>
 	</div>
 	</div>
 	
 </body>
-
-	<script type="text/javascript">
-		document.getElementById("Next").onclick = function() {
-			location.href = "./Page_7.html";
-		}
-		document.getElementById("Last").onclick = function() {
-			location.href = "./Page_5.html";
-		}
-	</script>
-
 </html>
