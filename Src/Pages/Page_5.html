@@ -21,8 +21,18 @@
 		<div class="inline">
 		<div class="left">
 		<div class="card border-primary mb-3" style="width: 95vw; height: 74vh; margin-top:-10px;">
-			<div class="card-header"><h3>Goals, Objectives and Accomadations</h3></div>
-			<div class="card-body">
+			<div class="card-header">
+				<div class="inline">
+					<h3>Goals, Objectives and Accomadations</h3>
+				</div>
+				<div style="float:right; margin-right:-5px;">
+				<div class="btn-group mr-2" role="group" aria-label="First group" name="preschoolNum">
+					<button type="button" class="btn btn-secondary" onclick="goals1()"><b>Goals 1 - 3</b></button>
+					<button type="button" class="btn btn-secondary" onclick="goals2()"><b>Goals 4 - 6</b></button>
+				</div>
+				</div>
+			</div>
+			<div class="card-body" id="goals1">
 				
 				<div class="inline">
 				<div class="card border-info mb-3" style="width: 30vw; height: 65vh; margin-top:-10px;">
@@ -211,11 +221,205 @@
 				</div>
 				</div>
 				</div>
-						
-				
-				
+				</div>	
 				
 			</div>
+			
+			
+			<div class="card-body" id="goals2" style="display:none;">
+				
+				<div class="inline">
+				<div class="card border-info mb-3" style="width: 30vw; height: 65vh; margin-top:-10px;">
+				<div class="card-header" style="height:5vh;"><h4>Long Term Goal 4</h4></div>
+				<div class="card-body">
+					
+					<div class="form-group">
+					<label for="goal4"><b>Long Term Goal 4 by June 2021</b></label>
+					<select class="form-control" id="goal4">
+						<option>Goal Bank Option 1</option>
+						<option>Goal Bank Option 2</option>
+						<option>Goal Bank Option 3</option>
+						<option>Goal Bank Option 4</option>
+						<option>Goal Bank Option 5</option>
+					</select>
+					</div>
+					
+					<label class="col-form-label" for="inputDefault" style="margin-top:-10px;"><b>Baseline</b></label>
+					<input type="text" class="form-control" placeholder="Currently..." id="goalBaseline4">
+
+					<div class="form-group">
+					<label for="shortTermObjective1" style="margin-top:2vh;"><b>Short-Term Objectives</b></label>
+					<select class="form-control" id="shortTermObjective4">
+						<option>Short-Term Objective Bank Option 1</option>
+						<option>Short-Term Objective Bank Option 2</option>
+						<option>Short-Term Objective Bank Option 3</option>
+						<option>Short-Term Objective Bank Option 4</option>
+						<option>Short-Term Objective Bank Option 5</option>
+					</select>
+					</div>
+					
+					<label for="info1"><b>Procedures for Monitoring Development</b></label>
+					<div class="card border-warning mb-3" style="height:11vh;" id="info1">
+					<div class="card-body">
+						<ul style="margin-top:-10px;">
+							<li> Teacher feedback </li>
+							<li> Documentation </li>
+							<li> Photos </li>
+							<li> Informal assessments with collaboration from the child's team </li>
+						</ul>
+					</div>
+					</div>
+					
+					<label class="col-form-label" for="inputDefault" style="margin-top:-10px;"><b>Objective Review</b></label>
+					<textarea class="form-control" id="objectiveReview4" rows="1" style="resize:none;"></textarea>
+					
+					<div class="form-group">
+					<label for="goal1" style="margin-top:10px;"><b>Accommodations and Strategies to Support this Goal</b></label>
+					<select class="form-control" id="goalStrategy4">
+						<option>Strategy Goal Bank Option 1</option>
+						<option>Strategy Goal Bank Option 2</option>
+						<option>Strategy Goal Bank Option 3</option>
+						<option>Strategy Goal Bank Option 4</option>
+						<option>Strategy Goal Bank Option 5</option>
+					</select>
+					</div>
+					
+					
+				</div>
+				</div>
+				</div>
+				
+				
+				<div class="inline">
+				<div class="left">
+				<div class="card border-info mb-3" style="width: 30vw; height: 65vh; margin-top:-10px;">
+				<div class="card-header" style="height:5vh;"><h4>Long Term Goal 5</h4></div>
+				<div class="card-body">
+					
+					<div class="form-group">
+					<label for="goal5"><b>Long Term Goal 5 by June 2021</b></label>
+					<select class="form-control" id="goal5">
+						<option>Goal Bank Option 1</option>
+						<option>Goal Bank Option 2</option>
+						<option>Goal Bank Option 3</option>
+						<option>Goal Bank Option 4</option>
+						<option>Goal Bank Option 5</option>
+					</select>
+					</div>
+					
+					<label class="col-form-label" for="inputDefault" style="margin-top:-10px;"><b>Baseline</b></label>
+					<input type="text" class="form-control" placeholder="Currently..." id="goalBaseline5">
+
+					<div class="form-group">
+					<label for="goal1" style="margin-top:2vh;"><b>Short-Term Objectives</b></label>
+					<select class="form-control" id="shortTermObjective5">
+						<option>Short-Term Objective Bank Option 1</option>
+						<option>Short-Term Objective Bank Option 2</option>
+						<option>Short-Term Objective Bank Option 3</option>
+						<option>Short-Term Objective Bank Option 4</option>
+						<option>Short-Term Objective Bank Option 5</option>
+					</select>
+					</div>
+					
+					<label for="info1"><b>Procedures for Monitoring Development</b></label>
+					<div class="card border-warning mb-3" style="height:11vh;" id="info1">
+					<div class="card-body">
+						<ul style="margin-top:-10px;">
+							<li> Teacher feedback </li>
+							<li> Documentation </li>
+							<li> Photos </li>
+							<li> Informal assessments with collaboration from the child's team </li>
+						</ul>
+					</div>
+					</div>
+					
+					<label class="col-form-label" for="inputDefault" style="margin-top:-10px;"><b>Objective Review</b></label>
+					<textarea class="form-control" id="objectiveReview5" rows="1" style="resize:none;"></textarea>
+					
+					<div class="form-group">
+					<label for="goal1" style="margin-top:10px;"><b>Accommodations and Strategies to Support this Goal</b></label>
+					<select class="form-control" id="goalStrategy5">
+						<option>Strategy Goal Bank Option 1</option>
+						<option>Strategy Goal Bank Option 2</option>
+						<option>Strategy Goal Bank Option 3</option>
+						<option>Strategy Goal Bank Option 4</option>
+						<option>Strategy Goal Bank Option 5</option>
+					</select>
+					</div>
+					
+					
+				</div>
+				</div>
+				</div>
+				</div>
+				
+
+				<div class="inline">
+				<div class="left">
+				<div class="card border-info mb-3" style="width: 30vw; height: 65vh; margin-top:-10px;">
+				<div class="card-header" style="height:5vh;"><h4>Long Term Goal 6</h4></div>
+				<div class="card-body">
+					
+					<div class="form-group">
+					<label for="goal6"><b>Long Term Goal 6 by June 2021</b></label>
+					<select class="form-control" id="goal6">
+						<option>Goal Bank Option 1</option>
+						<option>Goal Bank Option 2</option>
+						<option>Goal Bank Option 3</option>
+						<option>Goal Bank Option 4</option>
+						<option>Goal Bank Option 5</option>
+					</select>
+					</div>
+					
+					<label class="col-form-label" for="inputDefault" style="margin-top:-10px;"><b>Baseline</b></label>
+					<input type="text" class="form-control" placeholder="Currently..." id="goalBaseline6">
+
+					<div class="form-group">
+					<label for="goal1" style="margin-top:2vh;"><b>Short-Term Objectives</b></label>
+					<select class="form-control" id="shortTermObjective6">
+						<option>Short-Term Objective Bank Option 1</option>
+						<option>Short-Term Objective Bank Option 2</option>
+						<option>Short-Term Objective Bank Option 3</option>
+						<option>Short-Term Objective Bank Option 4</option>
+						<option>Short-Term Objective Bank Option 5</option>
+					</select>
+					</div>
+					
+					<label for="info1"><b>Procedures for Monitoring Development</b></label>
+					<div class="card border-warning mb-3" style="height:11vh;" id="info1">
+					<div class="card-body">
+						<ul style="margin-top:-10px;">
+							<li> Teacher feedback </li>
+							<li> Documentation </li>
+							<li> Photos </li>
+							<li> Informal assessments with collaboration from the child's team </li>
+						</ul>
+					</div>
+					</div>
+					
+					<label class="col-form-label" for="inputDefault" style="margin-top:-10px;"><b>Objective Review</b></label>
+					<textarea class="form-control" id="objectiveReview6" rows="1" style="resize:none;"></textarea>
+					
+					<div class="form-group">
+					<label for="goal1" style="margin-top:10px;"><b>Accommodations and Strategies to Support this Goal</b></label>
+					<select class="form-control" id="goalStrategy6">
+						<option>Strategy Goal Bank Option 1</option>
+						<option>Strategy Goal Bank Option 2</option>
+						<option>Strategy Goal Bank Option 3</option>
+						<option>Strategy Goal Bank Option 4</option>
+						<option>Strategy Goal Bank Option 5</option>
+					</select>
+					</div>
+					
+					
+				</div>
+				</div>
+				</div>
+				</div>	
+				
+			</div>
+			
+			
 		</div>
 		</div>
 		</div>
