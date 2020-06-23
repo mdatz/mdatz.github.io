@@ -8,6 +8,7 @@
 	<link rel="stylesheet" href="../Resources/CSS/bootstrap.css">
 	<link rel="stylesheet" href="../Resources/CSS/custom.css">
 	<script type="text/javascript" src="../Resources/JS/Page_6.js"></script>
+	<script src="https://cdn.jsdelivr.net/npm/signature_pad@2.3.2/dist/signature_pad.min.js"></script>
 </head>
 
 <body onload="fillExisting()">
@@ -278,6 +279,16 @@
 				</div>
 				</div>
 				</div>
+				
+				<div class="inline">
+				<div class="left">
+					<div class="card border-info mb-3" style="width: 8vw; height: 9vh;margin-top:10vh;margin-left:1vw;">
+					<div class="card-body">
+						<button type="button" class="btn btn-warning" style="margin-top:-4px;" onclick="openSignaturePad()">Test Signature</button>
+					</div>
+					</div>
+				</div>
+				</div>
 
 				<div class="inline">
 				<div class="left">
@@ -342,8 +353,31 @@
 		</div>
 		</div>
 		
-		
 	</div>
+	
+	<div style="position:absolute;width:45vw;height:30vh;margin-left:27.5vw;display:none;" id="SignaturePad">
+		<div class="card border-primary mb-3" style="width:45vw;height:30vh;">
+		<div class="card-body">
+			<div class="inline">
+			<div class="card border-dark mb-3" style="width:38vw;height:25vh;" style="padding-top:0px;">
+			<div class="card-body" style="padding-bottom:0px;padding-top:0px;padding-left:0px;padding-right:0px;">
+				<canvas id="signatureCanvas" style="width:100%;height:100%;"></canvas>
+			</div>
+			</div>
+			</div>
+			
+			<button type="button" class="btn btn-danger" style="float:right;" onclick="closeSignaturePad()">X</button>
+			<br></br>
+			<button type="button" class="btn btn-info" style="width:4vw;float:right;margin-top:8vh;" onclick="undoSignature()">Undo</button>
+			<br></br>
+			<button type="button" class="btn btn-info" style="width:4vw;float:right;margin-top:10px;" onclick="clearSignature()">Clear</button>
+			<br></br>
+			<button type="button" class="btn btn-success" style="width:4vw;float:right;margin-top:10px;" onclick="submitSignature()">Submit</button>
+			
+		</div>
+		</div>
+	</div>
+	
 	
 	<div class="clear"></div>
 	

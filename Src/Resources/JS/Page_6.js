@@ -306,3 +306,44 @@ function previous(){
 	
 	location.href = "./Page_5.html";
 }
+
+//Global Signature Pad Variable
+var signaturePad;
+
+function openSignaturePad(){
+	document.getElementById("SignaturePad").style.display = "block";
+	
+	var canvas = document.getElementById("signatureCanvas");
+	signaturePad = new SignaturePad(canvas, {backgroundColor: 'rgb(255,255,255)'});
+	
+	var ratio =  Math.max(window.devicePixelRatio || 1, 1);
+
+	canvas.width = canvas.offsetWidth * ratio;
+	canvas.height = canvas.offsetHeight * ratio;
+	canvas.getContext("2d").scale(ratio, ratio);
+
+	signaturePad.clear();
+}
+
+function closeSignaturePad(){
+	document.getElementById("SignaturePad").style.display = "none";
+}
+
+function undoSignature(){
+	var signature = signaturePad.toData();
+
+	if (signature) {
+		signature.pop();
+		signaturePad.fromData(signature);
+	}
+}
+
+function clearSignature(){
+	signaturePad.clear();
+}
+
+function submitSignature(){
+	
+}
+
+
