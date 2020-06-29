@@ -2,34 +2,24 @@ function fillExisting(){
 	
 	//If Form Variables still Exist, fill the HTML Elements with the Stored Values
 	document.getElementById("parentGaurdian1Initial").value = sessionStorage.getItem("Parent/Gaurdian 1 Initial Review");
-	document.getElementById("parentGaurdian1First").value = sessionStorage.getItem("Parent/Gaurdian 1 First Review");
 	document.getElementById("parentGaurdian1Final").value = sessionStorage.getItem("Parent/Gaurdian 1 Final Review");
 	document.getElementById("parentGaurdian2Initial").value = sessionStorage.getItem("Parent/Gaurdian 2 Initial Review");
-	document.getElementById("parentGaurdian2First").value = sessionStorage.getItem("Parent/Gaurdian 2 First Review");
 	document.getElementById("parentGaurdian2Final").value = sessionStorage.getItem("Parent/Gaurdian 2 Final Review");
 	document.getElementById("preschoolTeacherInitial").value = sessionStorage.getItem("Preschool Teacher Initial Review");
-	document.getElementById("preschoolTeacherFirst").value = sessionStorage.getItem("Preschool Teacher First Review");
 	document.getElementById("preschoolTeacherFinal").value = sessionStorage.getItem("Preschool Teacher Final Review");
 	document.getElementById("certificatedTeacherInitial").value = sessionStorage.getItem("Certificated Teacher Initial Review");
-	document.getElementById("certificatedTeacherFirst").value = sessionStorage.getItem("Certificated Teacher First Review");
 	document.getElementById("certificatedTeacherFinal").value = sessionStorage.getItem("Certificated Teacher Final Review");
 	document.getElementById("developmentalAssistantInitial").value = sessionStorage.getItem("Developmental Assistant Initial Review");
-	document.getElementById("developmentalAssistantFirst").value = sessionStorage.getItem("Developmental Assistant First Review");
 	document.getElementById("developmentalAssistantFinal").value = sessionStorage.getItem("Developmental Assistant Final Review");
 	document.getElementById("SLPathologistInitial").value = sessionStorage.getItem("Speech-Language Pathologist Initial Review");
-	document.getElementById("SLPathologistFirst").value = sessionStorage.getItem("Speech-Language Pathologist First Review");
 	document.getElementById("SLPathologistFinal").value = sessionStorage.getItem("Speech-Language Pathologist Final Review");
 	document.getElementById("occupationalTherapistInitial").value = sessionStorage.getItem("Occupational Therapist Initial Review");
-	document.getElementById("occupationalTherapistFirst").value = sessionStorage.getItem("Occupational Therapist First Review");
 	document.getElementById("occupationalTherapistFinal").value = sessionStorage.getItem("Occupational Therapist Final Review");
 	document.getElementById("physiotherapistInitial").value = sessionStorage.getItem("Physiotherapist Initial Review");
-	document.getElementById("physiotherapistFirst").value = sessionStorage.getItem("Physiotherapist First Review");
 	document.getElementById("physiotherapistFinal").value = sessionStorage.getItem("Physiotherapist Final Review");
 	document.getElementById("psychologistInitial").value = sessionStorage.getItem("Psychologist Initial Review");
-	document.getElementById("psychologistFirst").value = sessionStorage.getItem("Psychologist First Review");
 	document.getElementById("psychologistFinal").value = sessionStorage.getItem("Psychologist Final Review");
 	document.getElementById("behaviourSpecialistInitial").value = sessionStorage.getItem("Behaviour Specialist Initial Review");
-	document.getElementById("behaviourSpecialistFirst").value = sessionStorage.getItem("Behaviour Specialist First Review");
 	document.getElementById("behaviourSpecialistFinal").value = sessionStorage.getItem("Behaviour Specialist Final Review");
 	document.getElementById("date1").value = sessionStorage.getItem("Transition Program Date");
 	document.getElementById("transitionProgram").value = sessionStorage.getItem("Transition Program");
@@ -47,18 +37,12 @@ function next(){
 	sessionStorage.removeItem("Parent/Gaurdian 1 Initial Review");
 	sessionStorage.setItem("Parent/Gaurdian 1 Initial Review", document.getElementById("parentGaurdian1Initial").value);
 
-	sessionStorage.removeItem("Parent/Gaurdian 1 First Review");
-	sessionStorage.setItem("Parent/Gaurdian 1 First Review", document.getElementById("parentGaurdian1First").value);
-
 	sessionStorage.removeItem("Parent/Gaurdian 1 Final Review");
 	sessionStorage.setItem("Parent/Gaurdian 1 Final Review", document.getElementById("parentGaurdian1Final").value);
 
 
 	sessionStorage.removeItem("Parent/Gaurdian 2 Initial Review");
 	sessionStorage.setItem("Parent/Gaurdian 2 Initial Review", document.getElementById("parentGaurdian2Initial").value);
-
-	sessionStorage.removeItem("Parent/Gaurdian 2 First Review");
-	sessionStorage.setItem("Parent/Gaurdian 2 First Review", document.getElementById("parentGaurdian2First").value);
 
 	sessionStorage.removeItem("Parent/Gaurdian 2 Final Review");
 	sessionStorage.setItem("Parent/Gaurdian 2 Final Review", document.getElementById("parentGaurdian2Final").value);
@@ -67,18 +51,12 @@ function next(){
 	sessionStorage.removeItem("Preschool Teacher Initial Review");
 	sessionStorage.setItem("Preschool Teacher Initial Review", document.getElementById("preschoolTeacherInitial").value);
 
-	sessionStorage.removeItem("Preschool Teacher First Review");
-	sessionStorage.setItem("Preschool Teacher First Review", document.getElementById("preschoolTeacherFirst").value);
-
 	sessionStorage.removeItem("Preschool Teacher Final Review");
 	sessionStorage.setItem("Preschool Teacher Final Review", document.getElementById("preschoolTeacherFinal").value);
 	
 	
 	sessionStorage.removeItem("Certificated Teacher Initial Review");
 	sessionStorage.setItem("Certificated Teacher Initial Review", document.getElementById("certificatedTeacherInitial").value);
-	
-	sessionStorage.removeItem("Certificated Teacher First Review");
-	sessionStorage.setItem("Certificated Teacher First Review", document.getElementById("certificatedTeacherFirst").value);
 	
 	sessionStorage.removeItem("Certificated Teacher Final Review");
 	sessionStorage.setItem("Certificated Teacher Final Review", document.getElementById("certificatedTeacherFinal").value);
@@ -87,18 +65,12 @@ function next(){
 	sessionStorage.removeItem("Developmental Assistant Initial Review");
 	sessionStorage.setItem("Developmental Assistant Initial Review", document.getElementById("developmentalAssistantInitial").value);
 	
-	sessionStorage.removeItem("Developmental Assistant First Review");
-	sessionStorage.setItem("Developmental Assistant First Review", document.getElementById("developmentalAssistantFirst").value);
-	
 	sessionStorage.removeItem("Developmental Assistant Final Review");
 	sessionStorage.setItem("Developmental Assistant Final Review", document.getElementById("developmentalAssistantFinal").value);
 	
 	
 	sessionStorage.removeItem("Speech-Language Pathologist Initial Review");
 	sessionStorage.setItem("Speech-Language Pathologist Initial Review", document.getElementById("SLPathologistInitial").value);
-	
-	sessionStorage.removeItem("Speech-Language Pathologist First Review");
-	sessionStorage.setItem("Speech-Language Pathologist First Review", document.getElementById("SLPathologistFirst").value);
 
 	sessionStorage.removeItem("Speech-Language Pathologist Final Review");
 	sessionStorage.setItem("Speech-Language Pathologist Final Review", document.getElementById("SLPathologistFinal").value);
@@ -106,9 +78,6 @@ function next(){
 
 	sessionStorage.removeItem("Occupational Therapist Initial Review");
 	sessionStorage.setItem("Occupational Therapist Initial Review", document.getElementById("occupationalTherapistInitial").value);
-
-	sessionStorage.removeItem("Occupational Therapist First Review");
-	sessionStorage.setItem("Occupational Therapist First Review", document.getElementById("occupationalTherapistFirst").value);
 	
 	sessionStorage.removeItem("Occupational Therapist Final Review");
 	sessionStorage.setItem("Occupational Therapist Final Review", document.getElementById("occupationalTherapistFinal").value);
@@ -117,9 +86,6 @@ function next(){
 	sessionStorage.removeItem("Physiotherapist Initial Review");
 	sessionStorage.setItem("Physiotherapist Initial Review", document.getElementById("physiotherapistInitial").value);	
 	
-	sessionStorage.removeItem("Physiotherapist First Review");
-	sessionStorage.setItem("Physiotherapist First Review", document.getElementById("physiotherapistFirst").value);	
-	
 	sessionStorage.removeItem("Physiotherapist Final Review");
 	sessionStorage.setItem("Physiotherapist Final Review", document.getElementById("physiotherapistFinal").value);	
 
@@ -127,18 +93,12 @@ function next(){
 	sessionStorage.removeItem("Psychologist Initial Review");
 	sessionStorage.setItem("Psychologist Initial Review", document.getElementById("psychologistInitial").value);	
 	
-	sessionStorage.removeItem("Psychologist First Review");
-	sessionStorage.setItem("Psychologist First Review", document.getElementById("psychologistFirst").value);
-	
 	sessionStorage.removeItem("Psychologist Final Review");
 	sessionStorage.setItem("Psychologist Final Review", document.getElementById("psychologistFinal").value);
 	
 
 	sessionStorage.removeItem("Behaviour Specialist Initial Review");
 	sessionStorage.setItem("Behaviour Specialist Initial Review", document.getElementById("behaviourSpecialistInitial").value);
-	
-	sessionStorage.removeItem("Behaviour Specialist First Review");
-	sessionStorage.setItem("Behaviour Specialist First Review", document.getElementById("behaviourSpecialistFirst").value);
 	
 	sessionStorage.removeItem("Behaviour Specialist Final Review");
 	sessionStorage.setItem("Behaviour Specialist Final Review", document.getElementById("behaviourSpecialistFinal").value);
@@ -179,18 +139,12 @@ function previous(){
 	sessionStorage.removeItem("Parent/Gaurdian 1 Initial Review");
 	sessionStorage.setItem("Parent/Gaurdian 1 Initial Review", document.getElementById("parentGaurdian1Initial").value);
 
-	sessionStorage.removeItem("Parent/Gaurdian 1 First Review");
-	sessionStorage.setItem("Parent/Gaurdian 1 First Review", document.getElementById("parentGaurdian1First").value);
-
 	sessionStorage.removeItem("Parent/Gaurdian 1 Final Review");
 	sessionStorage.setItem("Parent/Gaurdian 1 Final Review", document.getElementById("parentGaurdian1Final").value);
 
 
 	sessionStorage.removeItem("Parent/Gaurdian 2 Initial Review");
 	sessionStorage.setItem("Parent/Gaurdian 2 Initial Review", document.getElementById("parentGaurdian2Initial").value);
-
-	sessionStorage.removeItem("Parent/Gaurdian 2 First Review");
-	sessionStorage.setItem("Parent/Gaurdian 2 First Review", document.getElementById("parentGaurdian2First").value);
 
 	sessionStorage.removeItem("Parent/Gaurdian 2 Final Review");
 	sessionStorage.setItem("Parent/Gaurdian 2 Final Review", document.getElementById("parentGaurdian2Final").value);
@@ -199,18 +153,12 @@ function previous(){
 	sessionStorage.removeItem("Preschool Teacher Initial Review");
 	sessionStorage.setItem("Preschool Teacher Initial Review", document.getElementById("preschoolTeacherInitial").value);
 
-	sessionStorage.removeItem("Preschool Teacher First Review");
-	sessionStorage.setItem("Preschool Teacher First Review", document.getElementById("preschoolTeacherFirst").value);
-
 	sessionStorage.removeItem("Preschool Teacher Final Review");
 	sessionStorage.setItem("Preschool Teacher Final Review", document.getElementById("preschoolTeacherFinal").value);
 	
 	
 	sessionStorage.removeItem("Certificated Teacher Initial Review");
 	sessionStorage.setItem("Certificated Teacher Initial Review", document.getElementById("certificatedTeacherInitial").value);
-	
-	sessionStorage.removeItem("Certificated Teacher First Review");
-	sessionStorage.setItem("Certificated Teacher First Review", document.getElementById("certificatedTeacherFirst").value);
 	
 	sessionStorage.removeItem("Certificated Teacher Final Review");
 	sessionStorage.setItem("Certificated Teacher Final Review", document.getElementById("certificatedTeacherFinal").value);
@@ -219,18 +167,12 @@ function previous(){
 	sessionStorage.removeItem("Developmental Assistant Initial Review");
 	sessionStorage.setItem("Developmental Assistant Initial Review", document.getElementById("developmentalAssistantInitial").value);
 	
-	sessionStorage.removeItem("Developmental Assistant First Review");
-	sessionStorage.setItem("Developmental Assistant First Review", document.getElementById("developmentalAssistantFirst").value);
-	
 	sessionStorage.removeItem("Developmental Assistant Final Review");
 	sessionStorage.setItem("Developmental Assistant Final Review", document.getElementById("developmentalAssistantFinal").value);
 	
 	
 	sessionStorage.removeItem("Speech-Language Pathologist Initial Review");
 	sessionStorage.setItem("Speech-Language Pathologist Initial Review", document.getElementById("SLPathologistInitial").value);
-	
-	sessionStorage.removeItem("Speech-Language Pathologist First Review");
-	sessionStorage.setItem("Speech-Language Pathologist First Review", document.getElementById("SLPathologistFirst").value);
 
 	sessionStorage.removeItem("Speech-Language Pathologist Final Review");
 	sessionStorage.setItem("Speech-Language Pathologist Final Review", document.getElementById("SLPathologistFinal").value);
@@ -238,9 +180,6 @@ function previous(){
 
 	sessionStorage.removeItem("Occupational Therapist Initial Review");
 	sessionStorage.setItem("Occupational Therapist Initial Review", document.getElementById("occupationalTherapistInitial").value);
-
-	sessionStorage.removeItem("Occupational Therapist First Review");
-	sessionStorage.setItem("Occupational Therapist First Review", document.getElementById("occupationalTherapistFirst").value);
 	
 	sessionStorage.removeItem("Occupational Therapist Final Review");
 	sessionStorage.setItem("Occupational Therapist Final Review", document.getElementById("occupationalTherapistFinal").value);
@@ -248,10 +187,7 @@ function previous(){
 	
 	sessionStorage.removeItem("Physiotherapist Initial Review");
 	sessionStorage.setItem("Physiotherapist Initial Review", document.getElementById("physiotherapistInitial").value);	
-	
-	sessionStorage.removeItem("Physiotherapist First Review");
-	sessionStorage.setItem("Physiotherapist First Review", document.getElementById("physiotherapistFirst").value);	
-	
+
 	sessionStorage.removeItem("Physiotherapist Final Review");
 	sessionStorage.setItem("Physiotherapist Final Review", document.getElementById("physiotherapistFinal").value);	
 
@@ -259,18 +195,12 @@ function previous(){
 	sessionStorage.removeItem("Psychologist Initial Review");
 	sessionStorage.setItem("Psychologist Initial Review", document.getElementById("psychologistInitial").value);	
 	
-	sessionStorage.removeItem("Psychologist First Review");
-	sessionStorage.setItem("Psychologist First Review", document.getElementById("psychologistFirst").value);
-	
 	sessionStorage.removeItem("Psychologist Final Review");
 	sessionStorage.setItem("Psychologist Final Review", document.getElementById("psychologistFinal").value);
 	
 
 	sessionStorage.removeItem("Behaviour Specialist Initial Review");
 	sessionStorage.setItem("Behaviour Specialist Initial Review", document.getElementById("behaviourSpecialistInitial").value);
-	
-	sessionStorage.removeItem("Behaviour Specialist First Review");
-	sessionStorage.setItem("Behaviour Specialist First Review", document.getElementById("behaviourSpecialistFirst").value);
 	
 	sessionStorage.removeItem("Behaviour Specialist Final Review");
 	sessionStorage.setItem("Behaviour Specialist Final Review", document.getElementById("behaviourSpecialistFinal").value);
