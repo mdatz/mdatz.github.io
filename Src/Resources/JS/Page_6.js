@@ -1,3 +1,51 @@
+
+function createForm(){
+	
+	//Handle PDF Form Data
+	var templatePDF = this.response;
+	var fields = pdfform().list_fields(templatePDF);
+	
+	//Create Buffer With Form Variables
+	//Page 1 --------------------------
+	fields['Child Name'] = [sessionStorage.getItem("Child First Name") + " " + sessionStorage.getItem("Child Middle Name") + " " + sessionStorage.getItem("Child Last Name")]; 
+	fields['Child DOB'] = [sessionStorage.getItem("Child Date of Birth")];
+	fields['Child September Age'] = [sessionStorage.getItem("Child Date on September")];
+	fields['Years of ECS'] = [sessionStorage.getItem("ECS Year")];
+	fields['Eligibility Code'] = [sessionStorage.getItem("Elegibility Code")];
+	fields['Fathers Name'] = [sessionStorage.getItem("Father Name")];
+	fields['Fathers Home Address'] = [sessionStorage.getItem("Father Address")];
+	fields['Fathers Home Phone'] = [sessionStorage.getItem("Father Home Number")];
+	fields['Fathers Work Phone'] = [sessionStorage.getItem("Father Work Number")];
+	fields['Fathers Cell Phone'] = [sessionStorage.getItem("Father Cell Number")];
+	fields['Fathers Email'] = [sessionStorage.getItem("Father Email")];
+	fields['Mothers Name'] = [sessionStorage.getItem("Mother Name")];
+	fields['Mothers Home Address'] = [sessionStorage.getItem("Mother Address")];
+	fields['Mothers Home Phone'] = [sessionStorage.getItem("Mother Home Number")];
+	fields['Mothers Work Phone'] = [sessionStorage.getItem("Mother Work Number")];
+	fields['Mothers Cell Phone'] = [sessionStorage.getItem("Mother Cell Number")];
+	fields['Mothers Email'] = [sessionStorage.getItem("Mother Email")];
+	
+	//console.log(fields);
+	
+	var finalBuffer = pdfform().transform(templatePDF, fields);
+	var finalPDF = new Blob([finalBuffer], {type: 'application/pdf'});
+	
+	saveAs(finalPDF, 'test.pdf');
+}
+
+function submitForm(){
+	
+	//Create PDF Request
+	var pdfhttp = new XMLHttpRequest();
+	pdfhttp.addEventListener("load", createForm);
+	
+	//Send Request for Hosted PDF Template
+	pdfhttp.open("GET", "https://mdatz.github.io/Src/Resources/Forms/Template.pdf", true);
+	pdfhttp.responseType = "arraybuffer";
+	pdfhttp.send();
+
+}
+
 function fillExisting(){
 	
 	//If Form Variables still Exist, fill the HTML Elements with the Stored Values
@@ -29,6 +77,8 @@ function fillExisting(){
 	document.getElementById("kindergartenConsultantFinalDate").value = sessionStorage.getItem("Kindergarten Consultant/Strategist Final Date");
 	document.getElementById("kindergartenRepresentative").value = sessionStorage.getItem("Kindergarten Representative");
 	document.getElementById("kindergartenRepresentativeFinalDate").value = sessionStorage.getItem("Kindergarten Representative Final Date");
+	
+	flatpickr(document.getElementById("parentGaurdian1Initial"),{dateFormat: "Y-m-d"});
 }
 
 function next(){
@@ -130,6 +180,8 @@ function next(){
 	
 	sessionStorage.removeItem("Kindergarten Representative Final Date");
 	sessionStorage.setItem("Kindergarten Representative Final Date", document.getElementById("kindergartenRepresentativeFinalDate").value);
+	
+	submitForm();
 	
 }
 
