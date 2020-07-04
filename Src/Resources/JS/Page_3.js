@@ -1,5 +1,17 @@
 function fillExisting(){
 	
+	flatpickr(document.getElementById("preschoolStartDate1"),{dateFormat: "Y-m-d"});
+	flatpickr(document.getElementById("preschoolStartDate2"),{dateFormat: "Y-m-d"});
+	flatpickr(document.getElementById("preschoolStartDate3"),{dateFormat: "Y-m-d"});
+	flatpickr(document.getElementById("preschoolEndDate1"),{dateFormat: "Y-m-d"});
+	flatpickr(document.getElementById("preschoolEndDate2"),{dateFormat: "Y-m-d"});
+	flatpickr(document.getElementById("preschoolEndDate3"),{dateFormat: "Y-m-d"});
+	
+	flatpickr(document.getElementById("familyDoctorVisit"),{dateFormat: "Y-m-d"});
+	flatpickr(document.getElementById("pediatricianVisit"),{dateFormat: "Y-m-d"});
+	flatpickr(document.getElementById("hearingScreenVisit"),{dateFormat: "Y-m-d"});
+	flatpickr(document.getElementById("visionScreenVisit"),{dateFormat: "Y-m-d"});
+	
 	//If Form Variables still Exist, fill the HTML Elements with the Stored Values
 	document.getElementById("preschoolName1").value = sessionStorage.getItem("Preschool Name 1");
 	document.getElementById("preschoolStartDate1").value = sessionStorage.getItem("Preschool Start Date 1");

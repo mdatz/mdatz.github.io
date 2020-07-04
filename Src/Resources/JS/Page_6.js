@@ -79,6 +79,29 @@ function fillExisting(){
 	document.getElementById("kindergartenRepresentativeFinalDate").value = sessionStorage.getItem("Kindergarten Representative Final Date");
 	
 	flatpickr(document.getElementById("parentGaurdian1Initial"),{dateFormat: "Y-m-d"});
+	flatpickr(document.getElementById("parentGaurdian1Final"),{dateFormat: "Y-m-d"});
+	flatpickr(document.getElementById("parentGaurdian2Initial"),{dateFormat: "Y-m-d"});
+	flatpickr(document.getElementById("parentGaurdian2Final"),{dateFormat: "Y-m-d"});
+	flatpickr(document.getElementById("preschoolTeacherInitial"),{dateFormat: "Y-m-d"});
+	flatpickr(document.getElementById("preschoolTeacherFinal"),{dateFormat: "Y-m-d"});
+	flatpickr(document.getElementById("certificatedTeacherInitial"),{dateFormat: "Y-m-d"});
+	flatpickr(document.getElementById("certificatedTeacherFinal"),{dateFormat: "Y-m-d"});
+	flatpickr(document.getElementById("developmentalAssistantInitial"),{dateFormat: "Y-m-d"});
+	flatpickr(document.getElementById("developmentalAssistantFinal"),{dateFormat: "Y-m-d"});
+	flatpickr(document.getElementById("SLPathologistInitial"),{dateFormat: "Y-m-d"});
+	flatpickr(document.getElementById("SLPathologistFinal"),{dateFormat: "Y-m-d"});
+	flatpickr(document.getElementById("occupationalTherapistInitial"),{dateFormat: "Y-m-d"});
+	flatpickr(document.getElementById("occupationalTherapistFinal"),{dateFormat: "Y-m-d"});
+	flatpickr(document.getElementById("physiotherapistInitial"),{dateFormat: "Y-m-d"});
+	flatpickr(document.getElementById("physiotherapistFinal"),{dateFormat: "Y-m-d"});
+	flatpickr(document.getElementById("psychologistInitial"),{dateFormat: "Y-m-d"});
+	flatpickr(document.getElementById("psychologistFinal"),{dateFormat: "Y-m-d"});
+	flatpickr(document.getElementById("behaviourSpecialistInitial"),{dateFormat: "Y-m-d"});
+	flatpickr(document.getElementById("behaviourSpecialistFinal"),{dateFormat: "Y-m-d"});
+	flatpickr(document.getElementById("ECSOperatorFinalDate"),{dateFormat: "Y-m-d"});
+	flatpickr(document.getElementById("kindergartenConsultantFinalDate"),{dateFormat: "Y-m-d"});
+	flatpickr(document.getElementById("kindergartenRepresentativeFinalDate"),{dateFormat: "Y-m-d"});
+	flatpickr(document.getElementById("date1"),{dateFormat: "Y-m-d"});
 }
 
 function next(){

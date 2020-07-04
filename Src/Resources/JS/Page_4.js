@@ -1,5 +1,17 @@
 function fillExisting(){
 	
+	flatpickr(document.getElementById("initialCELFTestDate"),{dateFormat: "Y-m-d"});
+	flatpickr(document.getElementById("finalCELFTestDate"),{dateFormat: "Y-m-d"});
+	flatpickr(document.getElementById("finalPLSTestDate"),{dateFormat: "Y-m-d"});
+	flatpickr(document.getElementById("finalGFTATestDate"),{dateFormat: "Y-m-d"});
+	flatpickr(document.getElementById("initialPDMSTestDate"),{dateFormat: "Y-m-d"});
+	flatpickr(document.getElementById("finalPDMSTestDate"),{dateFormat: "Y-m-d"});
+	flatpickr(document.getElementById("finalMFUNTestDate"),{dateFormat: "Y-m-d"});
+	flatpickr(document.getElementById("finalSP2TestDate"),{dateFormat: "Y-m-d"});
+	flatpickr(document.getElementById("initialReviewDate"),{dateFormat: "Y-m-d"});
+	flatpickr(document.getElementById("firstReviewDate"),{dateFormat: "Y-m-d"});
+	flatpickr(document.getElementById("finalReviewDate"),{dateFormat: "Y-m-d"});
+	
 	//If Form Variables still Exist, fill the HTML Elements with the Stored Values
 	document.getElementById("initialCELFTestResult").value = sessionStorage.getItem("Initial CELF Test Result");
 	document.getElementById("initialCELFTestTherapist").value = sessionStorage.getItem("Initial CELF Test Therapist");

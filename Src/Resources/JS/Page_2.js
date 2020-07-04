@@ -1,4 +1,12 @@
 function fillExisting() {
+	
+	flatpickr(document.getElementById("preschoolStart"),{enableTime: true, noCalendar: true, dateFormat: "H:i", time_24hr: true});
+	flatpickr(document.getElementById("preschoolEnd"),{enableTime: true, noCalendar: true, dateFormat: "H:i", time_24hr: true});
+	flatpickr(document.getElementById("KiDSStart"),{enableTime: true, noCalendar: true, dateFormat: "H:i", time_24hr: true});
+	flatpickr(document.getElementById("KiDSEnd"),{enableTime: true, noCalendar: true, dateFormat: "H:i", time_24hr: true});
+	flatpickr(document.getElementById("homeProgrammingStart"),{enableTime: true, noCalendar: true, dateFormat: "H:i", time_24hr: true});
+	flatpickr(document.getElementById("homeProgrammingEnd"),{enableTime: true, noCalendar: true, dateFormat: "H:i", time_24hr: true});
+	
 	if(sessionStorage.length != 0){
 		//If Form Variables still Exist, fill the HTML Elements with the Stored Values
 		document.getElementById("preschoolName").value = sessionStorage.getItem("Preschool Name");
