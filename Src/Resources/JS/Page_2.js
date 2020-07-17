@@ -38,9 +38,7 @@ function fillExisting() {
 		document.getElementById("occupationalTherapist").value = sessionStorage.getItem("Occupational Therapist");	
 		document.getElementById("physiotherapist").value = sessionStorage.getItem("Physiotherapist");	
 		document.getElementById("psychologist").value = sessionStorage.getItem("Psychologist");	
-		document.getElementById("behaviouralSpecialist").value = sessionStorage.getItem("Behavioural Specialist");
-		document.getElementById("IPActualHours").value = sessionStorage.getItem("Instructional/Programming Actual Hours");	
-		document.getElementById("FOPActualHours").value = sessionStorage.getItem("Family Oriented Programming Sessions Actual Hours");	
+		document.getElementById("behaviouralSpecialist").value = sessionStorage.getItem("Behavioural Specialist");	
 	}else{
 		console.log("Session Storage length is 0!");
 	}
@@ -136,12 +134,6 @@ function next() {
 	sessionStorage.removeItem("Behavioural Specialist");
 	sessionStorage.setItem("Behavioural Specialist", document.getElementById("behaviouralSpecialist").value);
 	
-	sessionStorage.removeItem("Instructional/Programming Actual Hours");
-	sessionStorage.setItem("Instructional/Programming Actual Hours", document.getElementById("IPActualHours").value);
-	
-	sessionStorage.removeItem("Family Oriented Programming Sessions Actual Hours");
-	sessionStorage.setItem("Family Oriented Programming Sessions Actual Hours", document.getElementById("FOPActualHours").value);
-	
 	//Return the next page
 	return location.href = "./Page_3.html";
 }
@@ -235,12 +227,6 @@ function previous() {
 	
 	sessionStorage.removeItem("Behavioural Specialist");
 	sessionStorage.setItem("Behavioural Specialist", document.getElementById("behaviouralSpecialist").value);
-	
-	sessionStorage.removeItem("Instructional/Programming Actual Hours");
-	sessionStorage.setItem("Instructional/Programming Actual Hours", document.getElementById("IPActualHours").value);
-	
-	sessionStorage.removeItem("Family Oriented Programming Sessions Actual Hours");
-	sessionStorage.setItem("Family Oriented Programming Sessions Actual Hours", document.getElementById("FOPActualHours").value);
 	
 	//Return the previous page
 	return location.href = "./Page_1.html";

@@ -1,6 +1,6 @@
 function fillExisting() {
 	
-	flatpickr(document.getElementById("childDOB"),{dateFormat: "Y-m-d"});
+	flatpickr(document.getElementById("childDOB"),{dateFormat: "d-m-Y"});
 	
 	if(sessionStorage.length != 0){
 		//If Form Variables still Exist, fill the HTML Elements with the Stored Values

@@ -7,10 +7,12 @@ function createForm(){
 	
 	//Create Buffer With Form Variables
 	//Page 1 --------------------------
+	fields['PUF Header Year'] = ["2020 - 2021"];
 	fields['Child Name'] = [sessionStorage.getItem("Child First Name") + " " + sessionStorage.getItem("Child Middle Name") + " " + sessionStorage.getItem("Child Last Name")]; 
 	fields['Child DOB'] = [sessionStorage.getItem("Child Date of Birth")];
+	fields['Next September Year'] = ["September 1, 2020"];
 	fields['Child September Age'] = [sessionStorage.getItem("Child Date on September")];
-	fields['Years of ECS'] = [sessionStorage.getItem("ECS Year")];
+	fields['Year of ECS'] = [sessionStorage.getItem("ECS Year")];
 	fields['Eligibility Code'] = [sessionStorage.getItem("Elegibility Code")];
 	fields['Fathers Name'] = [sessionStorage.getItem("Father Name")];
 	fields['Fathers Home Address'] = [sessionStorage.getItem("Father Address")];
@@ -25,12 +27,122 @@ function createForm(){
 	fields['Mothers Cell Phone'] = [sessionStorage.getItem("Mother Cell Number")];
 	fields['Mothers Email'] = [sessionStorage.getItem("Mother Email")];
 	
+	//Page 2 --------------------------
+	fields['Preschool Name'] = [sessionStorage.getItem("Preschool Name")];
+	
+	//Fill Radio Button Set 1 (true = checked, false = unchecked)
+	fields['Preschool Start']  = [sessionStorage.getItem("Preschool Start Time")];
+	fields['Preschool End']  = [sessionStorage.getItem("Preschool End Time")];
+	
+	if(sessionStorage.getItem("PAMonday") == 'false'){
+		fields['Preschool Monday'] = [false];
+	}else{
+		fields['Preschool Monday'] = [true];
+	}
+	if(sessionStorage.getItem("PATuesday") == 'false'){
+		fields['Preschool Tuesday'] = [false];
+	}else{
+		fields['Preschool Tuesday'] = [true];
+	}
+	if(sessionStorage.getItem("PAWednesday") == 'false'){
+		fields['Preschool Wednesday'] = [false];
+	}else{
+		fields['Preschool Wednesday'] = [true];
+	}	
+	if(sessionStorage.getItem("PAThursday") == 'false'){
+		fields['Preschool Thursday'] = [false];
+	}else{
+		fields['Preschool Thursday'] = [true];
+	}	
+	if(sessionStorage.getItem("PAFriday") == 'false'){
+		fields['Preschool Friday'] = [false];
+	}else{
+		fields['Preschool Friday'] = [true];
+	}	
+	
+	//Fill Radio Button Set 2 (true = checked, false = unchecked)
+	fields['Kids Playtime Start']  = [sessionStorage.getItem("KiDS Start Time")];
+	fields['Kids Playtime End']  = [sessionStorage.getItem("KiDS End Time")];
+	
+	if(sessionStorage.getItem("KAMonday") == 'false'){
+		fields['Kids Playtime Monday'] = [false];
+	}else{
+		fields['Kids Playtime Monday'] = [true];
+	}
+	if(sessionStorage.getItem("KATuesday") == 'false'){
+		fields['Kids Playtime Tuesday'] = [false];
+	}else{
+		fields['Kids Playtime Tuesday'] = [true];
+	}
+	if(sessionStorage.getItem("KAWednesday") == 'false'){
+		fields['Kids Playtime Wednesday'] = [false];
+	}else{
+		fields['Kids Playtime Wednesday'] = [true];
+	}	
+	if(sessionStorage.getItem("KAThursday") == 'false'){
+		fields['Kids Playtime Thursday'] = [false];
+	}else{
+		fields['Kids Playtime Thursday'] = [true];
+	}	
+	if(sessionStorage.getItem("KAFriday") == 'false'){
+		fields['Kids Playtime Friday'] = [false];
+	}else{
+		fields['Kids Playtime Friday'] = [true];
+	}	
+
+	//Fill Radio Button Set 3 (true = checked, false = unchecked)
+	fields['Home Programming Start']  = [sessionStorage.getItem("Home Programming Start Time")];
+	fields['Home Programming End']  = [sessionStorage.getItem("Home Programming End Time")];
+	
+	if(sessionStorage.getItem("HAMonday") == 'false'){
+		fields['Home Programming Monday'] = [false];
+	}else{
+		fields['Home Programming Monday'] = [true];
+	}
+	if(sessionStorage.getItem("HATuesday") == 'false'){
+		fields['Home Programming Tuesday'] = [false];
+	}else{
+		fields['Home Programming Tuesday'] = [true];
+	}
+	if(sessionStorage.getItem("HAWednesday") == 'false'){
+		fields['Home Programming Wednesday'] = [false];
+	}else{
+		fields['Home Programming Wednesday'] = [true];
+	}	
+	if(sessionStorage.getItem("HAThursday") == 'false'){
+		fields['Home Programming Thursday'] = [false];
+	}else{
+		fields['Home Programming Thursday'] = [true];
+	}	
+	if(sessionStorage.getItem("HAFriday") == 'false'){
+		fields['Home Programming Friday'] = [false];
+	}else{
+		fields['Home Programming Friday'] = [true];
+	}	
+
+	fields['Preschool Teacher Name'] = [sessionStorage.getItem("Preschool Teacher")];
+	fields['Certificated Teacher Name'] = [sessionStorage.getItem("Certificated Teacher")];
+	fields['Developmental Assistant Name'] = [sessionStorage.getItem("Developmental Assistant")];
+	fields['Speech-Language Pathologist Name'] = [sessionStorage.getItem("Speech Pathologist")];
+	fields['Occupational Therapist Name'] = [sessionStorage.getItem("Occupational Therapist")];
+	fields['Physiotherapist Name'] = [sessionStorage.getItem("Physiotherapist")];
+	fields['Psychologist Name'] = [sessionStorage.getItem("Psychologist")];
+	fields['Child Development Specialist Name'] = [sessionStorage.getItem("Behavioural Specialist")];
+	
+	//Page 3 --------------------------
+	
+	
+	
+	
+	
 	//console.log(fields);
 	
+	//Create Output PDF
 	var finalBuffer = pdfform().transform(templatePDF, fields);
 	var finalPDF = new Blob([finalBuffer], {type: 'application/pdf'});
 	
-	saveAs(finalPDF, 'test.pdf');
+	//Save Output PDF
+	saveAs(finalPDF, 'test_LAST.pdf');
 }
 
 function submitForm(){
@@ -40,7 +152,7 @@ function submitForm(){
 	pdfhttp.addEventListener("load", createForm);
 	
 	//Send Request for Hosted PDF Template
-	pdfhttp.open("GET", "https://mdatz.github.io/Src/Resources/Forms/Template.pdf", true);
+	pdfhttp.open("GET", "https://mdatz.github.io/Src/Resources/Forms/Template_4_Goals.pdf", true);
 	pdfhttp.responseType = "arraybuffer";
 	pdfhttp.send();
 
