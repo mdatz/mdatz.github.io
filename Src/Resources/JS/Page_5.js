@@ -40,26 +40,6 @@ function fillExisting(){
 	if(sessionStorage.getItem("Accommodations and Strategies Goal 4.1") != null){document.getElementById("goalStrategy4_1").value = sessionStorage.getItem("Accommodations and Strategies Goal 4.1");}
 	if(sessionStorage.getItem("Accommodations and Strategies Goal 4.2") != null){document.getElementById("goalStrategy4_2").value = sessionStorage.getItem("Accommodations and Strategies Goal 4.2");}
 	if(sessionStorage.getItem("Accommodations and Strategies Goal 4.3") != null){document.getElementById("goalStrategy4_3").value = sessionStorage.getItem("Accommodations and Strategies Goal 4.3");}
-	
-	if(sessionStorage.getItem("Long Term Goal 5") != null){document.getElementById("goal5").value = sessionStorage.getItem("Long Term Goal 5");}
-	document.getElementById("goalBaseline5").value = sessionStorage.getItem("Baseline Goal 5");
-	if(sessionStorage.getItem("Short Term Objective Goal 5.1") != null){document.getElementById("shortTermObjective5_1").value = sessionStorage.getItem("Short Term Objective Goal 5.1");}
-	if(sessionStorage.getItem("Short Term Objective Goal 5.2") != null){document.getElementById("shortTermObjective5_2").value = sessionStorage.getItem("Short Term Objective Goal 5.2");}
-	if(sessionStorage.getItem("Short Term Objective Goal 5.3") != null){document.getElementById("shortTermObjective5_3").value = sessionStorage.getItem("Short Term Objective Goal 5.3");}	
-	document.getElementById("objectiveReview5").value = sessionStorage.getItem("Objective Review Goal 5");
-	if(sessionStorage.getItem("Accommodations and Strategies Goal 5.1") != null){document.getElementById("goalStrategy5_1").value = sessionStorage.getItem("Accommodations and Strategies Goal 5.1");}
-	if(sessionStorage.getItem("Accommodations and Strategies Goal 5.2") != null){document.getElementById("goalStrategy5_2").value = sessionStorage.getItem("Accommodations and Strategies Goal 5.2");}
-	if(sessionStorage.getItem("Accommodations and Strategies Goal 5.3") != null){document.getElementById("goalStrategy5_3").value = sessionStorage.getItem("Accommodations and Strategies Goal 5.3");}
-	
-	if(sessionStorage.getItem("Long Term Goal 6") != null){document.getElementById("goal6").value = sessionStorage.getItem("Long Term Goal 6");}
-	document.getElementById("goalBaseline6").value = sessionStorage.getItem("Baseline Goal 6");
-	if(sessionStorage.getItem("Short Term Objective Goal 6.1") != null){document.getElementById("shortTermObjective6_1").value = sessionStorage.getItem("Short Term Objective Goal 6.1");}
-	if(sessionStorage.getItem("Short Term Objective Goal 6.2") != null){document.getElementById("shortTermObjective6_2").value = sessionStorage.getItem("Short Term Objective Goal 6.2");}
-	if(sessionStorage.getItem("Short Term Objective Goal 6.3") != null){document.getElementById("shortTermObjective6_3").value = sessionStorage.getItem("Short Term Objective Goal 6.3");}	
-	document.getElementById("objectiveReview6").value = sessionStorage.getItem("Objective Review Goal 6");
-	if(sessionStorage.getItem("Accommodations and Strategies Goal 6.1") != null){document.getElementById("goalStrategy6_1").value = sessionStorage.getItem("Accommodations and Strategies Goal 6.1");}
-	if(sessionStorage.getItem("Accommodations and Strategies Goal 6.2") != null){document.getElementById("goalStrategy6_2").value = sessionStorage.getItem("Accommodations and Strategies Goal 6.2");}
-	if(sessionStorage.getItem("Accommodations and Strategies Goal 6.3") != null){document.getElementById("goalStrategy6_3").value = sessionStorage.getItem("Accommodations and Strategies Goal 6.3");}
 }
 
 function next(){
@@ -203,75 +183,6 @@ function next(){
 	var goalAccommodation4_3 = document.getElementById("goalStrategy4_3");
 	sessionStorage.setItem("Accommodations and Strategies Goal 4.3", goalAccommodation4_3.options[goalAccommodation4_3.selectedIndex].text);
 	
-
-	sessionStorage.removeItem("Long Term Goal 5");
-	var goalOption5 = document.getElementById("goal5");
-	sessionStorage.setItem("Long Term Goal 5", goalOption5.options[goalOption5.selectedIndex].text);
-	
-	sessionStorage.removeItem("Baseline Goal 5");
-	sessionStorage.setItem("Baseline Goal 5", document.getElementById("goalBaseline5").value);
-	
-	sessionStorage.removeItem("Short Term Objective Goal 5.1");
-	var goalObjective5_1 = document.getElementById("shortTermObjective5_1");
-	sessionStorage.setItem("Short Term Objective Goal 5.1", goalObjective5_1.options[goalObjective5_1.selectedIndex].text);
-	
-	sessionStorage.removeItem("Short Term Objective Goal 5.2");
-	var goalObjective5_2 = document.getElementById("shortTermObjective5_2");
-	sessionStorage.setItem("Short Term Objective Goal 5.2", goalObjective5_2.options[goalObjective5_2.selectedIndex].text);
-	
-	sessionStorage.removeItem("Short Term Objective Goal 5.3");
-	var goalObjective5_3 = document.getElementById("shortTermObjective5_3");
-	sessionStorage.setItem("Short Term Objective Goal 5.3", goalObjective5_3.options[goalObjective5_3.selectedIndex].text);
-	
-	sessionStorage.removeItem("Objective Review Goal 5");
-	sessionStorage.setItem("Objective Review Goal 5", document.getElementById("objectiveReview5").value);
-	
-	sessionStorage.removeItem("Accommodations and Strategies Goal 5.1");
-	var goalAccommodation5_1 = document.getElementById("goalStrategy5_1");
-	sessionStorage.setItem("Accommodations and Strategies Goal 5.1", goalAccommodation5_1.options[goalAccommodation5_1.selectedIndex].text);
-	
-	sessionStorage.removeItem("Accommodations and Strategies Goal 5.2");
-	var goalAccommodation5_2 = document.getElementById("goalStrategy5_2");
-	sessionStorage.setItem("Accommodations and Strategies Goal 5.2", goalAccommodation5_2.options[goalAccommodation5_2.selectedIndex].text);
-
-	sessionStorage.removeItem("Accommodations and Strategies Goal 5.3");
-	var goalAccommodation5_3 = document.getElementById("goalStrategy5_3");
-	sessionStorage.setItem("Accommodations and Strategies Goal 5.3", goalAccommodation5_3.options[goalAccommodation5_3.selectedIndex].text);
-	
-	
-	sessionStorage.removeItem("Long Term Goal 6");
-	var goalOption6 = document.getElementById("goal6");
-	sessionStorage.setItem("Long Term Goal 6", goalOption6.options[goalOption6.selectedIndex].text);
-	
-	sessionStorage.removeItem("Baseline Goal 6");
-	sessionStorage.setItem("Baseline Goal 6", document.getElementById("goalBaseline6").value);
-	
-	sessionStorage.removeItem("Short Term Objective Goal 6.1");
-	var goalObjective6_1 = document.getElementById("shortTermObjective6_1");
-	sessionStorage.setItem("Short Term Objective Goal 6.1", goalObjective6_1.options[goalObjective6_1.selectedIndex].text);
-	
-	sessionStorage.removeItem("Short Term Objective Goal 6.2");
-	var goalObjective6_2 = document.getElementById("shortTermObjective6_2");
-	sessionStorage.setItem("Short Term Objective Goal 6.2", goalObjective6_2.options[goalObjective6_2.selectedIndex].text);
-	
-	sessionStorage.removeItem("Short Term Objective Goal 6.3");
-	var goalObjective6_3 = document.getElementById("shortTermObjective6_3");
-	sessionStorage.setItem("Short Term Objective Goal 6.3", goalObjective6_3.options[goalObjective6_3.selectedIndex].text);
-	
-	sessionStorage.removeItem("Objective Review Goal 6");
-	sessionStorage.setItem("Objective Review Goal 6", document.getElementById("objectiveReview6").value);
-	
-	sessionStorage.removeItem("Accommodations and Strategies Goal 6.1");
-	var goalAccommodation6_1 = document.getElementById("goalStrategy6_1");
-	sessionStorage.setItem("Accommodations and Strategies Goal 6.1", goalAccommodation6_1.options[goalAccommodation6_1.selectedIndex].text);
-	
-	sessionStorage.removeItem("Accommodations and Strategies Goal 6.2");
-	var goalAccommodation6_2 = document.getElementById("goalStrategy6_2");
-	sessionStorage.setItem("Accommodations and Strategies Goal 6.2", goalAccommodation6_2.options[goalAccommodation6_2.selectedIndex].text);
-
-	sessionStorage.removeItem("Accommodations and Strategies Goal 6.3");
-	var goalAccommodation6_3 = document.getElementById("goalStrategy6_3");
-	sessionStorage.setItem("Accommodations and Strategies Goal 6.3", goalAccommodation6_3.options[goalAccommodation6_3.selectedIndex].text);
 
 	return location.href = "./Page_6.html";
 }
@@ -417,75 +328,6 @@ function previous(){
 	var goalAccommodation4_3 = document.getElementById("goalStrategy4_3");
 	sessionStorage.setItem("Accommodations and Strategies Goal 4.3", goalAccommodation4_3.options[goalAccommodation4_3.selectedIndex].text);
 	
-
-	sessionStorage.removeItem("Long Term Goal 5");
-	var goalOption5 = document.getElementById("goal5");
-	sessionStorage.setItem("Long Term Goal 5", goalOption5.options[goalOption5.selectedIndex].text);
-	
-	sessionStorage.removeItem("Baseline Goal 5");
-	sessionStorage.setItem("Baseline Goal 5", document.getElementById("goalBaseline5").value);
-	
-	sessionStorage.removeItem("Short Term Objective Goal 5.1");
-	var goalObjective5_1 = document.getElementById("shortTermObjective5_1");
-	sessionStorage.setItem("Short Term Objective Goal 5.1", goalObjective5_1.options[goalObjective5_1.selectedIndex].text);
-	
-	sessionStorage.removeItem("Short Term Objective Goal 5.2");
-	var goalObjective5_2 = document.getElementById("shortTermObjective5_2");
-	sessionStorage.setItem("Short Term Objective Goal 5.2", goalObjective5_2.options[goalObjective5_2.selectedIndex].text);
-	
-	sessionStorage.removeItem("Short Term Objective Goal 5.3");
-	var goalObjective5_3 = document.getElementById("shortTermObjective5_3");
-	sessionStorage.setItem("Short Term Objective Goal 5.3", goalObjective5_3.options[goalObjective5_3.selectedIndex].text);
-	
-	sessionStorage.removeItem("Objective Review Goal 5");
-	sessionStorage.setItem("Objective Review Goal 5", document.getElementById("objectiveReview5").value);
-	
-	sessionStorage.removeItem("Accommodations and Strategies Goal 5.1");
-	var goalAccommodation5_1 = document.getElementById("goalStrategy5_1");
-	sessionStorage.setItem("Accommodations and Strategies Goal 5.1", goalAccommodation5_1.options[goalAccommodation5_1.selectedIndex].text);
-	
-	sessionStorage.removeItem("Accommodations and Strategies Goal 5.2");
-	var goalAccommodation5_2 = document.getElementById("goalStrategy5_2");
-	sessionStorage.setItem("Accommodations and Strategies Goal 5.2", goalAccommodation5_2.options[goalAccommodation5_2.selectedIndex].text);
-
-	sessionStorage.removeItem("Accommodations and Strategies Goal 5.3");
-	var goalAccommodation5_3 = document.getElementById("goalStrategy5_3");
-	sessionStorage.setItem("Accommodations and Strategies Goal 5.3", goalAccommodation5_3.options[goalAccommodation5_3.selectedIndex].text);
-	
-	
-	sessionStorage.removeItem("Long Term Goal 6");
-	var goalOption6 = document.getElementById("goal6");
-	sessionStorage.setItem("Long Term Goal 6", goalOption6.options[goalOption6.selectedIndex].text);
-	
-	sessionStorage.removeItem("Baseline Goal 6");
-	sessionStorage.setItem("Baseline Goal 6", document.getElementById("goalBaseline6").value);
-	
-	sessionStorage.removeItem("Short Term Objective Goal 6.1");
-	var goalObjective6_1 = document.getElementById("shortTermObjective6_1");
-	sessionStorage.setItem("Short Term Objective Goal 6.1", goalObjective6_1.options[goalObjective6_1.selectedIndex].text);
-	
-	sessionStorage.removeItem("Short Term Objective Goal 6.2");
-	var goalObjective6_2 = document.getElementById("shortTermObjective6_2");
-	sessionStorage.setItem("Short Term Objective Goal 6.2", goalObjective6_2.options[goalObjective6_2.selectedIndex].text);
-	
-	sessionStorage.removeItem("Short Term Objective Goal 6.3");
-	var goalObjective6_3 = document.getElementById("shortTermObjective6_3");
-	sessionStorage.setItem("Short Term Objective Goal 6.3", goalObjective6_3.options[goalObjective6_3.selectedIndex].text);
-	
-	sessionStorage.removeItem("Objective Review Goal 6");
-	sessionStorage.setItem("Objective Review Goal 6", document.getElementById("objectiveReview6").value);
-	
-	sessionStorage.removeItem("Accommodations and Strategies Goal 6.1");
-	var goalAccommodation6_1 = document.getElementById("goalStrategy6_1");
-	sessionStorage.setItem("Accommodations and Strategies Goal 6.1", goalAccommodation6_1.options[goalAccommodation6_1.selectedIndex].text);
-	
-	sessionStorage.removeItem("Accommodations and Strategies Goal 6.2");
-	var goalAccommodation6_2 = document.getElementById("goalStrategy6_2");
-	sessionStorage.setItem("Accommodations and Strategies Goal 6.2", goalAccommodation6_2.options[goalAccommodation6_2.selectedIndex].text);
-
-	sessionStorage.removeItem("Accommodations and Strategies Goal 6.3");
-	var goalAccommodation6_3 = document.getElementById("goalStrategy6_3");
-	sessionStorage.setItem("Accommodations and Strategies Goal 6.3", goalAccommodation6_3.options[goalAccommodation6_3.selectedIndex].text);
 
 	return location.href = "./Page_4.html";
 }
@@ -645,85 +487,8 @@ function shortTermAccomodation4_2(){
 	document.getElementById("goalStrategy4_3").style.display = "none";
 }
 
-
 function shortTermAccomodation4_3(){
 	document.getElementById("goalStrategy4_3").style.display = "block";
 	document.getElementById("goalStrategy4_2").style.display = "none";
 	document.getElementById("goalStrategy4_1").style.display = "none";
-}
-
-
-function shortTermObjective5_1(){
-	document.getElementById("shortTermObjective5_1").style.display = "block";
-	document.getElementById("shortTermObjective5_2").style.display = "none";
-	document.getElementById("shortTermObjective5_3").style.display = "none";
-}
-
-function shortTermObjective5_2(){
-	document.getElementById("shortTermObjective5_2").style.display = "block";
-	document.getElementById("shortTermObjective5_1").style.display = "none";
-	document.getElementById("shortTermObjective5_3").style.display = "none";
-}
-
-function shortTermObjective5_3(){
-	document.getElementById("shortTermObjective5_3").style.display = "block";
-	document.getElementById("shortTermObjective5_2").style.display = "none";
-	document.getElementById("shortTermObjective5_1").style.display = "none";
-}
-
-function shortTermAccomodation5_1(){
-	document.getElementById("goalStrategy5_1").style.display = "block";
-	document.getElementById("goalStrategy5_2").style.display = "none";
-	document.getElementById("goalStrategy5_3").style.display = "none";
-}
-
-function shortTermAccomodation5_2(){
-	document.getElementById("goalStrategy5_2").style.display = "block";
-	document.getElementById("goalStrategy5_1").style.display = "none";
-	document.getElementById("goalStrategy5_3").style.display = "none";
-}
-
-
-function shortTermAccomodation5_3(){
-	document.getElementById("goalStrategy5_3").style.display = "block";
-	document.getElementById("goalStrategy5_2").style.display = "none";
-	document.getElementById("goalStrategy5_1").style.display = "none";
-}
-
-
-function shortTermObjective6_1(){
-	document.getElementById("shortTermObjective6_1").style.display = "block";
-	document.getElementById("shortTermObjective6_2").style.display = "none";
-	document.getElementById("shortTermObjective6_3").style.display = "none";
-}
-
-function shortTermObjective6_2(){
-	document.getElementById("shortTermObjective6_2").style.display = "block";
-	document.getElementById("shortTermObjective6_1").style.display = "none";
-	document.getElementById("shortTermObjective6_3").style.display = "none";
-}
-
-function shortTermObjective6_3(){
-	document.getElementById("shortTermObjective6_3").style.display = "block";
-	document.getElementById("shortTermObjective6_2").style.display = "none";
-	document.getElementById("shortTermObjective6_1").style.display = "none";
-}
-
-function shortTermAccomodation6_1(){
-	document.getElementById("goalStrategy6_1").style.display = "block";
-	document.getElementById("goalStrategy6_2").style.display = "none";
-	document.getElementById("goalStrategy6_3").style.display = "none";
-}
-
-function shortTermAccomodation6_2(){
-	document.getElementById("goalStrategy6_2").style.display = "block";
-	document.getElementById("goalStrategy6_1").style.display = "none";
-	document.getElementById("goalStrategy6_3").style.display = "none";
-}
-
-
-function shortTermAccomodation6_3(){
-	document.getElementById("goalStrategy6_3").style.display = "block";
-	document.getElementById("goalStrategy6_2").style.display = "none";
-	document.getElementById("goalStrategy6_1").style.display = "none";
 }
