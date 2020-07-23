@@ -345,6 +345,12 @@ function createForm(){
 	fields['Footer 10'] = [sessionStorage.getItem("Child Last Name") + ", " + sessionStorage.getItem("Child First Name")];
 	fields['Footer 11'] = [sessionStorage.getItem("Child Last Name") + ", " + sessionStorage.getItem("Child First Name")];
 	
+	//Fill Goal End Dates
+	fields['Goal 1 End Date'] = ['2021'];
+	fields['Goal 2 End Date'] = ['2021'];
+	fields['Goal 3 End Date'] = ['2021'];
+	fields['Goal 4 End Date'] = ['2021'];
+	
 	//Create Output PDF	
 	var finalBuffer = pdfform().transform(templatePDF, fields);
 	var finalPDF = new Blob([finalBuffer], {type: 'application/pdf'});
@@ -735,6 +741,30 @@ function submitSignature(){
 	sig_folder.file(file_name, sig_blob);
 	
 	document.getElementById("SignaturePad").style.display = "none";
+	
+	//Update Signature Button If Signed
+	if(currentSignature == "Parent_1/Initial_Signature"){
+		document.getElementById("Parent_1_Initial").className = "btn btn-success";
+	}else if(currentSignature == "Parent_2/Initial_Signature"){
+		document.getElementById("Parent_2_Initial").className = "btn btn-success";
+	}else if(currentSignature == "Preschool_Teacher/Initial_Signature"){
+		document.getElementById("Preschool_Teacher_Initial").className = "btn btn-success";
+	}else if(currentSignature == "Certificated_Teacher/Initial_Signature"){
+		document.getElementById("Certificated_Teacher_Initial").className = "btn btn-success";
+	}else if(currentSignature == "Developmental_Assistant/Initial_Signature"){
+		document.getElementById("Developmental_Assistant_Initial").className = "btn btn-success";
+	}else if(currentSignature == "Speech_Language_Pathologist/Initial_Signature"){
+		document.getElementById("Speech_Pathologist_Initial").className = "btn btn-success";
+	}else if(currentSignature == "Occupational_Therapist/Initial_Signature"){
+		document.getElementById("Occupational_Therapist_Initial").className = "btn btn-success";
+	}else if(currentSignature == "Physiotherapist/Initial_Signature"){
+		document.getElementById("Physiotherapist_Initial").className = "btn btn-success";
+	}else if(currentSignature == "Psychologist/Initial_Signature"){
+		document.getElementById("Psychologist_Initial").className = "btn btn-success";
+	}else if(currentSignature == "Child_Developmental_Specialist/Initial_Signature"){
+		document.getElementById("Developmental_Specialist_Initial").className = "btn btn-success";
+	}
+	
 }
 
 
