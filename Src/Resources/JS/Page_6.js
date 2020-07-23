@@ -1,9 +1,22 @@
 
+//Folder for Signatures
+var sig_folder;
+
+//Global Signature Pad Variables
+var signaturePad;
+var currentSignature;
+
+//Global Variable for Number of Goals used
+var num_goals;
+
 function createForm(){
 	
 	//Handle PDF Form Data
 	var templatePDF = this.response;
 	var fields = pdfform().list_fields(templatePDF);
+	
+	//Debugging Output
+	//console.log(fields);
 	
 	//Create Buffer With Form Variables
 	//Page 1 --------------------------
@@ -200,23 +213,87 @@ function createForm(){
 	fields['First Assessment Review Date'] = [sessionStorage.getItem("First Review Date")];	
 	fields['Final Assessment Review Date'] = [sessionStorage.getItem("Final Review Date")];
 	
-	//Page 5 --------------------------
-	fields['Child Name Signature Page'] = [sessionStorage.getItem("Child First Name") + " " + sessionStorage.getItem("Child Last Name")];
-	fields['Academic Year Signature Page'] = ["2020 - 2021"];
-	
-	//Fill First Goal (Always Assumes that 1 Goal is provided)
-	fields['Long Term Goal 1'] = [sessionStorage.getItem("Long Term Goal 1")];
-	fields['Baseline Goal 1'] = [sessionStorage.getItem("Baseline Goal 1")];
-	fields['Goal 1 Short Term 1'] = [sessionStorage.getItem("Short Term Objective Goal 1.1")];
-	fields['Goal 1 Short Term 2'] = [sessionStorage.getItem("Short Term Objective Goal 1.2")];
-	fields['Goal 1 Short Term 3'] = [sessionStorage.getItem("Short Term Objective Goal 1.3")];
-	fields['Goal 1 Review'] = [sessionStorage.getItem("Objective Review Goal 1")];
-	fields['Goal 1 Accommodation 1'] = [sessionStorage.getItem("Accommodations and Strategies Goal 1.1")];
-	fields['Goal 1 Accommodation 2'] = [sessionStorage.getItem("Accommodations and Strategies Goal 1.2")];
-	fields['Goal 1 Accommodation 3'] = [sessionStorage.getItem("Accommodations and Strategies Goal 1.3")];
+	//Check Goal 1
+	if(num_goals == 1){
+		fields['Long Term Goal 4'] = [sessionStorage.getItem("Long Term Goal 1")];
+		fields['Baseline Goal 4'] = [sessionStorage.getItem("Baseline Goal 1")];
+		fields['Goal 4 Short Term 1'] = [sessionStorage.getItem("Short Term Objective Goal 1.1")];
+		fields['Goal 4 Short Term 2'] = [sessionStorage.getItem("Short Term Objective Goal 1.2")];
+		fields['Goal 4 Short Term 3'] = [sessionStorage.getItem("Short Term Objective Goal 1.3")];
+		fields['Goal 4 Review'] = [sessionStorage.getItem("Objective Review Goal 1")];
+		fields['Goal 4 Accommodation 1'] = [sessionStorage.getItem("Accommodations and Strategies Goal 1.1")];
+		fields['Goal 4 Accommodation 2'] = [sessionStorage.getItem("Accommodations and Strategies Goal 1.2")];
+		fields['Goal 4 Accommodation 3'] = [sessionStorage.getItem("Accommodations and Strategies Goal 1.3")];
+	}
 	
 	//Check Goal 2
-	if(sessionStorage.getItem("Long Term Goal 2") != ["None"]){
+	if(num_goals == 2){
+		fields['Long Term Goal 3'] = [sessionStorage.getItem("Long Term Goal 1")];
+		fields['Baseline Goal 3'] = [sessionStorage.getItem("Baseline Goal 1")];
+		fields['Goal 3 Short Term 1'] = [sessionStorage.getItem("Short Term Objective Goal 1.1")];
+		fields['Goal 3 Short Term 2'] = [sessionStorage.getItem("Short Term Objective Goal 1.2")];
+		fields['Goal 3 Short Term 3'] = [sessionStorage.getItem("Short Term Objective Goal 1.3")];
+		fields['Goal 3 Review'] = [sessionStorage.getItem("Objective Review Goal 1")];
+		fields['Goal 3 Accommodation 1'] = [sessionStorage.getItem("Accommodations and Strategies Goal 1.1")];
+		fields['Goal 3 Accommodation 2'] = [sessionStorage.getItem("Accommodations and Strategies Goal 1.2")];
+		fields['Goal 3 Accommodation 3'] = [sessionStorage.getItem("Accommodations and Strategies Goal 1.3")];
+		
+		fields['Long Term Goal 4'] = [sessionStorage.getItem("Long Term Goal 2")];
+		fields['Baseline Goal 4'] = [sessionStorage.getItem("Baseline Goal 2")];
+		fields['Goal 4 Short Term 1'] = [sessionStorage.getItem("Short Term Objective Goal 2.1")];
+		fields['Goal 4 Short Term 2'] = [sessionStorage.getItem("Short Term Objective Goal 2.2")];
+		fields['Goal 4 Short Term 3'] = [sessionStorage.getItem("Short Term Objective Goal 2.3")];
+		fields['Goal 4 Review'] = [sessionStorage.getItem("Objective Review Goal 2")];
+		fields['Goal 4 Accommodation 1'] = [sessionStorage.getItem("Accommodations and Strategies Goal 2.1")];
+		fields['Goal 4 Accommodation 2'] = [sessionStorage.getItem("Accommodations and Strategies Goal 2.2")];
+		fields['Goal 4 Accommodation 3'] = [sessionStorage.getItem("Accommodations and Strategies Goal 2.3")];
+	}
+	
+	//Check Goal 3
+	if(num_goals == 3){
+		fields['Long Term Goal 2'] = [sessionStorage.getItem("Long Term Goal 1")];
+		fields['Baseline Goal 2'] = [sessionStorage.getItem("Baseline Goal 1")];
+		fields['Goal 2 Short Term 1'] = [sessionStorage.getItem("Short Term Objective Goal 1.1")];
+		fields['Goal 2 Short Term 2'] = [sessionStorage.getItem("Short Term Objective Goal 1.2")];
+		fields['Goal 2 Short Term 3'] = [sessionStorage.getItem("Short Term Objective Goal 1.3")];
+		fields['Goal 2 Review'] = [sessionStorage.getItem("Objective Review Goal 1")];
+		fields['Goal 2 Accommodation 1'] = [sessionStorage.getItem("Accommodations and Strategies Goal 1.1")];
+		fields['Goal 2 Accommodation 2'] = [sessionStorage.getItem("Accommodations and Strategies Goal 1.2")];
+		fields['Goal 2 Accommodation 3'] = [sessionStorage.getItem("Accommodations and Strategies Goal 1.3")];
+		
+		fields['Long Term Goal 3'] = [sessionStorage.getItem("Long Term Goal 2")];
+		fields['Baseline Goal 3'] = [sessionStorage.getItem("Baseline Goal 2")];
+		fields['Goal 3 Short Term 1'] = [sessionStorage.getItem("Short Term Objective Goal 2.1")];
+		fields['Goal 3 Short Term 2'] = [sessionStorage.getItem("Short Term Objective Goal 2.2")];
+		fields['Goal 3 Short Term 3'] = [sessionStorage.getItem("Short Term Objective Goal 2.3")];
+		fields['Goal 3 Review'] = [sessionStorage.getItem("Objective Review Goal 2")];
+		fields['Goal 3 Accommodation 1'] = [sessionStorage.getItem("Accommodations and Strategies Goal 2.1")];
+		fields['Goal 3 Accommodation 2'] = [sessionStorage.getItem("Accommodations and Strategies Goal 2.2")];
+		fields['Goal 3 Accommodation 3'] = [sessionStorage.getItem("Accommodations and Strategies Goal 2.3")];
+		
+		fields['Long Term Goal 4'] = [sessionStorage.getItem("Long Term Goal 3")];
+		fields['Baseline Goal 4'] = [sessionStorage.getItem("Baseline Goal 3")];
+		fields['Goal 4 Short Term 1'] = [sessionStorage.getItem("Short Term Objective Goal 3.1")];
+		fields['Goal 4 Short Term 2'] = [sessionStorage.getItem("Short Term Objective Goal 3.2")];
+		fields['Goal 4 Short Term 3'] = [sessionStorage.getItem("Short Term Objective Goal 3.3")];
+		fields['Goal 4 Review'] = [sessionStorage.getItem("Objective Review Goal 3")];
+		fields['Goal 4 Accommodation 1'] = [sessionStorage.getItem("Accommodations and Strategies Goal 3.1")];
+		fields['Goal 4 Accommodation 2'] = [sessionStorage.getItem("Accommodations and Strategies Goal 3.2")];
+		fields['Goal 4 Accommodation 3'] = [sessionStorage.getItem("Accommodations and Strategies Goal 3.3")];
+	}
+	
+	//Check Goal 4
+	if(num_goals == 4){
+		fields['Long Term Goal 1'] = [sessionStorage.getItem("Long Term Goal 1")];
+		fields['Baseline Goal 1'] = [sessionStorage.getItem("Baseline Goal 1")];
+		fields['Goal 1 Short Term 1'] = [sessionStorage.getItem("Short Term Objective Goal 1.1")];
+		fields['Goal 1 Short Term 2'] = [sessionStorage.getItem("Short Term Objective Goal 1.2")];
+		fields['Goal 1 Short Term 3'] = [sessionStorage.getItem("Short Term Objective Goal 1.3")];
+		fields['Goal 1 Review'] = [sessionStorage.getItem("Objective Review Goal 1")];
+		fields['Goal 1 Accommodation 1'] = [sessionStorage.getItem("Accommodations and Strategies Goal 1.1")];
+		fields['Goal 1 Accommodation 2'] = [sessionStorage.getItem("Accommodations and Strategies Goal 1.2")];
+		fields['Goal 1 Accommodation 3'] = [sessionStorage.getItem("Accommodations and Strategies Goal 1.3")];
+		
 		fields['Long Term Goal 2'] = [sessionStorage.getItem("Long Term Goal 2")];
 		fields['Baseline Goal 2'] = [sessionStorage.getItem("Baseline Goal 2")];
 		fields['Goal 2 Short Term 1'] = [sessionStorage.getItem("Short Term Objective Goal 2.1")];
@@ -226,10 +303,7 @@ function createForm(){
 		fields['Goal 2 Accommodation 1'] = [sessionStorage.getItem("Accommodations and Strategies Goal 2.1")];
 		fields['Goal 2 Accommodation 2'] = [sessionStorage.getItem("Accommodations and Strategies Goal 2.2")];
 		fields['Goal 2 Accommodation 3'] = [sessionStorage.getItem("Accommodations and Strategies Goal 2.3")];
-	}
-	
-	//Check Goal 3
-	if(sessionStorage.getItem("Long Term Goal 3") != ["None"]){
+		
 		fields['Long Term Goal 3'] = [sessionStorage.getItem("Long Term Goal 3")];
 		fields['Baseline Goal 3'] = [sessionStorage.getItem("Baseline Goal 3")];
 		fields['Goal 3 Short Term 1'] = [sessionStorage.getItem("Short Term Objective Goal 3.1")];
@@ -238,11 +312,8 @@ function createForm(){
 		fields['Goal 3 Review'] = [sessionStorage.getItem("Objective Review Goal 3")];
 		fields['Goal 3 Accommodation 1'] = [sessionStorage.getItem("Accommodations and Strategies Goal 3.1")];
 		fields['Goal 3 Accommodation 2'] = [sessionStorage.getItem("Accommodations and Strategies Goal 3.2")];
-		fields['Goal 3 Accommodation 3'] = [sessionStorage.getItem("Accommodations and Strategies Goal 3.3")];
-	}
-	
-	//Check Goal 4
-	if(sessionStorage.getItem("Long Term Goal 4") != ["None"]){
+		fields['Goal 3 Accommodation 3'] = [sessionStorage.getItem("Accommodations and Strategies Goal 3.3")];		
+
 		fields['Long Term Goal 4'] = [sessionStorage.getItem("Long Term Goal 4")];
 		fields['Baseline Goal 4'] = [sessionStorage.getItem("Baseline Goal 4")];
 		fields['Goal 4 Short Term 1'] = [sessionStorage.getItem("Short Term Objective Goal 4.1")];
@@ -262,7 +333,6 @@ function createForm(){
 	fields['Kindergarten Consultant Date'] = [sessionStorage.getItem("Kindergarten Consultant/Strategist Final Date")];
 	fields['Kindergarten Representative Date'] = [sessionStorage.getItem("Kindergarten Representative Final Date")];
 	
-	
 	//Fill PDF Footers
 	fields['Footer 2'] = [sessionStorage.getItem("Child Last Name") + ", " + sessionStorage.getItem("Child First Name")];
 	fields['Footer 3'] = [sessionStorage.getItem("Child Last Name") + ", " + sessionStorage.getItem("Child First Name")];
@@ -275,19 +345,28 @@ function createForm(){
 	fields['Footer 10'] = [sessionStorage.getItem("Child Last Name") + ", " + sessionStorage.getItem("Child First Name")];
 	fields['Footer 11'] = [sessionStorage.getItem("Child Last Name") + ", " + sessionStorage.getItem("Child First Name")];
 	
-	console.log(fields);
-	
-	//Create Output PDF
+	//Create Output PDF	
 	var finalBuffer = pdfform().transform(templatePDF, fields);
 	var finalPDF = new Blob([finalBuffer], {type: 'application/pdf'});
 	
+	//Generate File Names
 	var date = new Date();
-	var file_name = [sessionStorage.getItem("Child First Name") + "_" + sessionStorage.getItem("Child Middle Name") + "_" + sessionStorage.getItem("Child Last Name") + "_" + date.getDay() + "_" + date.getMonth() + "_" + date.getFullYear() + "_" + date.getHours() + 
-					"_" + date.getMinutes() + ".pdf"];
+	var base_name = [sessionStorage.getItem("Child First Name") + "_" + sessionStorage.getItem("Child Middle Name") + "_" + sessionStorage.getItem("Child Last Name") + "_" + date.getDate() + "_" + date.getMonth() + "_" + date.getFullYear() + "_" + date.getHours() + 
+					"_" + date.getMinutes()];
+	var file_name = base_name + ".pdf";
+	var folder_name = base_name + ".zip";
 	
-	//Save Output PDF
-	saveAs(finalPDF, file_name);
+	final_zip.file(file_name, finalPDF);
+	
+	//Save Output ZIP Folder
+	final_zip.generateAsync({type:"blob"}).then(function (blob) { 
+        saveAs(blob, folder_name);                          	
+    }, function (err) {
+        console.log("Error!");
+    });
 }
+
+
 
 function submitForm(){
 	
@@ -297,18 +376,16 @@ function submitForm(){
 	
 	//Check for Number of Goals
 	var formURL = "https://mdatz.github.io/Src/Resources/Forms/Template_4_Goals.pdf";
-	if(sessionStorage.getItem("Long Term Goal 4") == ["None"]){
-		formURL = "https://mdatz.github.io/Src/Resources/Forms/Template_3_Goals.pdf"
-	}
-	if(sessionStorage.getItem("Long Term Goal 3") == ["None"]){
-		formURL = "https://mdatz.github.io/Src/Resources/Forms/Template_2_Goals.pdf"
-	}
-	if(sessionStorage.getItem("Long Term Goal 2") == ["None"]){
-		formURL = "https://mdatz.github.io/Src/Resources/Forms/Template_1_Goals.pdf"
-	}
 	
-	//Remove when all goal Templates Created
-	var formURL = "https://mdatz.github.io/Src/Resources/Forms/Template_4_Goals.pdf";
+	if(num_goals == 3){
+		formURL = "https://mdatz.github.io/Src/Resources/Forms/Template_3_Goals.pdf";
+	}
+	if(num_goals == 2){
+		formURL = "https://mdatz.github.io/Src/Resources/Forms/Template_2_Goals.pdf";
+	}
+	if(num_goals == 1){
+		formURL = "https://mdatz.github.io/Src/Resources/Forms/Template_1_Goals.pdf";
+	}
 	
 	//Send Request for Hosted PDF Template
 	pdfhttp.open("GET", formURL, true);
@@ -318,6 +395,22 @@ function submitForm(){
 }
 
 function fillExisting(){
+	
+	final_zip = new JSZip();
+	sig_folder = final_zip.folder("Signatures");
+	
+	//Check for Number of Goals
+	num_goals = 4;
+	
+	if(sessionStorage.getItem("Long Term Goal 4") == ["None"]){
+		num_goals = 3;
+	}
+	if(sessionStorage.getItem("Long Term Goal 3") == ["None"]){
+		num_goals = 2;
+	}
+	if(sessionStorage.getItem("Long Term Goal 2") == ["None"]){
+		num_goals = 1;
+	}
 	
 	//If Form Variables still Exist, fill the HTML Elements with the Stored Values
 	document.getElementById("parentGaurdian1Initial").value = sessionStorage.getItem("Parent/Gaurdian 1 Initial Review");
@@ -583,10 +676,9 @@ function previous(){
 	location.href = "./Page_5.html";
 }
 
-//Global Signature Pad Variable
-var signaturePad;
-
-function openSignaturePad(){
+function openSignaturePad(argument){
+	
+	currentSignature = argument;
 	document.getElementById("SignaturePad").style.display = "block";
 	
 	var canvas = document.getElementById("signatureCanvas");
@@ -618,8 +710,31 @@ function clearSignature(){
 	signaturePad.clear();
 }
 
+function dataURItoBlob(dataURI) {
+
+    var byteString = atob(dataURI.split(',')[1]);
+
+    // separate out the mime component
+    var mimeString = dataURI.split(',')[0].split(':')[1].split(';')[0];
+
+    // write the bytes of the string to an ArrayBuffer
+    var ab = new ArrayBuffer(byteString.length);
+    var ia = new Uint8Array(ab);
+    for (var i = 0; i < byteString.length; i++) {
+        ia[i] = byteString.charCodeAt(i);
+    }
+
+    return new Blob([ab], {type: mimeString});
+}
+
 function submitSignature(){
 	
+	//Save Image Representation to Signature Folder
+	var sig_blob = dataURItoBlob(signaturePad.toDataURL());
+	var file_name = currentSignature + ".png";
+	sig_folder.file(file_name, sig_blob);
+	
+	document.getElementById("SignaturePad").style.display = "none";
 }
 
 
