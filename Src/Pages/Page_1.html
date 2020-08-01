@@ -10,6 +10,7 @@
 	<link rel="stylesheet" href="../Resources/CSS/flatpickr.min.css">
 	<script src="../Resources/JS/flatpickr.js"></script>
 	<script type="text/javascript" src="../Resources/JS/Page_1.js"></script>
+	<script type="text/javascript" src="../Resources/JS/pdfform.minipdf.dist.js"></script>
 </head>
 
 <body onload="fillExisting()">
@@ -75,15 +76,15 @@
 					<div class="form-group">
 					<center><label for="exampleSelect1" style="margin-top:10px;"><b>Eligibility Code</b></label></center>
 					<select class="form-control" id="elegibilityCode">
-						<option value="Code 30 - Mild to Moderate Disability">Code 30: Mild to Moderate Disability</option>
-						<option value="Code 41 - Severe Intellectual Disability">Code 41: Severe Intellectual Disability</option>
-						<option value="Code 42 - Severe Emotional/Behavioural Disability">Code 42: Severe Emotional/Behavioural Disability</option>
-						<option value="Code 43 - Severe Multiple Disability">Code 43: Severe Multiple Disability</option>
-						<option value="Code 44 - Severe Physical or Medical Disability">Code 44: Severe Physical or Medical Disability</option>
-						<option value="Code 45 - Severe Deafness">Code 45: Severe Deafness</option>
-						<option value="Code 46 - Severe Blindness">Code 46: Severe Blindness</option>
-						<option value="Code 47 - Severe Language Delay">Code 47: Severe Language Delay</option>
-						<option value="Code 80 - Gifted and Talented">Code 80: Gifted and Talented</option>
+						<option value="30">Code 30: Mild to Moderate Disability</option>
+						<option value="41">Code 41: Severe Intellectual Disability</option>
+						<option value="42">Code 42: Severe Emotional/Behavioural Disability</option>
+						<option value="43">Code 43: Severe Multiple Disability</option>
+						<option value="44">Code 44: Severe Physical or Medical Disability</option>
+						<option value="45">Code 45: Severe Deafness</option>
+						<option value="46">Code 46: Severe Blindness</option>
+						<option value="47">Code 47: Severe Language Delay</option>
+						<option value="80">Code 80: Gifted and Talented</option>
 					</select>
 					</div>
 					
@@ -98,7 +99,8 @@
 				
 				<div class="upload">
 					<center>
-					<button type="button" class="btn btn-success btn-lg">Edit Previous Form</button>
+					<button type="button" class="btn btn-success btn-lg" onclick="document.getElementById('form_upload').click();">Edit Previous Form</button>
+					<input type="file" style="display:none;" id="form_upload" onchange="loadForm(this)"/>
 					</center>
 				</div>
 				

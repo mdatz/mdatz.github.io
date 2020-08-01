@@ -350,19 +350,10 @@ function createForm(){
 	
 	//Generate File Names
 	var date = new Date();
-	var base_name = [sessionStorage.getItem("Child First Name") + "_" + sessionStorage.getItem("Child Middle Name") + "_" + sessionStorage.getItem("Child Last Name") + "_" + date.getDate() + "_" + date.getMonth() + "_" + date.getFullYear() + "_" + date.getHours() + 
-					"_" + date.getMinutes()];
-	var file_name = base_name + ".pdf";
-	var folder_name = base_name + ".zip";
+	var file_name = [sessionStorage.getItem("Child First Name") + "_" + sessionStorage.getItem("Child Middle Name") + "_" + sessionStorage.getItem("Child Last Name") + "_" + date.getDate() + "_" + date.getMonth() + "_" + date.getFullYear() + "_" + date.getHours() + 
+					"_" + date.getMinutes() + ".pdf"];
 	
-	final_zip.file(file_name, finalPDF);
-	
-	//Save Output ZIP Folder
-	final_zip.generateAsync({type:"blob"}).then(function (blob) { 
-        saveAs(blob, folder_name);                          	
-    }, function (err) {
-        console.log("Error!");
-    });
+	saveAs(finalPDF, file_name); 
 }
 
 

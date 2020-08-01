@@ -110,6 +110,21 @@ function next() {
 	return location.href = "./Page_2.html";
 }
 
+function loadForm(input){
+	var input_form = input.files[0];
+	
+	var reader = new FileReader();
+	reader.onload = function(){
+		var fields = pdfform().list_fields(reader.result);
+		console.log(fields);
+		
+		//Refresh Page Contents
+		fillExisting();
+	}
+	
+	reader.readAsArrayBuffer(input_form);
+}
+
 function previous() {
 	//No Previous Page for Page 1
 }
