@@ -6,381 +6,283 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
 	<link rel="icon" href="../Resources/Images/Icon.ico">
 	<link rel="stylesheet" href="../Resources/CSS/bootstrap.css">
-	<link rel="stylesheet" href="../Resources/CSS/custom.css">
+	<link rel="stylesheet" href="../Resources/CSS/Page_6.css">
 	<link rel="stylesheet" href="../Resources/CSS/flatpickr.min.css">
-	<script src="../Resources/JS/flatpickr.js"></script>
+	<script type="text/javascript" src="../Resources/JS/FileSaver.js"></script>
+	<script type="text/javascript" src="../Resources/JS/pdfform.minipdf.dist.js"></script>
+	<script type="text/javascript" src="../Resources/JS/flatpickr.js"></script>
+	<script type="text/javascript" src="../Resources/JS/jszip.js"></script>
 	<script type="text/javascript" src="../Resources/JS/Page_6.js"></script>
-	<script src="../Resources/JS/signature_pad.min.js"></script>
-	<script src="../Resources/JS/pdfform.minipdf.dist.js"></script>
-	<script src="../Resources/JS/jszip.js"></script>
-	<script src="../Resources/JS/FileSaver.js"></script>
 </head>
 
 <body onload="fillExisting()">
-	<div class="jumbotron" style="width:100vw;">
-		<label class="col-form-label" for="progress" style="margin-top:-20px;"><h3>IPP Form Progress</h3></label>
-		<div class="progress">
-			<div class="progress-bar progress-bar-striped progress-bar-animated" role="progressbar" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100" style="width: 100%"></div>
+	
+	<!--Header & Progress Bar -->
+	<header>
+		<div class="header-label">
+			<label class="col-form-label" for="progress" name="header_label"><h3><b>IPP Form Progress</b></h3></label>
 		</div>
-		
-		<br></br>
-		<div class="inline">
-		<div class="left">
-		<div class="card border-primary mb-3" style="width: 95vw; height: 73vh;">
-			<div class="card-header"><h3>IPP Meeting and Attendance Signatures</h3></div>
+		<div class="progress">
+			<div class="progress-bar progress-bar-striped progress-bar-animated" role="progressbar" name="progress" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100" style="width: 100%"></div>
+		</div>
+	</header>
+	
+	
+	<!-- Main Body -->
+	<div class="main-container">
+		<div class="panel-A">
+			<div class="card border-primary mb-3">
+			<div class="card-header"><h3>IPP Meeting and Attendance Signatures I</h3></div>
 			<div class="card-body">
 				
-				<div class="inline">
-				<div class="card border-info mb-3" style="width: 39vw; height: 62vh;margin-left:1vw;">
-				<div class="card-body">
-				
-					<div class="inline">
-						<h4 style="margin-top:3vh;width:15vw;"><b>Parent/Gaurdian 1</b></h4>
-					</div>
-					<div class="inline">
-					<div class="left">
-						<label class="col-form-label" for="inputDefault" style="margin-top:-10px;"><b>Initial Review</b></label>
-						<input type="text" class="form-control" placeholder="DD/MM/YYYY" id="parentGaurdian1Initial" style="width:6vw;" data-input>
-					</div>
-					</div>
-					<div class="inline">
-					<div class="left">
-						<label class="col-form-label" for="inputDefault" style="margin-top:-10px;"><b>Final Review</b></label>
-						<input type="text" class="form-control" placeholder="DD/MM/YYYY" id="parentGaurdian1Final" style="width:6vw;">
-					</div>
-					</div>
-					<div class="inline">
-					<div class="left">
-						<button id="Parent_1_Initial" type="button" class="btn btn-warning" style="margin-left:25px;margin-top:28px;" onclick="openSignaturePad('Parent_1/Initial_Signature')">Signature</button>
-					</div>
-					</div>
-					
-					<div class="clear"></div>
-				
-					<div class="inline">
-						<h4 style="margin-top:5vh;width:15vw;"><b>Parent/Gaurdian 2</b></h4>
-					</div>
-					<div class="inline">
-					<div class="left">
-						<label class="col-form-label" for="inputDefault" style="margin-top:10px;"><b>Initial Review</b></label>
-						<input type="text" class="form-control" placeholder="DD/MM/YYYY" id="parentGaurdian2Initial" style="width:6vw;">
-					</div>
-					</div>
-					<div class="inline">
-					<div class="left">
-						<label class="col-form-label" for="inputDefault" style="margin-top:10px;"><b>Final Review</b></label>
-						<input type="text" class="form-control" placeholder="DD/MM/YYYY" id="parentGaurdian2Final" style="width:6vw;">
-					</div>
-					</div>
-					<div class="inline">
-					<div class="left">
-						<button id="Parent_2_Initial" type="button" class="btn btn-warning" style="margin-left:25px;margin-top:45px;" onclick="openSignaturePad('Parent_2/Initial_Signature')">Signature</button>
-					</div>
-					</div>
-	
-					<div class="clear"></div>
-
-					<div class="inline">
-						<h4 style="margin-top:5vh;width:15vw;"><b>Preschool Teacher</b></h4>
-					</div>
-					<div class="inline">
-					<div class="left">
-						<label class="col-form-label" for="inputDefault" style="margin-top:10px;"><b>Initial Review</b></label>
-						<input type="text" class="form-control" placeholder="DD/MM/YYYY" id="preschoolTeacherInitial" style="width:6vw;">
-					</div>
-					</div>
-					<div class="inline">
-					<div class="left">
-						<label class="col-form-label" for="inputDefault" style="margin-top:10px;"><b>Final Review</b></label>
-						<input type="text" class="form-control" placeholder="DD/MM/YYYY" id="preschoolTeacherFinal" style="width:6vw;">
-					</div>
-					</div>
-					<div class="inline">
-					<div class="left">
-						<button id="Preschool_Teacher_Initial" type="button" class="btn btn-warning" style="margin-left:25px;margin-top:45px;" onclick="openSignaturePad('Preschool_Teacher/Initial_Signature')">Signature</button>
-					</div>
-					</div>
-
-
-					<div class="clear"></div>
-
-					<div class="inline">
-						<h4 style="margin-top:5vh;width:15vw;"><b>Certificated Teacher</b></h4>
-					</div>
-					<div class="inline">
-					<div class="left">
-						<label class="col-form-label" for="inputDefault" style="margin-top:10px;"><b>Initial Review</b></label>
-						<input type="text" class="form-control" placeholder="DD/MM/YYYY" id="certificatedTeacherInitial" style="width:6vw;">
-					</div>
-					</div>
-					<div class="inline">
-					<div class="left">
-						<label class="col-form-label" for="inputDefault" style="margin-top:10px;"><b>Final Review</b></label>
-						<input type="text" class="form-control" placeholder="DD/MM/YYYY" id="certificatedTeacherFinal" style="width:6vw;">
-					</div>
-					</div>
-					<div class="inline">
-					<div class="left">
-						<button id="Certificated_Teacher_Initial" type="button" class="btn btn-warning" style="margin-left:25px;margin-top:45px;" onclick="openSignaturePad('Certificated_Teacher/Initial_Signature')">Signature</button>
-					</div>
-					</div>
-
-					<div class="clear"></div>
-
-					<div class="inline">
-						<h4 style="margin-top:5vh;width:15vw;"><b>Developmental Assistant</b></h4>
-					</div>
-					<div class="inline">
-					<div class="left">
-						<label class="col-form-label" for="inputDefault" style="margin-top:10px;"><b>Initial Review</b></label>
-						<input type="text" class="form-control" placeholder="DD/MM/YYYY" id="developmentalAssistantInitial" style="width:6vw;">
-					</div>
-					</div>
-					<div class="inline">
-					<div class="left">
-						<label class="col-form-label" for="inputDefault" style="margin-top:10px;"><b>Final Review</b></label>
-						<input type="text" class="form-control" placeholder="DD/MM/YYYY" id="developmentalAssistantFinal" style="width:6vw;">
-					</div>
-					</div>
-					<div class="inline">
-					<div class="left">
-						<button id="Developmental_Assistant_Initial" type="button" class="btn btn-warning" style="margin-left:25px;margin-top:45px;" onclick="openSignaturePad('Developmental_Assistant/Initial_Signature')">Signature</button>
-					</div>
-					</div>
-
-					<div class="clear"></div>
-
-					<div class="inline">
-						<h4 style="margin-top:5vh;width:15vw;"><b>Speech-Language Pathologist</b></h4>
-					</div>
-					<div class="inline">
-					<div class="left">
-						<label class="col-form-label" for="inputDefault" style="margin-top:10px;"><b>Initial Review</b></label>
-						<input type="text" class="form-control" placeholder="DD/MM/YYYY" id="SLPathologistInitial" style="width:6vw;">
-					</div>
-					</div>
-					<div class="inline">
-					<div class="left">
-						<label class="col-form-label" for="inputDefault" style="margin-top:10px;"><b>Final Review</b></label>
-						<input type="text" class="form-control" placeholder="DD/MM/YYYY" id="SLPathologistFinal" style="width:6vw;">
-					</div>
-					</div>
-					<div class="inline">
-					<div class="left">
-						<button id="Speech_Pathologist_Initial" type="button" class="btn btn-warning" style="margin-left:25px;margin-top:45px;" onclick="openSignaturePad('Speech_Language_Pathologist/Initial_Signature')">Signature</button>
-					</div>
-					</div>
-
-
-					<div class="clear"></div>
-
-					<div class="inline">
-						<h4 style="margin-top:5vh;width:15vw;"><b>Occupational Therapist</b></h4>
-					</div>
-					<div class="inline">
-					<div class="left">
-						<label class="col-form-label" for="inputDefault" style="margin-top:10px;"><b>Initial Review</b></label>
-						<input type="text" class="form-control" placeholder="DD/MM/YYYY" id="occupationalTherapistInitial" style="width:6vw;">
-					</div>
-					</div>
-					<div class="inline">
-					<div class="left">
-						<label class="col-form-label" for="inputDefault" style="margin-top:10px;"><b>Final Review</b></label>
-						<input type="text" class="form-control" placeholder="DD/MM/YYYY" id="occupationalTherapistFinal" style="width:6vw;">
-					</div>
-					</div>
-					<div class="inline">
-					<div class="left">
-						<button id="Occupational_Therapist_Initial" type="button" class="btn btn-warning" style="margin-left:25px;margin-top:45px;" onclick="openSignaturePad('Occupational_Therapist/Initial_Signature')">Signature</button>
-					</div>
-					</div>
-
-				
+				<div class="header-group">
+						<h4 style="color:white"><b>.</b></h4>
+						<h4><b>Initial Review</b></h4>
+						<h4><b>Second Review</b></h4>
+						<h4><b>Final Review</b></h4>
 				</div>
-				</div>
+				<hr></hr>
+				<div class="attendance-group">
+					<div>
+						<h4>Parent/Gaurdian 1</h4>
+					</div>
+					<div class="attendance-button">
+						<button type="button" class="btn btn-warning" id="parentGaurdian1Initial">Check In</button>
+					</div>
+					<div class="attendance-button">
+						<button type="button" class="btn btn-warning" id="parentGaurdian1Second">Check In</button>
+					</div>
+					<div class="attendance-button">
+						<button type="button" class="btn btn-warning" id="parentGaurdian1Final">Check In</button>
+					</div>
 				</div>
 				
-				<div class="inline">
-				<div class="left">
-				<div class="card border-info mb-3" style="width: 39vw; height: 28vh;">
-				<div class="card-body">
-
-					<div class="inline">
-						<h4 style="margin-top:3vh;width:15vw;"><b>Physiotherapist</b></h4>
+				<div class="attendance-group">
+					<div>
+						<h4>Parent/Gaurdian 2</h4>
 					</div>
-					<div class="inline">
-					<div class="left">
-						<label class="col-form-label" for="inputDefault" style="margin-top:-10px;"><b>Initial Review</b></label>
-						<input type="text" class="form-control" placeholder="DD/MM/YYYY" id="physiotherapistInitial" style="width:6vw;">
+					<div class="attendance-button">
+						<button type="button" class="btn btn-warning" id="parentGaurdian1Initial">Check In</button>
 					</div>
+					<div class="attendance-button">
+						<button type="button" class="btn btn-warning" id="parentGaurdian1Second">Check In</button>
 					</div>
-					<div class="inline">
-					<div class="left">
-						<label class="col-form-label" for="inputDefault" style="margin-top:-10px;"><b>Final Review</b></label>
-						<input type="text" class="form-control" placeholder="DD/MM/YYYY" id="physiotherapistFinal" style="width:6vw;">
+					<div class="attendance-button">
+						<button type="button" class="btn btn-warning" id="parentGaurdian1Final">Check In</button>
 					</div>
-					</div>
-					<div class="inline">
-					<div class="left">
-						<button id="Physiotherapist_Initial" type="button" class="btn btn-warning" style="margin-left:25px;margin-top:28px;" onclick="openSignaturePad('Physiotherapist/Initial_Signature')">Signature</button>
-					</div>
-					</div>					
-
-					
-					<div class="clear"></div>
-				
-					<div class="inline">
-						<h4 style="margin-top:5vh;width:15vw;"><b>Psychologist</b></h4>
-					</div>
-					<div class="inline">
-					<div class="left">
-						<label class="col-form-label" for="inputDefault" style="margin-top:10px;"><b>Initial Review</b></label>
-						<input type="text" class="form-control" placeholder="DD/MM/YYYY" id="psychologistInitial" style="width:6vw;">
-					</div>
-					</div>
-					<div class="inline">
-					<div class="left">
-						<label class="col-form-label" for="inputDefault" style="margin-top:10px;"><b>Final Review</b></label>
-						<input type="text" class="form-control" placeholder="DD/MM/YYYY" id="psychologistFinal" style="width:6vw;">
-					</div>
-					</div>
-					<div class="inline">
-					<div class="left">
-						<button id="Psychologist_Initial" type="button" class="btn btn-warning" style="margin-left:25px;margin-top:45px;" onclick="openSignaturePad('Psychologist/Initial_Signature')">Signature</button>
-					</div>
-					</div>
-	
-	
-					<div class="clear"></div>
-
-					<div class="inline">
-						<h4 style="margin-top:5vh;width:15vw;"><b>Child Development Specialist</b></h4>
-					</div>
-					<div class="inline">
-					<div class="left">
-						<label class="col-form-label" for="inputDefault" style="margin-top:10px;"><b>Initial Review</b></label>
-						<input type="text" class="form-control" placeholder="DD/MM/YYYY" id="behaviourSpecialistInitial" style="width:6vw;">
-					</div>
-					</div>
-					<div class="inline">
-					<div class="left">
-						<label class="col-form-label" for="inputDefault" style="margin-top:10px;"><b>Final Review</b></label>
-						<input type="text" class="form-control" placeholder="DD/MM/YYYY" id="behaviourSpecialistFinal" style="width:6vw;">
-					</div>
-					</div>
-					<div class="inline">
-					<div class="left">
-						<button id="Developmental_Specialist_Initial" type="button" class="btn btn-warning" style="margin-left:25px;margin-top:45px;" onclick="openSignaturePad('Child_Developmental_Specialist/Initial_Signature')">Signature</button>
-					</div>
-					</div>
-					
-				</div>
-				</div>
-				</div>
 				</div>
 				
-
-				<div class="inline">
-				<div class="left">
-						<div class="card border-info mb-3" style="width:15vw;height:32.5vh;">
-						<div class="card-header"><h4>Transition Planning</h4></div>
-						<div class="card-body">
-							<label class="col-form-label" for="inputDefault" style="float:left;margin-right:1vw;"><b>Date</b></label>
-							<input type="text" class="form-control" placeholder="DD/MM/YYYY" id="date1" style="width:8vw;">
-							
-							<label class="col-form-label" for="inputDefault" style="margin-top:10px;"><b>Receiving Program</b></label>
-							<textarea class="form-control" id="transitionProgram" rows="5" style="resize:none;"></textarea>
-						</div>
-						</div>
-				</div>
+				<div class="attendance-group">
+					<div>
+						<h4>Preschool Teacher</h4>
+					</div>
+					<div class="attendance-button">
+						<button type="button" class="btn btn-warning" id="parentGaurdian1Initial">Check In</button>
+					</div>
+					<div class="attendance-button">
+						<button type="button" class="btn btn-warning" id="parentGaurdian1Second">Check In</button>
+					</div>
+					<div class="attendance-button">
+						<button type="button" class="btn btn-warning" id="parentGaurdian1Final">Check In</button>
+					</div>
 				</div>
 				
-				<div class="inline">
-				<div class="left">
-				<div class="card border-info mb-3" style="width: 35vw; height: 32.4vh;">
+				<div class="attendance-group">
+					<div>
+						<h4>Certificated Teacher</h4>
+					</div>
+					<div class="attendance-button">
+						<button type="button" class="btn btn-warning" id="parentGaurdian1Initial">Check In</button>
+					</div>
+					<div class="attendance-button">
+						<button type="button" class="btn btn-warning" id="parentGaurdian1Second">Check In</button>
+					</div>
+					<div class="attendance-button">
+						<button type="button" class="btn btn-warning" id="parentGaurdian1Final">Check In</button>
+					</div>
+				</div>
+				
+				<div class="attendance-group">
+					<div>
+						<h4>Developmental Assistant</h4>
+					</div>
+					<div class="attendance-button">
+						<button type="button" class="btn btn-warning" id="parentGaurdian1Initial">Check In</button>
+					</div>
+					<div class="attendance-button">
+						<button type="button" class="btn btn-warning" id="parentGaurdian1Second">Check In</button>
+					</div>
+					<div class="attendance-button">
+						<button type="button" class="btn btn-warning" id="parentGaurdian1Final">Check In</button>
+					</div>
+				</div>
+				
+				<div class="attendance-group">
+					<div>
+						<h4>Occupational Therapist</h4>
+					</div>
+					<div class="attendance-button">
+						<button type="button" class="btn btn-warning" id="parentGaurdian1Initial">Check In</button>
+					</div>
+					<div class="attendance-button">
+						<button type="button" class="btn btn-warning" id="parentGaurdian1Second">Check In</button>
+					</div>
+					<div class="attendance-button">
+						<button type="button" class="btn btn-warning" id="parentGaurdian1Final">Check In</button>
+					</div>
+				</div>
+				
+				<div class="attendance-group">
+					<div>
+						<h4>Physiotherapist</h4>
+					</div>
+					<div class="attendance-button">
+						<button type="button" class="btn btn-warning" id="parentGaurdian1Initial">Check In</button>
+					</div>
+					<div class="attendance-button">
+						<button type="button" class="btn btn-warning" id="parentGaurdian1Second">Check In</button>
+					</div>
+					<div class="attendance-button">
+						<button type="button" class="btn btn-warning" id="parentGaurdian1Final">Check In</button>
+					</div>
+				</div>
+				
+				<div class="attendance-group">
+					<div>
+						<h4>Psychologist</h4>
+					</div>
+					<div class="attendance-button">
+						<button type="button" class="btn btn-warning" id="parentGaurdian1Initial">Check In</button>
+					</div>
+					<div class="attendance-button">
+						<button type="button" class="btn btn-warning" id="parentGaurdian1Second">Check In</button>
+					</div>
+					<div class="attendance-button">
+						<button type="button" class="btn btn-warning" id="parentGaurdian1Final">Check In</button>
+					</div>
+				</div>
+				
+			</div>
+			</div>
+		</div>
+		<div class="panel-B">
+			<div class="card border-primary mb-3">
+			<div class="card-header"><h3>IPP Meeting and Attendance Signatures II</h3></div>
+			<div class="card-body">
+			
+				<div class="header-group">
+						<h4 style="color:white"><b>.</b></h4>
+						<h4><b>Initial Review</b></h4>
+						<h4><b>Second Review</b></h4>
+						<h4><b>Final Review</b></h4>
+				</div>
+				<hr></hr>
+				
+				<div class="attendance-group-B">
+					<div>
+						<h4>Speech-Language Pathologist</h4>
+					</div>
+					<div class="attendance-button">
+						<button type="button" class="btn btn-warning" id="parentGaurdian1Initial">Check In</button>
+					</div>
+					<div class="attendance-button">
+						<button type="button" class="btn btn-warning" id="parentGaurdian1Second">Check In</button>
+					</div>
+					<div class="attendance-button">
+						<button type="button" class="btn btn-warning" id="parentGaurdian1Final">Check In</button>
+					</div>
+				</div>
+				
+				<div class="attendance-group-B">
+					<div>
+						<h4>Child-Development Specialist</h4>
+					</div>
+					<div class="attendance-button">
+						<button type="button" class="btn btn-warning" id="parentGaurdian1Initial">Check In</button>
+					</div>
+					<div class="attendance-button">
+						<button type="button" class="btn btn-warning" id="parentGaurdian1Second">Check In</button>
+					</div>
+					<div class="attendance-button">
+						<button type="button" class="btn btn-warning" id="parentGaurdian1Final">Check In</button>
+					</div>
+				</div>
+		
+			</div>
+			</div>
+
+		</div>
+		<div class="panel-C">
+			<div>
+			<div class="card border-primary mb-3">
+			<div class="card-header"><h4>Transition Planning</h4></div>
+			<div class="card-body">
+				<label class="col-form-label" for="inputDefault" style="float:left;margin-right:1vw;"><b>Date</b></label>
+				<input type="text" class="form-control" placeholder="DD/MM/YYYY" id="date1" style="width:100px;">
+				
+				<label class="col-form-label" for="inputDefault" style="margin-top:10px;"><b>Receiving Program</b></label>
+				<textarea class="form-control" id="transitionProgram" rows="5" style="resize:none;"></textarea>
+			</div>
+			</div>
+			</div>
+			<div style="margin-left:10px;">
+				
+				<div class="card border-primary mb-3">
 				<div class="card-header"><h4>Transition Team/Operator</h4></div>
 				<div class="card-body">
-					
-					<div class="inline">
-					<div class="inline">
-					<label class="col-form-label" for="inputDefault" style="margin-top:-10px;"><b>Receiving Private ECS Operator</b></label>
-					<input type="text" class="form-control" placeholder="Transition Team/Operator Member" id="ECSOperator" style="width:25vw;">
-					</div>
-						
-					<div class="inline-buttons">
-					<label class="col-form-label" for="inputDefault" style="margin-top:-10px;margin-left:1vw;"><b>Final IPP Date</b></label>
-					<input type="text" class="form-control" placeholder="DD/MM/YYYY" id="ECSOperatorFinalDate" style="width:5.5vw;margin-left:1vw;">
-					</div>
-					
-					<div class="inline">
-					<label class="col-form-label" for="inputDefault" style="margin-top:5px;"><b>Kindergarten Consultant/Strategist</b></label>
-					<input type="text" class="form-control" placeholder="Transition Team/Operator Member" id="kindergartenConsultant" style="width:25vw;">
-					</div>
-						
-					<div class="inline-buttons">
-					<label class="col-form-label" for="inputDefault" style="margin-top:5px;margin-left:1vw;"><b>Final IPP Date</b></label>
-					<input type="text" class="form-control" placeholder="DD/MM/YYYY" id="kindergartenConsultantFinalDate" style="width:5.5vw;margin-left:1vw;">
+				
+					<div class="team-group" style="margin-top:-5px;">
+						<div>
+							<label class="col-form-label" for="inputDefault"><b>Receiving Private ECS Operator</b></label>
+							<input type="text" class="form-control" placeholder="Team Member Name" id="ECSOperator">
+						</div>
+						<div>
+							<label class="col-form-label" for="inputDefault"><b>Final IPP Date</b></label>
+							<input type="text" class="form-control" placeholder="DD/MM/YYYY" id="ECSOperatorFinalDate">
+						</div>
 					</div>
 					
-					<div class="inline">
-					<label class="col-form-label" for="inputDefault" style="margin-top:5px;"><b>Kindergarten Representative</b></label>
-					<input type="text" class="form-control" placeholder="Transition Team/Operator Member" id="kindergartenRepresentative" style="width:25vw;">
-					</div>
-						
-					<div class="inline-buttons">
-					<label class="col-form-label" for="inputDefault" style="margin-top:5px;margin-left:1vw;"><b>Final IPP Date</b></label>
-					<input type="text" class="form-control" placeholder="DD/MM/YYYY" id="kindergartenRepresentativeFinalDate" style="width:5.5vw;margin-left:1vw;">
+					<div class="team-group">
+						<div>
+							<label class="col-form-label" for="inputDefault"><b>Kindergarten Consultant/Strategist</b></label>
+							<input type="text" class="form-control" placeholder="Team Member Name" id="kindergartenConsultant">
+						</div>
+						<div>
+							<label class="col-form-label" for="inputDefault"><b>Final IPP Date</b></label>
+							<input type="text" class="form-control" placeholder="DD/MM/YYYY" id="kindergartenConsultantFinalDate">
+						</div>
 					</div>
 					
-				</div>
-				</div>
-				</div>
+					<div class="team-group">
+						<div>
+							<label class="col-form-label" for="inputDefault"><b>Kindergarten Representative</b></label>
+							<input type="text" class="form-control" placeholder="Team Member Name" id="kindergartenRepresentative">
+						</div>
+						<div>
+							<label class="col-form-label" for="inputDefault"><b>Final IPP Date</b></label>
+							<input type="text" class="form-control" placeholder="DD/MM/YYYY" id="kindergartenRepresentativeFinalDate">
+						</div>
+					</div>
+				
 				</div>
 				</div>
 				
 			</div>
 		</div>
-		</div>
-		</div>
-		
 	</div>
 	
-	<div style="position:absolute;width:45vw;height:30vh;margin-left:27.5vw;display:none;" id="SignaturePad">
-		<div class="card border-primary mb-3" style="width:45vw;height:30vh;">
+	
+	<!-- Footer & Pagenation Buttons -->
+	<footer>
+		<div class="footer-pagenation">
+		<div class="card border-dark mb-3">
 		<div class="card-body">
-			<div class="inline">
-			<div class="card border-dark mb-3" style="width:38vw;height:25vh;" style="padding-top:0px;">
-			<div class="card-body" style="padding-bottom:0px;padding-top:0px;padding-left:0px;padding-right:0px;">
-				<canvas id="signatureCanvas" style="width:100%;height:100%;"></canvas>
-			</div>
-			</div>
-			</div>
-			
-			<button type="button" class="btn btn-danger" style="float:right;" onclick="closeSignaturePad()">X</button>
-			<br></br>
-			<button type="button" class="btn btn-info" style="width:4vw;float:right;margin-top:8vh;" onclick="undoSignature()">Undo</button>
-			<br></br>
-			<button type="button" class="btn btn-info" style="width:4vw;float:right;margin-top:10px;" onclick="clearSignature()">Clear</button>
-			<br></br>
-			<button type="button" class="btn btn-success" style="width:4vw;float:right;margin-top:10px;" onclick="submitSignature()">Submit</button>
-			
+			<button type="button" class="btn btn-primary" id="Last" onclick="previous()">Previous Page</button>
+			<button type="button" class="btn btn-success" style="" id="Next" onclick="next()">Create Form</button>
 		</div>
 		</div>
-	</div>
-	
-	
-	<div class="clear"></div>
-	
-	<div class="pagenation_center">
-	<div class="center">
-	<div class="card border-dark mb-3" style="max-width: 18vw;">
-	<div class="card-body">
-		<button type="button" class="btn btn-primary" id="Last" onclick="previous()">Previous Page</button>
-		<button type="button" class="btn btn-success" style="margin-left:20px;" id="Next" onclick="next()">Submit Form</button>
-    </div>
-	</div>
-	</div>
-	</div>
+		</div>
+	</footer>
 	
 </body>
 </html>

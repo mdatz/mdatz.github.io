@@ -6,37 +6,64 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
 	<link rel="icon" href="../Resources/Images/Icon.ico">
 	<link rel="stylesheet" href="../Resources/CSS/bootstrap.css">
-	<link rel="stylesheet" href="../Resources/CSS/custom.css">
+	<link rel="stylesheet" href="../Resources/CSS/Page_5.css">
+	<link rel="stylesheet" href="../Resources/CSS/flatpickr.min.css">
+	<script src="../Resources/JS/flatpickr.js"></script>
 	<script type="text/javascript" src="../Resources/JS/Page_5.js"></script>
 </head>
 
 <body onload="fillExisting()">
-	<div class="jumbotron" style="width:100vw;">
-		<label class="col-form-label" for="progress" style="margin-top:-20px;"><h3>IPP Form Progress</h3></label>
-		<div class="progress">
-			<div class="progress-bar progress-bar-striped progress-bar-animated" role="progressbar" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100" style="width: 83.333%"></div>
+	
+	<!--Header & Progress Bar -->
+	<header>
+		<div class="header-label">
+			<label class="col-form-label" for="progress" name="header_label"><h3><b>IPP Form Progress</b></h3></label>
 		</div>
-
-		<br></br>
-		<div class="inline">
-		<div class="left">
-		<div class="card border-primary mb-3" style="width: 95vw; height: 74vh; margin-top:-10px;">
+		<div class="progress">
+			<div class="progress-bar progress-bar-striped progress-bar-animated" role="progressbar" name="progress" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100" style="width: 83.333%"></div>
+		</div>
+	</header>
+	
+	
+	<!-- Main Body -->
+	<div class="main-container">
+		<div class="panel-sidebar">
+			<div class="card border-primary mb-3">
 			<div class="card-header">
-				<div class="inline">
-					<h3>Goals, Objectives and Accomadations</h3>
-				</div>
-				<div style="float:right; margin-right:-5px;">
-				<div class="btn-group mr-2" role="group" aria-label="First group" name="preschoolNum">
-					<button type="button" class="btn btn-secondary" onclick="goals1()"><b>Goals 1 - 3</b></button>
-					<button type="button" class="btn btn-secondary" onclick="goals2()"><b>Goals 4 - 6</b></button>
-				</div>
+				<div>
+					<h3>Goals, Objectives and Accommodations</h3>
 				</div>
 			</div>
-			<div class="card-body" id="goals1">
+			<div class="card-body">
+				<center>
+				<div class="btn-group mr-2" role="group" aria-label="First group" name="preschoolNum" style="margin-top:15px;">
+					<button type="button" class="btn btn-primary" onclick="goals1()"><b>Goals 1 - 2</b></button>
+					<button type="button" class="btn btn-primary" onclick="goals2()"><b>Goals 3 - 4</b></button>
+				</div>
+				</center>
 				
-				<div class="inline">
-				<div class="card border-info mb-3" style="width: 30vw; height: 65vh; margin-top:-10px;">
-				<div class="card-header" style="height:5vh;"><h4>Long Term Goal 1</h4></div>
+				<label for="info1" style="margin-top:45px;"><b>Procedures for Monitoring Development</b></label>
+				<div class="card border-warning mb-3" id="info1">
+				<div class="card-body" style="margin-bottom:-5px;">
+					<ul style="font-size:14px;">
+						<li> Teacher feedback </li>
+						<li> Documentation </li>
+						<li> Photos </li>
+						<li> Informal assessments with collaboration from the child's team </li>
+					</ul>
+				</div>
+				</div>
+				<label style="margin-top:15px;"><b>Early Learning Enviroment Accommodations</b></label>
+				<textarea class="form-control" id="EnviromentAccommodations" rows="10" style="resize:none;"></textarea>
+
+			</div>
+			</div>
+
+		</div>
+		<div class="panel-A">
+				<div id="goals1">
+				<div class="card border-info mb-3">
+				<div class="card-header"><center><h4>Goal 1</h4></center></div>
 				<div class="card-body">
 					
 					<div class="form-group">
@@ -51,16 +78,16 @@
 					</select>
 					</div>
 					
-					<label class="col-form-label" for="inputDefault" style="margin-top:-10px;"><b>Baseline</b></label>
-					<input type="text" class="form-control" placeholder="Currently..." id="goalBaseline1">
+					<label class="col-form-label" for="inputDefault" style="margin-top:0px;"><b>Baseline</b></label>
+					<textarea class="form-control" id="goalBaseline1" rows="3" style="resize:none;"></textarea>
 
-					<div class="form-group">
+					<div class="form-group" style="margin-top:15px;">
 					<label for="shortTermObjective1" style="margin-top:2vh;"><b>Short-Term Objectives</b></label>
 					<div style="float:right; margin-right:-5px; margin-top:1vh;">
-					<div class="btn-group mr-2" role="group" aria-label="First group" name="shortTermObjective1">
-						<button type="button" class="btn btn-secondary" onclick="shortTermObjective1_1()"><b>1</b></button>
-						<button type="button" class="btn btn-secondary" onclick="shortTermObjective1_2()"><b>2</b></button>
-						<button type="button" class="btn btn-secondary" onclick="shortTermObjective1_3()"><b>3</b></button>
+					<div class="btn-group mr-2" role="group" aria-label="First group" name="shortTermObjective1" style="margin-bottom:10px">
+						<button type="button" class="btn btn-info" onclick="shortTermObjective1_1()"><b>1</b></button>
+						<button type="button" class="btn btn-info" onclick="shortTermObjective1_2()"><b>2</b></button>
+						<button type="button" class="btn btn-info" onclick="shortTermObjective1_3()"><b>3</b></button>
 					</div>
 					</div>
 					<select class="form-control" id="shortTermObjective1_1" style="display:block;">
@@ -86,28 +113,16 @@
 					</select>
 					</div>
 					
-					<label for="info1"><b>Procedures for Monitoring Development</b></label>
-					<div class="card border-warning mb-3" style="height:11vh;" id="info1">
-					<div class="card-body">
-						<ul style="margin-top:-10px;">
-							<li> Teacher feedback </li>
-							<li> Documentation </li>
-							<li> Photos </li>
-							<li> Informal assessments with collaboration from the child's team </li>
-						</ul>
-					</div>
-					</div>
+					<label class="col-form-label" for="inputDefault" style="margin-top:0px;"><b>Objective Review</b></label>
+					<textarea class="form-control" id="objectiveReview1" rows="3" style="resize:none;"></textarea>
 					
-					<label class="col-form-label" for="inputDefault" style="margin-top:-10px;"><b>Objective Review</b></label>
-					<textarea class="form-control" id="objectiveReview1" rows="1" style="resize:none;"></textarea>
-					
-					<div class="form-group">
+					<div class="form-group" style="margin-top:15px;">
 					<label for="goal1" style="margin-top:2vh;"><b>Accommodations and Strategies to Support this Goal</b></label>
 					<div style="float:right; margin-right:-5px; margin-top:1vh;">
-					<div class="btn-group mr-2" role="group" aria-label="First group" name="shortTermAccomodation1">
-						<button type="button" class="btn btn-secondary" onclick="shortTermAccomodation1_1()"><b>1</b></button>
-						<button type="button" class="btn btn-secondary" onclick="shortTermAccomodation1_2()"><b>2</b></button>
-						<button type="button" class="btn btn-secondary" onclick="shortTermAccomodation1_3()"><b>3</b></button>
+					<div class="btn-group mr-2" role="group" aria-label="First group" name="shortTermAccomodation1" style="margin-bottom:10px">
+						<button type="button" class="btn btn-info" onclick="shortTermAccomodation1_1()"><b>1</b></button>
+						<button type="button" class="btn btn-info" onclick="shortTermAccomodation1_2()"><b>2</b></button>
+						<button type="button" class="btn btn-info" onclick="shortTermAccomodation1_3()"><b>3</b></button>
 					</div>
 					</div>
 					<select class="form-control" id="goalStrategy1_1" style="display:block">
@@ -137,123 +152,15 @@
 				</div>
 				</div>
 				</div>
-				
-				
-				<div class="inline">
-				<div class="left">
-				<div class="card border-info mb-3" style="width: 30vw; height: 65vh; margin-top:-10px;">
-				<div class="card-header" style="height:5vh;"><h4>Long Term Goal 2</h4></div>
+			
+			
+				<div id="goals3" style="display:none;">
+				<div class="card border-info mb-3">
+				<div class="card-header"><center><h4>Goal 3</h4></center></div>
 				<div class="card-body">
 					
 					<div class="form-group">
-					<label for="goal1"><b>Long Term Goal 2 by June 2021</b></label>
-					<select class="form-control" id="goal2">
-						<option>Goal Bank Option 1</option>
-						<option>Goal Bank Option 2</option>
-						<option>Goal Bank Option 3</option>
-						<option>Goal Bank Option 4</option>
-						<option>Goal Bank Option 5</option>
-						<option selected>None</option>
-					</select>
-					</div>
-					
-					<label class="col-form-label" for="inputDefault" style="margin-top:-10px;"><b>Baseline</b></label>
-					<input type="text" class="form-control" placeholder="Currently..." id="goalBaseline2">
-
-					<div class="form-group">
-					<label for="shortTermObjective2" style="margin-top:2vh;"><b>Short-Term Objectives</b></label>
-					<div style="float:right; margin-right:-5px; margin-top:1vh;">
-					<div class="btn-group mr-2" role="group" aria-label="First group" name="shortTermObjective2">
-						<button type="button" class="btn btn-secondary" onclick="shortTermObjective2_1()"><b>1</b></button>
-						<button type="button" class="btn btn-secondary" onclick="shortTermObjective2_2()"><b>2</b></button>
-						<button type="button" class="btn btn-secondary" onclick="shortTermObjective2_3()"><b>3</b></button>
-					</div>
-					</div>
-					<select class="form-control" id="shortTermObjective2_1" style="display:block;">
-						<option>Short-Term Objective Bank Option 1</option>
-						<option>Short-Term Objective Bank Option 2</option>
-						<option>Short-Term Objective Bank Option 3</option>
-						<option>Short-Term Objective Bank Option 4</option>
-						<option>Short-Term Objective Bank Option 5</option>
-					</select>
-					<select class="form-control" id="shortTermObjective2_2" style="display:none;">
-						<option>Short-Term Objective Bank Option 1</option>
-						<option>Short-Term Objective Bank Option 2</option>
-						<option>Short-Term Objective Bank Option 3</option>
-						<option>Short-Term Objective Bank Option 4</option>
-						<option>Short-Term Objective Bank Option 5</option>
-					</select>
-					<select class="form-control" id="shortTermObjective2_3" style="display:none;">
-						<option>Short-Term Objective Bank Option 1</option>
-						<option>Short-Term Objective Bank Option 2</option>
-						<option>Short-Term Objective Bank Option 3</option>
-						<option>Short-Term Objective Bank Option 4</option>
-						<option>Short-Term Objective Bank Option 5</option>
-					</select>
-					</div>
-					
-					<label for="info1"><b>Procedures for Monitoring Development</b></label>
-					<div class="card border-warning mb-3" style="height:11vh;" id="info1">
-					<div class="card-body">
-						<ul style="margin-top:-10px;">
-							<li> Teacher feedback </li>
-							<li> Documentation </li>
-							<li> Photos </li>
-							<li> Informal assessments with collaboration from the child's team </li>
-						</ul>
-					</div>
-					</div>
-					
-					<label class="col-form-label" for="inputDefault" style="margin-top:-10px;"><b>Objective Review</b></label>
-					<textarea class="form-control" id="objectiveReview2" rows="1" style="resize:none;"></textarea>
-					
-					<div class="form-group">
-					<label for="goal1" style="margin-top:2vh;"><b>Accommodations and Strategies to Support this Goal</b></label>
-					<div style="float:right; margin-right:-5px; margin-top:1vh;">
-					<div class="btn-group mr-2" role="group" aria-label="First group" name="shortTermAccomodation2">
-						<button type="button" class="btn btn-secondary" onclick="shortTermAccomodation2_1()"><b>1</b></button>
-						<button type="button" class="btn btn-secondary" onclick="shortTermAccomodation2_2()"><b>2</b></button>
-						<button type="button" class="btn btn-secondary" onclick="shortTermAccomodation2_3()"><b>3</b></button>
-					</div>
-					</div>
-					<select class="form-control" id="goalStrategy2_1" style="display:block">
-						<option>Strategy Goal Bank Option 1</option>
-						<option>Strategy Goal Bank Option 2</option>
-						<option>Strategy Goal Bank Option 3</option>
-						<option>Strategy Goal Bank Option 4</option>
-						<option>Strategy Goal Bank Option 5</option>
-					</select>
-					<select class="form-control" id="goalStrategy2_2" style="display:none">
-						<option>Strategy Goal Bank Option 1</option>
-						<option>Strategy Goal Bank Option 2</option>
-						<option>Strategy Goal Bank Option 3</option>
-						<option>Strategy Goal Bank Option 4</option>
-						<option>Strategy Goal Bank Option 5</option>
-					</select>
-					<select class="form-control" id="goalStrategy2_3" style="display:none">
-						<option>Strategy Goal Bank Option 1</option>
-						<option>Strategy Goal Bank Option 2</option>
-						<option>Strategy Goal Bank Option 3</option>
-						<option>Strategy Goal Bank Option 4</option>
-						<option>Strategy Goal Bank Option 5</option>
-					</select>
-					</div>
-					
-					
-				</div>
-				</div>
-				</div>
-				</div>
-				
-
-				<div class="inline">
-				<div class="left">
-				<div class="card border-info mb-3" style="width: 30vw; height: 65vh; margin-top:-10px;">
-				<div class="card-header" style="height:5vh;"><h4>Long Term Goal 3</h4></div>
-				<div class="card-body">
-					
-					<div class="form-group">
-					<label for="goal1"><b>Long Term Goal 3 by June 2021</b></label>
+					<label for="goal3"><b>Long Term Goal 3 by June 2021</b></label>
 					<select class="form-control" id="goal3">
 						<option>Goal Bank Option 1</option>
 						<option>Goal Bank Option 2</option>
@@ -264,16 +171,16 @@
 					</select>
 					</div>
 					
-					<label class="col-form-label" for="inputDefault" style="margin-top:-10px;"><b>Baseline</b></label>
-					<input type="text" class="form-control" placeholder="Currently..." id="goalBaseline3">
+					<label class="col-form-label" for="inputDefault" style="margin-top:0px;"><b>Baseline</b></label>
+					<textarea class="form-control" id="goalBaseline3" rows="3" style="resize:none;"></textarea>
 
-					<div class="form-group">
+					<div class="form-group" style="margin-top:15px;">
 					<label for="shortTermObjective3" style="margin-top:2vh;"><b>Short-Term Objectives</b></label>
 					<div style="float:right; margin-right:-5px; margin-top:1vh;">
-					<div class="btn-group mr-2" role="group" aria-label="First group" name="shortTermObjective3">
-						<button type="button" class="btn btn-secondary" onclick="shortTermObjective3_1()"><b>1</b></button>
-						<button type="button" class="btn btn-secondary" onclick="shortTermObjective3_2()"><b>2</b></button>
-						<button type="button" class="btn btn-secondary" onclick="shortTermObjective3_3()"><b>3</b></button>
+					<div class="btn-group mr-2" role="group" aria-label="First group" name="shortTermObjective3" style="margin-bottom:10px">
+						<button type="button" class="btn btn-info" onclick="shortTermObjective3_1()"><b>1</b></button>
+						<button type="button" class="btn btn-info" onclick="shortTermObjective3_2()"><b>2</b></button>
+						<button type="button" class="btn btn-info" onclick="shortTermObjective3_3()"><b>3</b></button>
 					</div>
 					</div>
 					<select class="form-control" id="shortTermObjective3_1" style="display:block;">
@@ -299,28 +206,16 @@
 					</select>
 					</div>
 					
-					<label for="info1"><b>Procedures for Monitoring Development</b></label>
-					<div class="card border-warning mb-3" style="height:11vh;" id="info1">
-					<div class="card-body">
-						<ul style="margin-top:-10px;">
-							<li> Teacher feedback </li>
-							<li> Documentation </li>
-							<li> Photos </li>
-							<li> Informal assessments with collaboration from the child's team </li>
-						</ul>
-					</div>
-					</div>
+					<label class="col-form-label" for="inputDefault" style="margin-top:0px;"><b>Objective Review</b></label>
+					<textarea class="form-control" id="objectiveReview3" rows="3" style="resize:none;"></textarea>
 					
-					<label class="col-form-label" for="inputDefault" style="margin-top:-10px;"><b>Objective Review</b></label>
-					<textarea class="form-control" id="objectiveReview3" rows="1" style="resize:none;"></textarea>
-					
-					<div class="form-group">
-					<label for="goal1" style="margin-top:2vh;"><b>Accommodations and Strategies to Support this Goal</b></label>
+					<div class="form-group" style="margin-top:15px;">
+					<label for="goal3" style="margin-top:2vh;"><b>Accommodations and Strategies to Support this Goal</b></label>
 					<div style="float:right; margin-right:-5px; margin-top:1vh;">
-					<div class="btn-group mr-2" role="group" aria-label="First group" name="shortTermAccomodation3">
-						<button type="button" class="btn btn-secondary" onclick="shortTermAccomodation3_1()"><b>1</b></button>
-						<button type="button" class="btn btn-secondary" onclick="shortTermAccomodation3_2()"><b>2</b></button>
-						<button type="button" class="btn btn-secondary" onclick="shortTermAccomodation3_3()"><b>3</b></button>
+					<div class="btn-group mr-2" role="group" aria-label="First group" name="shortTermAccomodation3" style="margin-bottom:10px">
+						<button type="button" class="btn btn-info" onclick="shortTermAccomodation3_1()"><b>1</b></button>
+						<button type="button" class="btn btn-info" onclick="shortTermAccomodation3_2()"><b>2</b></button>
+						<button type="button" class="btn btn-info" onclick="shortTermAccomodation3_3()"><b>3</b></button>
 					</div>
 					</div>
 					<select class="form-control" id="goalStrategy3_1" style="display:block">
@@ -345,21 +240,109 @@
 						<option>Strategy Goal Bank Option 5</option>
 					</select>
 					</div>
-					
-					
-				</div>
+				
 				</div>
 				</div>
 				</div>	
-				
-			</div>
 			
-			
-			<div class="card-body" id="goals2" style="display:none;">
+		</div>
+		<div class="panel-B">
 				
-				<div class="inline">
-				<div class="card border-info mb-3" style="width: 30vw; height: 65vh; margin-top:-10px;">
-				<div class="card-header" style="height:5vh;"><h4>Long Term Goal 4</h4></div>
+				<div id="goals2">
+				<div class="card border-info mb-3">
+				<div class="card-header"><center><h4>Goal 2</h4></center></div>
+				<div class="card-body">
+					
+					<div class="form-group">
+					<label for="goal1"><b>Long Term Goal 2 by June 2021</b></label>
+					<select class="form-control" id="goal2">
+						<option>Goal Bank Option 1</option>
+						<option>Goal Bank Option 2</option>
+						<option>Goal Bank Option 3</option>
+						<option>Goal Bank Option 4</option>
+						<option>Goal Bank Option 5</option>
+						<option selected>None</option>
+					</select>
+					</div>
+					
+					<label class="col-form-label" for="inputDefault" style="margin-top:0px;"><b>Baseline</b></label>
+					<textarea class="form-control" id="goalBaseline2" rows="3" style="resize:none;"></textarea>
+
+					<div class="form-group" style="margin-top:15px;">
+					<label for="shortTermObjective2" style="margin-top:2vh;"><b>Short-Term Objectives</b></label>
+					<div style="float:right; margin-right:-5px; margin-top:1vh;">
+					<div class="btn-group mr-2" role="group" aria-label="First group" name="shortTermObjective2" style="margin-bottom:10px">
+						<button type="button" class="btn btn-info" onclick="shortTermObjective2_1()"><b>1</b></button>
+						<button type="button" class="btn btn-info" onclick="shortTermObjective2_2()"><b>2</b></button>
+						<button type="button" class="btn btn-info" onclick="shortTermObjective2_3()"><b>3</b></button>
+					</div>
+					</div>
+					<select class="form-control" id="shortTermObjective2_1" style="display:block;">
+						<option>Short-Term Objective Bank Option 1</option>
+						<option>Short-Term Objective Bank Option 2</option>
+						<option>Short-Term Objective Bank Option 3</option>
+						<option>Short-Term Objective Bank Option 4</option>
+						<option>Short-Term Objective Bank Option 5</option>
+					</select>
+					<select class="form-control" id="shortTermObjective2_2" style="display:none;">
+						<option>Short-Term Objective Bank Option 1</option>
+						<option>Short-Term Objective Bank Option 2</option>
+						<option>Short-Term Objective Bank Option 3</option>
+						<option>Short-Term Objective Bank Option 4</option>
+						<option>Short-Term Objective Bank Option 5</option>
+					</select>
+					<select class="form-control" id="shortTermObjective2_3" style="display:none;">
+						<option>Short-Term Objective Bank Option 1</option>
+						<option>Short-Term Objective Bank Option 2</option>
+						<option>Short-Term Objective Bank Option 3</option>
+						<option>Short-Term Objective Bank Option 4</option>
+						<option>Short-Term Objective Bank Option 5</option>
+					</select>
+					</div>
+					
+					<label class="col-form-label" for="inputDefault" style="margin-top:0px;"><b>Objective Review</b></label>
+					<textarea class="form-control" id="objectiveReview2" rows="3" style="resize:none;"></textarea>
+					
+					<div class="form-group" style="margin-top:15px;">
+					<label for="goal2" style="margin-top:2vh;"><b>Accommodations and Strategies to Support this Goal</b></label>
+					<div style="float:right; margin-right:-5px; margin-top:1vh;">
+					<div class="btn-group mr-2" role="group" aria-label="First group" name="shortTermAccomodation2" style="margin-bottom:10px">
+						<button type="button" class="btn btn-info" onclick="shortTermAccomodation2_1()"><b>1</b></button>
+						<button type="button" class="btn btn-info" onclick="shortTermAccomodation2_2()"><b>2</b></button>
+						<button type="button" class="btn btn-info" onclick="shortTermAccomodation2_3()"><b>3</b></button>
+					</div>
+					</div>
+					<select class="form-control" id="goalStrategy2_1" style="display:block">
+						<option>Strategy Goal Bank Option 1</option>
+						<option>Strategy Goal Bank Option 2</option>
+						<option>Strategy Goal Bank Option 3</option>
+						<option>Strategy Goal Bank Option 4</option>
+						<option>Strategy Goal Bank Option 5</option>
+					</select>
+					<select class="form-control" id="goalStrategy2_2" style="display:none">
+						<option>Strategy Goal Bank Option 1</option>
+						<option>Strategy Goal Bank Option 2</option>
+						<option>Strategy Goal Bank Option 3</option>
+						<option>Strategy Goal Bank Option 4</option>
+						<option>Strategy Goal Bank Option 5</option>
+					</select>
+					<select class="form-control" id="goalStrategy2_3" style="display:none">
+						<option>Strategy Goal Bank Option 1</option>
+						<option>Strategy Goal Bank Option 2</option>
+						<option>Strategy Goal Bank Option 3</option>
+						<option>Strategy Goal Bank Option 4</option>
+						<option>Strategy Goal Bank Option 5</option>
+					</select>
+					</div>
+				
+				</div>
+				</div>
+				</div>
+				
+				
+				<div id="goals4" style="display:none;">
+				<div class="card border-info mb-3">
+				<div class="card-header"><center><h4>Goal 4</h4></center></div>
 				<div class="card-body">
 					
 					<div class="form-group">
@@ -374,16 +357,16 @@
 					</select>
 					</div>
 					
-					<label class="col-form-label" for="inputDefault" style="margin-top:-10px;"><b>Baseline</b></label>
-					<input type="text" class="form-control" placeholder="Currently..." id="goalBaseline4">
+					<label class="col-form-label" for="inputDefault" style="margin-top:0px;"><b>Baseline</b></label>
+					<textarea class="form-control" id="goalBaseline4" rows="3" style="resize:none;"></textarea>
 
-					<div class="form-group">
+					<div class="form-group" style="margin-top:15px;">
 					<label for="shortTermObjective4" style="margin-top:2vh;"><b>Short-Term Objectives</b></label>
 					<div style="float:right; margin-right:-5px; margin-top:1vh;">
-					<div class="btn-group mr-2" role="group" aria-label="First group" name="shortTermObjective4">
-						<button type="button" class="btn btn-secondary" onclick="shortTermObjective4_1()"><b>1</b></button>
-						<button type="button" class="btn btn-secondary" onclick="shortTermObjective4_2()"><b>2</b></button>
-						<button type="button" class="btn btn-secondary" onclick="shortTermObjective4_3()"><b>3</b></button>
+					<div class="btn-group mr-2" role="group" aria-label="First group" name="shortTermObjective4" style="margin-bottom:10px">
+						<button type="button" class="btn btn-info" onclick="shortTermObjective4_1()"><b>1</b></button>
+						<button type="button" class="btn btn-info" onclick="shortTermObjective4_2()"><b>2</b></button>
+						<button type="button" class="btn btn-info" onclick="shortTermObjective4_3()"><b>3</b></button>
 					</div>
 					</div>
 					<select class="form-control" id="shortTermObjective4_1" style="display:block;">
@@ -409,28 +392,16 @@
 					</select>
 					</div>
 					
-					<label for="info1"><b>Procedures for Monitoring Development</b></label>
-					<div class="card border-warning mb-3" style="height:11vh;" id="info1">
-					<div class="card-body">
-						<ul style="margin-top:-10px;">
-							<li> Teacher feedback </li>
-							<li> Documentation </li>
-							<li> Photos </li>
-							<li> Informal assessments with collaboration from the child's team </li>
-						</ul>
-					</div>
-					</div>
+					<label class="col-form-label" for="inputDefault" style="margin-top:0px;"><b>Objective Review</b></label>
+					<textarea class="form-control" id="objectiveReview4" rows="3" style="resize:none;"></textarea>
 					
-					<label class="col-form-label" for="inputDefault" style="margin-top:-10px;"><b>Objective Review</b></label>
-					<textarea class="form-control" id="objectiveReview4" rows="1" style="resize:none;"></textarea>
-					
-					<div class="form-group">
-					<label for="goal1" style="margin-top:2vh;"><b>Accommodations and Strategies to Support this Goal</b></label>
+					<div class="form-group" style="margin-top:15px;">
+					<label for="goal4" style="margin-top:2vh;"><b>Accommodations and Strategies to Support this Goal</b></label>
 					<div style="float:right; margin-right:-5px; margin-top:1vh;">
-					<div class="btn-group mr-2" role="group" aria-label="First group" name="shortTermAccomodation4">
-						<button type="button" class="btn btn-secondary" onclick="shortTermAccomodation4_1()"><b>1</b></button>
-						<button type="button" class="btn btn-secondary" onclick="shortTermAccomodation4_2()"><b>2</b></button>
-						<button type="button" class="btn btn-secondary" onclick="shortTermAccomodation4_3()"><b>3</b></button>
+					<div class="btn-group mr-2" role="group" aria-label="First group" name="shortTermAccomodation4" style="margin-bottom:10px">
+						<button type="button" class="btn btn-info" onclick="shortTermAccomodation4_1()"><b>1</b></button>
+						<button type="button" class="btn btn-info" onclick="shortTermAccomodation4_2()"><b>2</b></button>
+						<button type="button" class="btn btn-info" onclick="shortTermAccomodation4_3()"><b>3</b></button>
 					</div>
 					</div>
 					<select class="form-control" id="goalStrategy4_1" style="display:block">
@@ -455,32 +426,26 @@
 						<option>Strategy Goal Bank Option 5</option>
 					</select>
 					</div>
-					
-					
-				</div>
-				</div>
-				</div>	
 				
-			</div>
+				</div>
+				</div>
+				</div>
 			
 		</div>
-		</div>
-		</div>
-
 	</div>
 	
-	<div class="clear"></div>
 	
-	<div class="pagenation_center">
-	<div class="center">
-	<div class="card border-dark mb-3" style="max-width: 18vw;">
-	<div class="card-body">
-		<button type="button" class="btn btn-primary" id="Last" onclick="previous()">Previous Page</button>
-		<button type="button" class="btn btn-success" style="margin-left:20px;" id="Next" onclick="next()">Next Page</button>
-    </div>
-	</div>
-	</div>
-	</div>
+	<!-- Footer & Pagenation Buttons -->
+	<footer>
+		<div class="footer-pagenation">
+		<div class="card border-dark mb-3">
+		<div class="card-body">
+			<button type="button" class="btn btn-primary" id="Last" onclick="previous()">Previous Page</button>
+			<button type="button" class="btn btn-success" style="" id="Next" onclick="next()">Next Page</button>
+		</div>
+		</div>
+		</div>
+	</footer>
 	
 </body>
 </html>

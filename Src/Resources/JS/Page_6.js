@@ -1,11 +1,4 @@
 
-//Folder for Signatures
-var sig_folder;
-
-//Global Signature Pad Variables
-var signaturePad;
-var currentSignature;
-
 //Global Variable for Number of Goals used
 var num_goals;
 
@@ -419,26 +412,6 @@ function fillExisting(){
 	}
 	
 	//If Form Variables still Exist, fill the HTML Elements with the Stored Values
-	document.getElementById("parentGaurdian1Initial").value = sessionStorage.getItem("Parent/Gaurdian 1 Initial Review");
-	document.getElementById("parentGaurdian1Final").value = sessionStorage.getItem("Parent/Gaurdian 1 Final Review");
-	document.getElementById("parentGaurdian2Initial").value = sessionStorage.getItem("Parent/Gaurdian 2 Initial Review");
-	document.getElementById("parentGaurdian2Final").value = sessionStorage.getItem("Parent/Gaurdian 2 Final Review");
-	document.getElementById("preschoolTeacherInitial").value = sessionStorage.getItem("Preschool Teacher Initial Review");
-	document.getElementById("preschoolTeacherFinal").value = sessionStorage.getItem("Preschool Teacher Final Review");
-	document.getElementById("certificatedTeacherInitial").value = sessionStorage.getItem("Certificated Teacher Initial Review");
-	document.getElementById("certificatedTeacherFinal").value = sessionStorage.getItem("Certificated Teacher Final Review");
-	document.getElementById("developmentalAssistantInitial").value = sessionStorage.getItem("Developmental Assistant Initial Review");
-	document.getElementById("developmentalAssistantFinal").value = sessionStorage.getItem("Developmental Assistant Final Review");
-	document.getElementById("SLPathologistInitial").value = sessionStorage.getItem("Speech-Language Pathologist Initial Review");
-	document.getElementById("SLPathologistFinal").value = sessionStorage.getItem("Speech-Language Pathologist Final Review");
-	document.getElementById("occupationalTherapistInitial").value = sessionStorage.getItem("Occupational Therapist Initial Review");
-	document.getElementById("occupationalTherapistFinal").value = sessionStorage.getItem("Occupational Therapist Final Review");
-	document.getElementById("physiotherapistInitial").value = sessionStorage.getItem("Physiotherapist Initial Review");
-	document.getElementById("physiotherapistFinal").value = sessionStorage.getItem("Physiotherapist Final Review");
-	document.getElementById("psychologistInitial").value = sessionStorage.getItem("Psychologist Initial Review");
-	document.getElementById("psychologistFinal").value = sessionStorage.getItem("Psychologist Final Review");
-	document.getElementById("behaviourSpecialistInitial").value = sessionStorage.getItem("Behaviour Specialist Initial Review");
-	document.getElementById("behaviourSpecialistFinal").value = sessionStorage.getItem("Behaviour Specialist Final Review");
 	document.getElementById("date1").value = sessionStorage.getItem("Transition Program Date");
 	document.getElementById("transitionProgram").value = sessionStorage.getItem("Transition Program");
 	document.getElementById("ECSOperator").value = sessionStorage.getItem("Receiving Private ECS Operator");
@@ -448,26 +421,6 @@ function fillExisting(){
 	document.getElementById("kindergartenRepresentative").value = sessionStorage.getItem("Kindergarten Representative");
 	document.getElementById("kindergartenRepresentativeFinalDate").value = sessionStorage.getItem("Kindergarten Representative Final Date");
 	
-	flatpickr(document.getElementById("parentGaurdian1Initial"),{dateFormat: "Y-m-d"});
-	flatpickr(document.getElementById("parentGaurdian1Final"),{dateFormat: "Y-m-d"});
-	flatpickr(document.getElementById("parentGaurdian2Initial"),{dateFormat: "Y-m-d"});
-	flatpickr(document.getElementById("parentGaurdian2Final"),{dateFormat: "Y-m-d"});
-	flatpickr(document.getElementById("preschoolTeacherInitial"),{dateFormat: "Y-m-d"});
-	flatpickr(document.getElementById("preschoolTeacherFinal"),{dateFormat: "Y-m-d"});
-	flatpickr(document.getElementById("certificatedTeacherInitial"),{dateFormat: "Y-m-d"});
-	flatpickr(document.getElementById("certificatedTeacherFinal"),{dateFormat: "Y-m-d"});
-	flatpickr(document.getElementById("developmentalAssistantInitial"),{dateFormat: "Y-m-d"});
-	flatpickr(document.getElementById("developmentalAssistantFinal"),{dateFormat: "Y-m-d"});
-	flatpickr(document.getElementById("SLPathologistInitial"),{dateFormat: "Y-m-d"});
-	flatpickr(document.getElementById("SLPathologistFinal"),{dateFormat: "Y-m-d"});
-	flatpickr(document.getElementById("occupationalTherapistInitial"),{dateFormat: "Y-m-d"});
-	flatpickr(document.getElementById("occupationalTherapistFinal"),{dateFormat: "Y-m-d"});
-	flatpickr(document.getElementById("physiotherapistInitial"),{dateFormat: "Y-m-d"});
-	flatpickr(document.getElementById("physiotherapistFinal"),{dateFormat: "Y-m-d"});
-	flatpickr(document.getElementById("psychologistInitial"),{dateFormat: "Y-m-d"});
-	flatpickr(document.getElementById("psychologistFinal"),{dateFormat: "Y-m-d"});
-	flatpickr(document.getElementById("behaviourSpecialistInitial"),{dateFormat: "Y-m-d"});
-	flatpickr(document.getElementById("behaviourSpecialistFinal"),{dateFormat: "Y-m-d"});
 	flatpickr(document.getElementById("ECSOperatorFinalDate"),{dateFormat: "Y-m-d"});
 	flatpickr(document.getElementById("kindergartenConsultantFinalDate"),{dateFormat: "Y-m-d"});
 	flatpickr(document.getElementById("kindergartenRepresentativeFinalDate"),{dateFormat: "Y-m-d"});
@@ -476,77 +429,7 @@ function fillExisting(){
 
 function next(){
 	
-	//Remove any existing items and add as new key
-	sessionStorage.removeItem("Parent/Gaurdian 1 Initial Review");
-	sessionStorage.setItem("Parent/Gaurdian 1 Initial Review", document.getElementById("parentGaurdian1Initial").value);
-
-	sessionStorage.removeItem("Parent/Gaurdian 1 Final Review");
-	sessionStorage.setItem("Parent/Gaurdian 1 Final Review", document.getElementById("parentGaurdian1Final").value);
-
-
-	sessionStorage.removeItem("Parent/Gaurdian 2 Initial Review");
-	sessionStorage.setItem("Parent/Gaurdian 2 Initial Review", document.getElementById("parentGaurdian2Initial").value);
-
-	sessionStorage.removeItem("Parent/Gaurdian 2 Final Review");
-	sessionStorage.setItem("Parent/Gaurdian 2 Final Review", document.getElementById("parentGaurdian2Final").value);
-	
-	
-	sessionStorage.removeItem("Preschool Teacher Initial Review");
-	sessionStorage.setItem("Preschool Teacher Initial Review", document.getElementById("preschoolTeacherInitial").value);
-
-	sessionStorage.removeItem("Preschool Teacher Final Review");
-	sessionStorage.setItem("Preschool Teacher Final Review", document.getElementById("preschoolTeacherFinal").value);
-	
-	
-	sessionStorage.removeItem("Certificated Teacher Initial Review");
-	sessionStorage.setItem("Certificated Teacher Initial Review", document.getElementById("certificatedTeacherInitial").value);
-	
-	sessionStorage.removeItem("Certificated Teacher Final Review");
-	sessionStorage.setItem("Certificated Teacher Final Review", document.getElementById("certificatedTeacherFinal").value);
-	
-	
-	sessionStorage.removeItem("Developmental Assistant Initial Review");
-	sessionStorage.setItem("Developmental Assistant Initial Review", document.getElementById("developmentalAssistantInitial").value);
-	
-	sessionStorage.removeItem("Developmental Assistant Final Review");
-	sessionStorage.setItem("Developmental Assistant Final Review", document.getElementById("developmentalAssistantFinal").value);
-	
-	
-	sessionStorage.removeItem("Speech-Language Pathologist Initial Review");
-	sessionStorage.setItem("Speech-Language Pathologist Initial Review", document.getElementById("SLPathologistInitial").value);
-
-	sessionStorage.removeItem("Speech-Language Pathologist Final Review");
-	sessionStorage.setItem("Speech-Language Pathologist Final Review", document.getElementById("SLPathologistFinal").value);
-
-
-	sessionStorage.removeItem("Occupational Therapist Initial Review");
-	sessionStorage.setItem("Occupational Therapist Initial Review", document.getElementById("occupationalTherapistInitial").value);
-	
-	sessionStorage.removeItem("Occupational Therapist Final Review");
-	sessionStorage.setItem("Occupational Therapist Final Review", document.getElementById("occupationalTherapistFinal").value);
-	
-	
-	sessionStorage.removeItem("Physiotherapist Initial Review");
-	sessionStorage.setItem("Physiotherapist Initial Review", document.getElementById("physiotherapistInitial").value);	
-	
-	sessionStorage.removeItem("Physiotherapist Final Review");
-	sessionStorage.setItem("Physiotherapist Final Review", document.getElementById("physiotherapistFinal").value);	
-
-
-	sessionStorage.removeItem("Psychologist Initial Review");
-	sessionStorage.setItem("Psychologist Initial Review", document.getElementById("psychologistInitial").value);	
-	
-	sessionStorage.removeItem("Psychologist Final Review");
-	sessionStorage.setItem("Psychologist Final Review", document.getElementById("psychologistFinal").value);
-	
-
-	sessionStorage.removeItem("Behaviour Specialist Initial Review");
-	sessionStorage.setItem("Behaviour Specialist Initial Review", document.getElementById("behaviourSpecialistInitial").value);
-	
-	sessionStorage.removeItem("Behaviour Specialist Final Review");
-	sessionStorage.setItem("Behaviour Specialist Final Review", document.getElementById("behaviourSpecialistFinal").value);
-	
-	
+	//Remove any existing items and add as new key	
 	sessionStorage.removeItem("Transition Program Date");
 	sessionStorage.setItem("Transition Program Date", document.getElementById("date1").value);
 	
@@ -580,77 +463,7 @@ function next(){
 
 function previous(){
 	
-	//Remove any existing items and add as new key
-	sessionStorage.removeItem("Parent/Gaurdian 1 Initial Review");
-	sessionStorage.setItem("Parent/Gaurdian 1 Initial Review", document.getElementById("parentGaurdian1Initial").value);
-
-	sessionStorage.removeItem("Parent/Gaurdian 1 Final Review");
-	sessionStorage.setItem("Parent/Gaurdian 1 Final Review", document.getElementById("parentGaurdian1Final").value);
-
-
-	sessionStorage.removeItem("Parent/Gaurdian 2 Initial Review");
-	sessionStorage.setItem("Parent/Gaurdian 2 Initial Review", document.getElementById("parentGaurdian2Initial").value);
-
-	sessionStorage.removeItem("Parent/Gaurdian 2 Final Review");
-	sessionStorage.setItem("Parent/Gaurdian 2 Final Review", document.getElementById("parentGaurdian2Final").value);
-	
-	
-	sessionStorage.removeItem("Preschool Teacher Initial Review");
-	sessionStorage.setItem("Preschool Teacher Initial Review", document.getElementById("preschoolTeacherInitial").value);
-
-	sessionStorage.removeItem("Preschool Teacher Final Review");
-	sessionStorage.setItem("Preschool Teacher Final Review", document.getElementById("preschoolTeacherFinal").value);
-	
-	
-	sessionStorage.removeItem("Certificated Teacher Initial Review");
-	sessionStorage.setItem("Certificated Teacher Initial Review", document.getElementById("certificatedTeacherInitial").value);
-	
-	sessionStorage.removeItem("Certificated Teacher Final Review");
-	sessionStorage.setItem("Certificated Teacher Final Review", document.getElementById("certificatedTeacherFinal").value);
-	
-	
-	sessionStorage.removeItem("Developmental Assistant Initial Review");
-	sessionStorage.setItem("Developmental Assistant Initial Review", document.getElementById("developmentalAssistantInitial").value);
-	
-	sessionStorage.removeItem("Developmental Assistant Final Review");
-	sessionStorage.setItem("Developmental Assistant Final Review", document.getElementById("developmentalAssistantFinal").value);
-	
-	
-	sessionStorage.removeItem("Speech-Language Pathologist Initial Review");
-	sessionStorage.setItem("Speech-Language Pathologist Initial Review", document.getElementById("SLPathologistInitial").value);
-
-	sessionStorage.removeItem("Speech-Language Pathologist Final Review");
-	sessionStorage.setItem("Speech-Language Pathologist Final Review", document.getElementById("SLPathologistFinal").value);
-
-
-	sessionStorage.removeItem("Occupational Therapist Initial Review");
-	sessionStorage.setItem("Occupational Therapist Initial Review", document.getElementById("occupationalTherapistInitial").value);
-	
-	sessionStorage.removeItem("Occupational Therapist Final Review");
-	sessionStorage.setItem("Occupational Therapist Final Review", document.getElementById("occupationalTherapistFinal").value);
-	
-	
-	sessionStorage.removeItem("Physiotherapist Initial Review");
-	sessionStorage.setItem("Physiotherapist Initial Review", document.getElementById("physiotherapistInitial").value);	
-
-	sessionStorage.removeItem("Physiotherapist Final Review");
-	sessionStorage.setItem("Physiotherapist Final Review", document.getElementById("physiotherapistFinal").value);	
-
-
-	sessionStorage.removeItem("Psychologist Initial Review");
-	sessionStorage.setItem("Psychologist Initial Review", document.getElementById("psychologistInitial").value);	
-	
-	sessionStorage.removeItem("Psychologist Final Review");
-	sessionStorage.setItem("Psychologist Final Review", document.getElementById("psychologistFinal").value);
-	
-
-	sessionStorage.removeItem("Behaviour Specialist Initial Review");
-	sessionStorage.setItem("Behaviour Specialist Initial Review", document.getElementById("behaviourSpecialistInitial").value);
-	
-	sessionStorage.removeItem("Behaviour Specialist Final Review");
-	sessionStorage.setItem("Behaviour Specialist Final Review", document.getElementById("behaviourSpecialistFinal").value);
-	
-	
+	//Remove any existing items and add as new key	
 	sessionStorage.removeItem("Transition Program Date");
 	sessionStorage.setItem("Transition Program Date", document.getElementById("date1").value);
 	
@@ -682,65 +495,7 @@ function previous(){
 	location.href = "./Page_5.html";
 }
 
-function openSignaturePad(argument){
-	
-	currentSignature = argument;
-	document.getElementById("SignaturePad").style.display = "block";
-	
-	var canvas = document.getElementById("signatureCanvas");
-	signaturePad = new SignaturePad(canvas, {backgroundColor: 'rgb(255,255,255)'});
-	
-	var ratio =  Math.max(window.devicePixelRatio || 1, 1);
-
-	canvas.width = canvas.offsetWidth * ratio;
-	canvas.height = canvas.offsetHeight * ratio;
-	canvas.getContext("2d").scale(ratio, ratio);
-
-	signaturePad.clear();
-}
-
-function closeSignaturePad(){
-	document.getElementById("SignaturePad").style.display = "none";
-}
-
-function undoSignature(){
-	var signature = signaturePad.toData();
-
-	if (signature) {
-		signature.pop();
-		signaturePad.fromData(signature);
-	}
-}
-
-function clearSignature(){
-	signaturePad.clear();
-}
-
-function dataURItoBlob(dataURI) {
-
-    var byteString = atob(dataURI.split(',')[1]);
-
-    // separate out the mime component
-    var mimeString = dataURI.split(',')[0].split(':')[1].split(';')[0];
-
-    // write the bytes of the string to an ArrayBuffer
-    var ab = new ArrayBuffer(byteString.length);
-    var ia = new Uint8Array(ab);
-    for (var i = 0; i < byteString.length; i++) {
-        ia[i] = byteString.charCodeAt(i);
-    }
-
-    return new Blob([ab], {type: mimeString});
-}
-
-function submitSignature(){
-	
-	//Save Image Representation to Signature Folder
-	var sig_blob = dataURItoBlob(signaturePad.toDataURL());
-	var file_name = currentSignature + ".png";
-	sig_folder.file(file_name, sig_blob);
-	
-	document.getElementById("SignaturePad").style.display = "none";
+function markAttendance(currentAttendance){
 	
 	//Update Signature Button If Signed
 	if(currentSignature == "Parent_1/Initial_Signature"){

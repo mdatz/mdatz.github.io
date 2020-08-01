@@ -1,0 +1,57 @@
+.header-label{
+	margin-left:2vw;
+	margin-top:3vh;
+	margin-bottom:-2vh;
+}
+
+.progress{
+	margin-left:2vw;
+	margin-right:2vw;
+	margin-top:2vh;
+	margin-bottom:2vh;
+}
+
+.main-container{
+	display:grid;
+	grid-template-columns:1fr 1fr;
+	grid-template-rows:1.8fr 0.2fr;
+	grid-column-gap:10px;
+	grid-row-gap:10px;
+	margin:15px;
+}
+
+.footer-pagenation{
+	display:grid;
+	justify-content:center;
+	margin-top:2vh;
+}
+
+.panel-A{
+
+}
+
+.panel-B{
+
+}
+
+.panel-C{
+	grid-row-start: 2;
+	grid-row-end: 3;
+	grid-column-start: 1;
+	grid-column-end: 3;	
+}
+
+.date-panel{
+	display:grid;
+	grid-template-columns:1fr 1fr 1fr;
+	justify-content:center;
+	grid-column-gap:100px;
+	margin-top:-10px;
+}
+
+.test-block{
+	display:grid;
+	grid-template-columns:1.75fr 0.4fr 1.25fr 0.6fr;
+	grid-template-rows:1fr;
+	grid-column-gap:5px;
+}

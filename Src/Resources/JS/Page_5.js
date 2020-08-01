@@ -334,12 +334,16 @@ function previous(){
 
 function goals1(){
 	document.getElementById("goals1").style.display = "block";
-	document.getElementById("goals2").style.display = "none";
+	document.getElementById("goals3").style.display = "none";
+	document.getElementById("goals2").style.display = "block";
+	document.getElementById("goals4").style.display = "none";
 }
 
 function goals2(){
-	document.getElementById("goals2").style.display = "block";
+	document.getElementById("goals3").style.display = "block";
 	document.getElementById("goals1").style.display = "none";
+	document.getElementById("goals4").style.display = "block";
+	document.getElementById("goals2").style.display = "none";
 }
 
 

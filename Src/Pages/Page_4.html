@@ -6,330 +6,242 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
 	<link rel="icon" href="../Resources/Images/Icon.ico">
 	<link rel="stylesheet" href="../Resources/CSS/bootstrap.css">
-	<link rel="stylesheet" href="../Resources/CSS/custom.css">
+	<link rel="stylesheet" href="../Resources/CSS/Page_4.css">
 	<link rel="stylesheet" href="../Resources/CSS/flatpickr.min.css">
 	<script src="../Resources/JS/flatpickr.js"></script>
 	<script type="text/javascript" src="../Resources/JS/Page_4.js"></script>
 </head>
 
 <body onload="fillExisting()">
-	<div class="jumbotron" style="width:100vw;">
-		<label class="col-form-label" for="progress" style="margin-top:-20px;"><h3>IPP Form Progress</h3></label>
-		<div class="progress">
-			<div class="progress-bar progress-bar-striped progress-bar-animated" role="progressbar" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100" style="width: 66.667%"></div>
-		</div>
 	
-		<br></br>
-		<div class="inline">
-		<div class="left">
-		<div class="card border-primary mb-3" style="width: 45vw; height: 62vh;">
+	<!--Header & Progress Bar -->
+	<header>
+		<div class="header-label">
+			<label class="col-form-label" for="progress" name="header_label"><h3><b>IPP Form Progress</b></h3></label>
+		</div>
+		<div class="progress">
+			<div class="progress-bar progress-bar-striped progress-bar-animated" role="progressbar" name="progress" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100" style="width: 66.667%"></div>
+		</div>
+	</header>
+	
+	
+	<!-- Main Body -->
+	<div class="main-container">
+		<div class="panel-A">
+			<div class="card border-primary mb-3">
 			<div class="card-header"><h3>Specialized Assessment Results I</h3></div>
 			<div class="card-body">
 			
-				<div class="card border-info mb-3" style="width: 43vw; height: 16vh;">
-				<div class="card-header"><h4>Speech-Language Pathology (Initial)</h4></div>
-				<div class="card-body">
-				
-					<div class="inline">
-						<p style="width:15vw;"><b>Clinical Evaluation of Language Fundamentals</b></p>
+				<div class="test-block">
+					<div>
+						<p><b>Clinical Evaluation of Language Fundamentals</b></p>
+						<p style="margin-top:-15px;"><b>(Initial)</b></p>
 						<p style="margin-top:-10px;">[Preschool, Second Edition (CELF-P2)]</p>
 					</div>
-					
-					<div class="inline">
-					<div class="left" style="margin-left:2vw;">
+					<div>
 						<label class="col-form-label" for="inputDefault" style="margin-top:-10px;">Results</label>
-						<input type="text" class="form-control" placeholder="%" id="initialCELFTestResult" style="width:5vw;">
+						<input type="text" class="form-control" placeholder="%" id="initialCELFTestResult">
 					</div>
-					</div>
-					
-					<div class="inline">
-					<div class="left">
+					<div>
 						<label class="col-form-label" for="inputDefault" style="margin-top:-10px;">Therapist</label>
-						<input type="text" class="form-control" placeholder="Therapist Name" id="initialCELFTestTherapist" style="width:10vw;">
+						<input type="text" class="form-control" placeholder="Therapist Name" id="initialCELFTestTherapist">
 					</div>
-					</div>
-					
-					<div class="inline">
-					<div class="left">
+					<div>
 						<label class="col-form-label" for="inputDefault" style="margin-top:-10px;">Date</label>
-						<input type="text" class="form-control" placeholder="DD/MM/YYYY" id="initialCELFTestDate" style="width:6vw;">
+						<input type="text" class="form-control" placeholder="DD/MM/YYYY" id="initialCELFTestDate">
 					</div>
-					</div>
-				
-				</div>
 				</div>
 				
-				<div class="card border-info mb-3" style="width: 43vw; height: 34vh;">
-				<div class="card-header"><h4>Speech-Language Pathology (Final)</h4></div>
-				<div class="card-body">
-				
-					<div class="inline">
-						<p style="width:15vw;"><b>Clinical Evaluation of Language Fundamentals</b></p>
+				<hr style="margin-top:15px"></hr>
+			
+				<div class="test-block">
+					<div>
+						<p><b>Clinical Evaluation of Language Fundamentals</b></p>
+						<p style="margin-top:-15px;"><b>(Final)</b></p>
 						<p style="margin-top:-10px;">[Preschool, Second Edition (CELF-P2)]</p>
 					</div>
-					
-					<div class="inline">
-					<div class="left" style="margin-left:2vw;">
+					<div>
 						<label class="col-form-label" for="inputDefault" style="margin-top:-10px;">Results</label>
-						<input type="text" class="form-control" placeholder="%" id="finalCELFTestResult" style="width:5vw;">
+						<input type="text" class="form-control" placeholder="%" id="finalCELFTestResult">
 					</div>
-					</div>
-					
-					<div class="inline">
-					<div class="left">
+					<div>
 						<label class="col-form-label" for="inputDefault" style="margin-top:-10px;">Therapist</label>
-						<input type="text" class="form-control" placeholder="Therapist Name" id="finalCELFTestTherapist" style="width:10vw;">
+						<input type="text" class="form-control" placeholder="Therapist Name" id="finalCELFTestTherapist">
 					</div>
-					</div>
-					
-					<div class="inline">
-					<div class="left">
+					<div>
 						<label class="col-form-label" for="inputDefault" style="margin-top:-10px;">Date</label>
-						<input type="text" class="form-control" placeholder="DD/MM/YYYY" id="finalCELFTestDate" style="width:6vw;">
+						<input type="text" class="form-control" placeholder="DD/MM/YYYY" id="finalCELFTestDate">
 					</div>
-					</div>
-					
-					<div class="clear"></div>
-					
-					<div class="inline">
-						<p style="margin-top:20px;width:15vw;"><b>Preschool Language Scales</b></p>
+				</div>
+				
+				<div class="test-block">
+					<div>
+						<p style="margin-top:20px;"><b>Preschool Language Scales</b></p>
 						<p style="margin-top:-10px;">[Fifth Edition (PLS-5)]</p>
 					</div>
-					
-					<div class="inline">
-					<div class="left" style="margin-left:2vw;">
+					<div>
 						<label class="col-form-label" for="inputDefault" style="margin-top:12px;">Results</label>
-						<input type="text" class="form-control" placeholder="%" id="finalPLSTestResult" style="width:5vw;">
+						<input type="text" class="form-control" placeholder="%" id="finalPLSTestResult">
 					</div>
-					</div>
-					
-					<div class="inline">
-					<div class="left">
+					<div>
 						<label class="col-form-label" for="inputDefault" style="margin-top:12px;">Therapist</label>
-						<input type="text" class="form-control" placeholder="Therapist Name" id="finalPLSTestTherapist" style="width:10vw;">
+						<input type="text" class="form-control" placeholder="Therapist Name" id="finalPLSTestTherapist">
 					</div>
-					</div>
-					
-					<div class="inline">
-					<div class="left">
+					<div>
 						<label class="col-form-label" for="inputDefault" style="margin-top:12px;">Date</label>
-						<input type="text" class="form-control" placeholder="DD/MM/YYYY" id="finalPLSTestDate" style="width:6vw;">
+						<input type="text" class="form-control" placeholder="DD/MM/YYYY" id="finalPLSTestDate">
 					</div>
-					</div>
-					
-					<div class="clear"></div>
-					
-					<div class="inline">
-						<p style="margin-top:20px;width:15vw;"><b>Goldman-Fristoe Test of Articulation</b></p>
+				</div>
+				
+				<div class="test-block">
+					<div>
+						<p style="margin-top:20px;"><b>Goldman-Fristoe Test of Articulation</b></p>
 						<p style="margin-top:-10px;">[Third Edition (GFTA-3)]</p>
 					</div>
-					
-					<div class="inline">
-					<div class="left" style="margin-left:2vw;">
+					<div>
 						<label class="col-form-label" for="inputDefault" style="margin-top:12px;">Results</label>
-						<input type="text" class="form-control" placeholder="%" id="finalGFTATestResult" style="width:5vw;">
+						<input type="text" class="form-control" placeholder="%" id="finalGFTATestResult">
 					</div>
-					</div>
-					
-					<div class="inline">
-					<div class="left">
+					<div>
 						<label class="col-form-label" for="inputDefault" style="margin-top:12px;">Therapist</label>
-						<input type="text" class="form-control" placeholder="Therapist Name" id="finalGFTATestTherapist" style="width:10vw;">
+						<input type="text" class="form-control" placeholder="Therapist Name" id="finalGFTATestTherapist">
 					</div>
-					</div>
-					
-					<div class="inline">
-					<div class="left">
+					<div>
 						<label class="col-form-label" for="inputDefault" style="margin-top:12px;">Date</label>
-						<input type="text" class="form-control" placeholder="DD/MM/YYYY" id="finalGFTATestDate" style="width:6vw;">
+						<input type="text" class="form-control" placeholder="DD/MM/YYYY" id="finalGFTATestDate">
 					</div>
-					</div>
-				
-				</div>
 				</div>
 			
 			</div>
+			</div>
 		</div>
-		</div>
-		</div>
-		
-		<div class="inline">
-		<div class="left">
-		<div class="card border-primary mb-3" style="width: 45vw; height: 73vh;">
+		<div class="panel-B">
+			<div class="card border-primary mb-3">
 			<div class="card-header"><h3>Specialized Assessment Results II</h3></div>
 			<div class="card-body">
 				
-				<div class="card border-info mb-3" style="width: 43vw; height: 16vh;">
-				<div class="card-header"><h4>Occupational Therapy (Initial)</h4></div>
-				<div class="card-body">
-				
-					<div class="inline">
-						<p style="width:15vw;"><b>Peabody Developmental Motor Scales</b></p>
+					<div class="test-block">
+					<div>
+						<p><b>Peabody Developmental Motor Scales</b></p>
+						<p style="margin-top:-15px;"><b>(Initial)</b></p>
 						<p style="margin-top:-10px;">[Second Edition (PDMS-2)]</p>
 					</div>
-					
-					<div class="inline">
-					<div class="left" style="margin-left:2vw;">
+					<div>
 						<label class="col-form-label" for="inputDefault" style="margin-top:-10px;">Results</label>
-						<input type="text" class="form-control" placeholder="%" id="initialPDMSTestResult" style="width:5vw;">
+						<input type="text" class="form-control" placeholder="%" id="initialPDMSTestResult">
 					</div>
-					</div>
-					
-					<div class="inline">
-					<div class="left">
+					<div>
 						<label class="col-form-label" for="inputDefault" style="margin-top:-10px;">Therapist</label>
-						<input type="text" class="form-control" placeholder="Therapist Name" id="initialPDMSTestTherapist" style="width:10vw;">
+						<input type="text" class="form-control" placeholder="Therapist Name" id="initialPDMSTestTherapist">
 					</div>
-					</div>
-					
-					<div class="inline">
-					<div class="left">
+					<div>
 						<label class="col-form-label" for="inputDefault" style="margin-top:-10px;">Date</label>
-						<input type="text" class="form-control" placeholder="DD/MM/YYYY" id="initialPDMSTestDate" style="width:6vw;">
+						<input type="text" class="form-control" placeholder="DD/MM/YYYY" id="initialPDMSTestDate">
 					</div>
-					</div>
-				
-				</div>
 				</div>
 				
-				<div class="card border-info mb-3" style="width: 43vw; height: 34vh;">
-				<div class="card-header"><h4>Occupational Therapy (Final)</h4></div>
-				<div class="card-body">
-				
-					<div class="inline">
-						<p style="width:15vw;"><b>Peabody Developmental Motor Scales</b></p>
+				<hr style="margin-top:15px"></hr>
+			
+				<div class="test-block">
+					<div>
+						<p><b>Peabody Developmental Motor Scales</b></p>
+						<p style="margin-top:-15px;"><b>(Final)</b></p>
 						<p style="margin-top:-10px;">[Second Edition (PDMS-2)]</p>
 					</div>
-					
-					<div class="inline">
-					<div class="left" style="margin-left:2vw;">
+					<div>
 						<label class="col-form-label" for="inputDefault" style="margin-top:-10px;">Results</label>
-						<input type="text" class="form-control" placeholder="%" id="finalPDMSTestResult" style="width:5vw;">
+						<input type="text" class="form-control" placeholder="%" id="finalPDMSTestResult">
 					</div>
-					</div>
-					
-					<div class="inline">
-					<div class="left">
+					<div>
 						<label class="col-form-label" for="inputDefault" style="margin-top:-10px;">Therapist</label>
-						<input type="text" class="form-control" placeholder="Therapist Name" id="finalPDMSTestTherapist" style="width:10vw;">
+						<input type="text" class="form-control" placeholder="Therapist Name" id="finalPDMSTestTherapist">
 					</div>
-					</div>
-					
-					<div class="inline">
-					<div class="left">
+					<div>
 						<label class="col-form-label" for="inputDefault" style="margin-top:-10px;">Date</label>
-						<input type="text" class="form-control" placeholder="DD/MM/YYYY" id="finalPDMSTestDate" style="width:6vw;">
+						<input type="text" class="form-control" placeholder="DD/MM/YYYY" id="finalPDMSTestDate">
 					</div>
-					</div>
-					
-					<div class="clear"></div>
-					
-					<div class="inline">
-						<p style="margin-top:20px;width:15vw;"><b>Miller Function and Participation Scales</b></p>
+				</div>
+				
+				<div class="test-block">
+					<div>
+						<p style="margin-top:20px;"><b>Miller Function and Participation Scales</b></p>
 						<p style="margin-top:-10px;">[(M-FUN)]</p>
 					</div>
-					
-					<div class="inline">
-					<div class="left" style="margin-left:2vw;">
+					<div>
 						<label class="col-form-label" for="inputDefault" style="margin-top:12px;">Results</label>
-						<input type="text" class="form-control" placeholder="%" id="finalMFUNTestResult" style="width:5vw;">
+						<input type="text" class="form-control" placeholder="%" id="finalMFUNTestResult">
 					</div>
-					</div>
-					
-					<div class="inline">
-					<div class="left">
+					<div>
 						<label class="col-form-label" for="inputDefault" style="margin-top:12px;">Therapist</label>
-						<input type="text" class="form-control" placeholder="Therapist Name" id="finalMFUNTestTherapist" style="width:10vw;">
+						<input type="text" class="form-control" placeholder="Therapist Name" id="finalMFUNTestTherapist">
 					</div>
-					</div>
-					
-					<div class="inline">
-					<div class="left">
+					<div>
 						<label class="col-form-label" for="inputDefault" style="margin-top:12px;">Date</label>
-						<input type="text" class="form-control" placeholder="DD/MM/YYYY" id="finalMFUNTestDate" style="width:6vw;">
+						<input type="text" class="form-control" placeholder="DD/MM/YYYY" id="finalMFUNTestDate">
 					</div>
+				</div>
+				
+				<div class="test-block">
+					<div>
+						<p style="margin-top:20px;"><b>Sensory Profile 2</b></p>
+						<p style="margin-top:-10px;color:white;">.</p>
 					</div>
-					
-					<div class="clear"></div>
-					
-					<div class="inline">
-						<p style="margin-top:25px;width:15vw;"><b>Sensory Profile 2</b></p>
-						<p style="margin-top:-10px;"></p>
-					</div>
-					
-					<div class="inline">
-					<div class="left" style="margin-left:2vw;">
+					<div>
 						<label class="col-form-label" for="inputDefault" style="margin-top:12px;">Results</label>
-						<input type="text" class="form-control" placeholder="%" id="finalSP2TestResult" style="width:5vw;">
+						<input type="text" class="form-control" placeholder="%" id="finalSP2TestResult">
 					</div>
-					</div>
-					
-					<div class="inline">
-					<div class="left">
+					<div>
 						<label class="col-form-label" for="inputDefault" style="margin-top:12px;">Therapist</label>
-						<input type="text" class="form-control" placeholder="Therapist Name" id="finalSP2TestTherapist" style="width:10vw;">
+						<input type="text" class="form-control" placeholder="Therapist Name" id="finalSP2TestTherapist">
 					</div>
-					</div>
-					
-					<div class="inline">
-					<div class="left">
+					<div>
 						<label class="col-form-label" for="inputDefault" style="margin-top:12px;">Date</label>
-						<input type="text" class="form-control" placeholder="DD/MM/YYYY" id="finalSP2TestDate" style="width:6vw;">
+						<input type="text" class="form-control" placeholder="DD/MM/YYYY" id="finalSP2TestDate">
 					</div>
-					</div>
-				
 				</div>
-				</div>
-				
-				<div class="card border-info mb-3" style="width: 43vw; height: 10vh;">
-				<div class="card-body">
-					
-					<div class="inline">
-					<div class="left">
-						<label class="col-form-label" for="inputDefault" style="margin-top:-10px;margin-left:2vw;"><b>Initial Review Date</b></label>
-						<input type="text" class="form-control" placeholder="DD/MM/YYYY" id="initialReviewDate" style="width:10vw;">
-					</div>
-					</div>
-					
-					<div class="inline">
-					<div class="left">
-						<label class="col-form-label" for="inputDefault" style="margin-top:-10px;margin-left:5vw;"><b>First Review Date</b></label>
-						<input type="text" class="form-control" placeholder="DD/MM/YYYY" id="firstReviewDate" style="width:10vw;margin-left:3vw;">
-					</div>
-					</div>
-					
-					<div class="inline">
-					<div class="left">
-						<label class="col-form-label" for="inputDefault" style="margin-top:-10px;margin-left:5vw"><b>Final Review Date</b></label>
-						<input type="text" class="form-control" placeholder="DD/MM/YYYY" id="finalReviewDate" style="width:10vw;margin-left:3vw;">
-					</div>
-					</div>
-					
-					
-				</div>
-				</div>
-				
+			
+			</div>
 			</div>
 		</div>
-		</div>
-		</div>
+		<div class="panel-C">
+			<div class="card border-primary mb-3" style="margin-left:25vw;margin-right:25vw;">
+			<div class="card-body">
+			<div class="date-panel">
+			
+			<div>
+				<label class="col-form-label" for="inputDefault"><b>Initial Review Date</b></label>
+				<input type="text" class="form-control" placeholder="DD/MM/YYYY" id="initialReviewDate">
+			</div>
+			
+			<div>
+				<label class="col-form-label" for="inputDefault"><b>First Review Date</b></label>
+				<input type="text" class="form-control" placeholder="DD/MM/YYYY" id="firstReviewDate">
+			</div>
+			
+			<div>
+				<label class="col-form-label" for="inputDefault"><b>Final Review Date</b></label>
+				<input type="text" class="form-control" placeholder="DD/MM/YYYY" id="finalReviewDate">
+			</div>
+			
+			</div>
+			</div>
+			</div>
 		
-
+		</div>
 	</div>
 	
-	<div class="clear"></div>
 	
-	<div class="pagenation_center">
-	<div class="center">
-	<div class="card border-dark mb-3" style="max-width: 18vw;">
-	<div class="card-body">
-		<button type="button" class="btn btn-primary" id="Last" onclick="previous()">Previous Page</button>
-		<button type="button" class="btn btn-success" style="margin-left:20px;" id="Next" onclick="next()">Next Page</button>
-    </div>
-	</div>
-	</div>
-	</div>
+	<!-- Footer & Pagenation Buttons -->
+	<footer>
+		<div class="footer-pagenation">
+		<div class="card border-dark mb-3">
+		<div class="card-body">
+			<button type="button" class="btn btn-primary" id="Last" onclick="previous()">Previous Page</button>
+			<button type="button" class="btn btn-success" style="" id="Next" onclick="next()">Next Page</button>
+		</div>
+		</div>
+		</div>
+	</footer>
 	
 </body>
-
 </html>

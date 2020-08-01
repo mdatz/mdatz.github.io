@@ -1,0 +1,77 @@
+
+.header-label{
+	margin-left:2vw;
+	margin-top:3vh;
+	margin-bottom:-2vh;
+}
+
+.progress{
+	margin-left:2vw;
+	margin-right:2vw;
+	margin-top:2vh;
+	margin-bottom:2vh;
+}
+
+.main-container{
+	display:grid;
+	grid-template-columns:1fr 1fr;
+	grid-template-rows:1fr;
+	grid-column-gap:10px;
+	grid-row-gap:10px;
+	margin:15px;
+}
+
+.footer-pagenation{
+	display:grid;
+	justify-content:center;
+	margin-top:2vh;
+}
+
+.panel-A{
+	display:grid;
+	grid-template-columns:1fr;
+	grid-template-rows:1fr 1fr;
+}
+
+.panel-B{
+	display:grid;
+	grid-template-columns:1fr 1fr;
+	grid-template-rows: 0.4fr 1.6fr;
+	grid-column-gap:10px;
+	grid-row-gap:10px;
+	
+	align-content:end;
+}
+
+.upload{
+	grid-column-start:1;
+	grid-column-end:3;
+	grid-row-start:1;
+	grid-row-end:2;
+	
+	margin-top:40px;
+}
+
+.logo{
+	margin:100px;
+	margin-top:25px;
+	margin-bottom:40px;
+}
+
+#logo{
+	width:100%;
+}
+
+.child-info{
+	display:grid;
+	grid-template-columns: 1fr 1fr 1fr;
+	grid-column-gap:8px;
+}
+
+#ECS-Button-Group{
+	margin-top:20px;
+	margin-left:auto;
+	display:grid;
+	grid-template-columns: 1fr 1fr 1fr;
+	grid-column-gap:40%;
+}

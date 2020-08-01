@@ -6,37 +6,37 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
 	<link rel="icon" href="../Resources/Images/Icon.ico">
 	<link rel="stylesheet" href="../Resources/CSS/bootstrap.css">
-	<link rel="stylesheet" href="../Resources/CSS/custom.css">
+	<link rel="stylesheet" href="../Resources/CSS/Page_3.css">
 	<link rel="stylesheet" href="../Resources/CSS/flatpickr.min.css">
 	<script src="../Resources/JS/flatpickr.js"></script>
 	<script type="text/javascript" src="../Resources/JS/Page_3.js"></script>
 </head>
 
 <body onload="fillExisting()">
-	<div class="jumbotron" style="width:100vw;">
-		<label class="col-form-label" for="progress" style="margin-top:-20px;"><h3>IPP Form Progress</h3></label>
-		<div class="progress">
-			<div class="progress-bar progress-bar-striped progress-bar-animated" role="progressbar" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100" style="width: 50%"></div>
+	
+	<!--Header & Progress Bar -->
+	<header>
+		<div class="header-label">
+			<label class="col-form-label" for="progress" name="header_label"><h3><b>IPP Form Progress</b></h3></label>
 		</div>
-		
-		<br></br>
-		<div class="inline">
-		<div class="left">
-		<div class="card border-primary mb-3" style="width: 50vw; height: 73vh;">
-			<div class="card-header"><h3>Background Information</h3></div>
-			<div class="card-body">
-				
-				<div class="inline">
-				<div class="card border-info mb-3" style="width: 15vw; height: 25vh;">
+		<div class="progress">
+			<div class="progress-bar progress-bar-striped progress-bar-animated" role="progressbar" name="progress" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100" style="width: 50%"></div>
+		</div>
+	</header>
+	
+	
+	<!-- Main Body -->
+	<div class="main-container">
+		<div class="panel-A">
+			<div class="subpanel-A">
+				<div class="card border-info mb-3">
 				<div class="card-header">
-					<div class="inline">
-					<h4>Preschool</h4>
-					</div>
+					<h3 style="float:left;">Preschool</h3>
 					<div style="float:right; margin-right:-5px;">
 					<div class="btn-group mr-2" role="group" aria-label="First group" name="preschoolNum">
-						<button type="button" class="btn btn-secondary" onclick="preschool1()">1</button>
-						<button type="button" class="btn btn-secondary" onclick="preschool2()">2</button>
-						<button type="button" class="btn btn-secondary" onclick="preschool3()">3</button>
+						<button type="button" class="btn btn-info" onclick="preschool1()">1</button>
+						<button type="button" class="btn btn-info" onclick="preschool2()">2</button>
+						<button type="button" class="btn btn-info" onclick="preschool3()">3</button>
 					</div>
 					</div>
 				</div>
@@ -44,149 +44,145 @@
 				
 					<label class="col-form-label" for="inputDefault" style="margin-top:-10px;"><b>Preschool 1 Name</b></label>
 					<input type="text" class="form-control" placeholder="School Name" id="preschoolName1">
-						
-					<div class="inline">
+					
+					<div class="time-slots">
+					<div>
 					<label class="col-form-label" for="inputDefault"><b>Start Date</b></label>
-					<input type="text" class="form-control" placeholder="DD/MM/YYYY" id="preschoolStartDate1" style="width:5.5vw;">
+					<input type="text" class="form-control" placeholder="DD/MM/YYYY" id="preschoolStartDate1">
 					</div>
-						
-					<div class="inline-buttons">
+					
+					<div>
 					<label class="col-form-label" for="inputDefault"><b>End Date</b></label>
-					<input type="text" class="form-control" placeholder="DD/MM/YYYY" id="preschoolEndDate1" style="width:5.5vw;">
+					<input type="text" class="form-control" placeholder="DD/MM/YYYY" id="preschoolEndDate1">
 					</div>
-				
+					</div>
 				</div>
 				<div class="card-body" id="preschool2" style="display:none;">
 				
 					<label class="col-form-label" for="inputDefault" style="margin-top:-10px;"><b>Preschool 2 Name</b></label>
 					<input type="text" class="form-control" placeholder="School Name" id="preschoolName2">
 						
-					<div class="inline">
+					<div class="time-slots">
+					<div>
 					<label class="col-form-label" for="inputDefault"><b>Start Date</b></label>
-					<input type="text" class="form-control" placeholder="DD/MM/YYYY" id="preschoolStartDate2" style="width:5.5vw;">
+					<input type="text" class="form-control" placeholder="DD/MM/YYYY" id="preschoolStartDate2">
 					</div>
-						
-					<div class="inline-buttons">
+					
+					<div>
 					<label class="col-form-label" for="inputDefault"><b>End Date</b></label>
-					<input type="text" class="form-control" placeholder="DD/MM/YYYY" id="preschoolEndDate2" style="width:5.5vw;">
+					<input type="text" class="form-control" placeholder="DD/MM/YYYY" id="preschoolEndDate2">
 					</div>
-				
+					</div>
 				</div>
-
 				<div class="card-body" id="preschool3" style="display:none;">
 				
 					<label class="col-form-label" for="inputDefault" style="margin-top:-10px;"><b>Preschool 3 Name</b></label>
 					<input type="text" class="form-control" placeholder="School Name" id="preschoolName3">
 						
-					<div class="inline">
+					<div class="time-slots">
+					<div>
 					<label class="col-form-label" for="inputDefault"><b>Start Date</b></label>
-					<input type="text" class="form-control" placeholder="DD/MM/YYYY" id="preschoolStartDate3" style="width:5.5vw;">
+					<input type="text" class="form-control" placeholder="DD/MM/YYYY" id="preschoolStartDate3">
 					</div>
-						
-					<div class="inline-buttons">
+					
+					<div>
 					<label class="col-form-label" for="inputDefault"><b>End Date</b></label>
-					<input type="text" class="form-control" placeholder="DD/MM/YYYY" id="preschoolEndDate3" style="width:5.5vw;">
+					<input type="text" class="form-control" placeholder="DD/MM/YYYY" id="preschoolEndDate3">
+					</div>
 					</div>
 				
 				</div>				
 				</div>
+			
+			</div>
+			<div class="subpanel-B">
 				
-				<div class="card border-info mb-3" style="width: 15vw; height: 35vh;">
-				<div class="card-header"><h4>Family Information</h4></div>
-				<div class="card-body">
-					<textarea class="form-control" id="familyInformation" rows="10" style="resize:none;"></textarea>
-				</div>
-				</div>
-				</div>
 				
-				<div class="inline">
-				<div class="left">
-				<div class="card border-info mb-3" style="width: 31vw; height: 61.5vh;">
-				<div class="card-header"><h4>Physical/Medical Information</h4></div>
+				<div class="card border-info mb-3">
+				<div class="card-header"><h3>Physical/Medical Information</h3></div>
 				<div class="card-body">
 					
-					<div class="inline">
+					<div class="medical-info">
+					<div>
 					<label class="col-form-label" for="inputDefault" style="margin-top:-10px;"><b>Family Doctor</b></label>
-					<input type="text" class="form-control" placeholder="Name of Family Doctor" id="familyDoctor" style="width:15vw;">
+					<input type="text" class="form-control" placeholder="Name of Family Doctor" id="familyDoctor">
 					</div>
-					<div class="inline">
-					<div class="left">
+					<div>
 					<label class="col-form-label" for="inputDefault" style="margin-top:-10px;"><b>Date of Last Visit</b></label>
-					<input type="text" class="form-control" placeholder="DD/MM/YYYY" id="familyDoctorVisit" style="width:10vw;">
+					<input type="text" class="form-control" placeholder="DD/MM/YYYY" id="familyDoctorVisit">
 					</div>
 					</div>
 					
-					<div class="inline">
+					<div class="medical-info">
+					<div>
 					<label class="col-form-label" for="inputDefault"><b>Pediatrician</b></label>
-					<input type="text" class="form-control" placeholder="Name of Pediatrician" id="pediatrician" style="width:15vw;">
+					<input type="text" class="form-control" placeholder="Name of Pediatrician" id="pediatrician">
 					</div>
-					<div class="inline">
-					<div class="left">
+					<div>
 					<label class="col-form-label" for="inputDefault"><b>Date of Last Visit</b></label>
-					<input type="text" class="form-control" placeholder="DD/MM/YYYY" id="pediatricianVisit" style="width:10vw;">
+					<input type="text" class="form-control" placeholder="DD/MM/YYYY" id="pediatricianVisit">
 					</div>
 					</div>
 					
-					<div class="inline">
+					<div class="medical-info">
+					<div>
 					<label class="col-form-label" for="inputDefault"><b>Hearing Screen</b></label>
-					<input type="text" class="form-control" placeholder="Name" id="hearingScreen" style="width:15vw;">
+					<input type="text" class="form-control" placeholder="Name" id="hearingScreen">
 					</div>
-					<div class="inline">
-					<div class="left">
+					<div>
 					<label class="col-form-label" for="inputDefault"><b>Date of Last Visit</b></label>
-					<input type="text" class="form-control" placeholder="DD/MM/YYYY" id="hearingScreenVisit" style="width:10vw;">
+					<input type="text" class="form-control" placeholder="DD/MM/YYYY" id="hearingScreenVisit">
 					</div>
 					</div>
 
-					<div class="inline">
+					<div class="medical-info">
+					<div>
 					<label class="col-form-label" for="inputDefault"><b>Vision Screen</b></label>
-					<input type="text" class="form-control" placeholder="Name" id="visionScreen" style="width:15vw;">
+					<input type="text" class="form-control" placeholder="Name" id="visionScreen">
 					</div>
-					<div class="inline">
-					<div class="left">
+					<div>
 					<label class="col-form-label" for="inputDefault"><b>Date of Last Visit</b></label>
-					<input type="text" class="form-control" placeholder="DD/MM/YYYY" id="visionScreenVisit" style="width:10vw;">
+					<input type="text" class="form-control" placeholder="DD/MM/YYYY" id="visionScreenVisit">
 					</div>
 					</div>
-					
-					<div class="clear"></div>
 					
 					<div class="form-group">
 					<label for="childStrengths" style="margin-top:1vh;"><b>Allergies</b></label>
-					<textarea class="form-control" id="medicalAllergies" rows="1" style="resize:none;height:3.5vh;"></textarea>
+					<textarea class="form-control" id="medicalAllergies" rows="1" style="resize:none;"></textarea>
 					</div>
 					<div class="form-group">
 					<label for="childAreasGrowth"><b>Medication</b></label>
-					<textarea class="form-control" id="medicalMedications" rows="1" style="resize:none;height:3.5vh;"></textarea>
+					<textarea class="form-control" id="medicalMedications" rows="1" style="resize:none;"></textarea>
 					</div>
 					<div class="form-group">
 					<label for="parentPriorities"><b>Other</b></label>
-					<textarea class="form-control" id="medicalOther" rows="1" style="resize:none;height:3.5vh;"></textarea>
+					<textarea class="form-control" id="medicalOther" rows="1" style="resize:none;"></textarea>
 					</div>
 					
 				</div>
 				</div>
+			
+			</div>
+			<div class="subpanel-C">
+				<div class="card border-info mb-3">
+				<div class="card-header"><h3>Family Information</h3></div>
+				<div class="card-body">
+					<textarea class="form-control" id="familyInformation" rows="12" style="resize:none;"></textarea>
 				</div>
 				</div>
-				
 			</div>
 		</div>
-		</div>
-		</div>
 		
-		<div class="inline">
-		<div class="left">
-		<div class="card border-primary mb-3" style="width: 40vw; height: 73vh;">
-			<div class="card-body">
+		<div class="panel-B">
 			
-			<div class="card border-info mb-3" style="width: 38vw; height: 22vh;">
+			<div class="card border-info mb-3">
 			<div class="card-header"><h3>Family Involvement</h3></div>
 			<div class="card-body">
 				<center><h5 style="margin-top:1vh">Parent(s)/Guardian(s) will partner with the members of their child's Kids Developmental Services team by attending all Individualized Program Plan meetings; sharing any new information; participating in programming sessions; and following through with recommended strategies.</h5></center>
 			</div>
 			</div>
 			
-			<div class="card border-info mb-3" style="width: 38vw; height: 45vh;">
+			<div class="card border-info mb-3">
 			<div class="card-header"><h3>Strengths, Areas of Growth, Parent Priorities</h3></div>
 			<div class="card-body">
 				
@@ -206,23 +202,21 @@
 			</div>
 			</div>
 			</div>
-		</div>
-		</div>
-		</div>
+
 	</div>
 	
-	<div class="clear"></div>
 	
-	<div class="pagenation_center">
-	<div class="center">
-	<div class="card border-dark mb-3" style="max-width: 18vw;">
-	<div class="card-body">
-		<button type="button" class="btn btn-primary" id="Last" onclick="previous()">Previous Page</button>
-		<button type="button" class="btn btn-success" style="margin-left:20px;" id="Next" onclick="next()">Next Page</button>
-    </div>
-	</div>
-	</div>
-	</div>
+	<!-- Footer & Pagenation Buttons -->
+	<footer>
+		<div class="footer-pagenation">
+		<div class="card border-dark mb-3">
+		<div class="card-body">
+			<button type="button" class="btn btn-primary" id="Last" onclick="previous()">Previous Page</button>
+			<button type="button" class="btn btn-success" style="" id="Next" onclick="next()">Next Page</button>
+		</div>
+		</div>
+		</div>
+	</footer>
 	
 </body>
 </html>

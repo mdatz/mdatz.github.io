@@ -1,0 +1,69 @@
+.header-label{
+	margin-left:2vw;
+	margin-top:3vh;
+	margin-bottom:-2vh;
+}
+
+.progress{
+	margin-left:2vw;
+	margin-right:2vw;
+	margin-top:2vh;
+	margin-bottom:2vh;
+}
+
+.main-container{
+	display:grid;
+	grid-template-columns:1.25fr 0.75fr;
+	grid-template-rows:1fr;
+	grid-column-gap:10px;
+	grid-row-gap:10px;
+	margin:15px;
+}
+
+.footer-pagenation{
+	display:grid;
+	justify-content:center;
+	margin-top:2vh;
+}
+
+.panel-A{
+	display:grid;
+	grid-template-columns:0.75fr 1.25fr;
+	grid-template-rows:1fr 1fr;
+	grid-column-gap:10px;
+}
+
+.panel-B{
+	
+}
+
+.subpanel-A{
+
+}
+
+.subpanel-B{
+	grid-row-start: 1;
+	grid-row-end: 3;
+	grid-column-start: 2;
+	grid-column-end: 3;
+}
+
+.subpanel-C{
+	grid-row-start: 2;
+	grid-row-end: 3;
+	grid-column-start: 1;
+	grid-column-end: 2;
+	margin-top:-100px;
+}
+
+.time-slots{
+	display:grid;
+	grid-template-columns: 1fr 1fr;
+	grid-column-gap:15px;
+}
+
+.medical-info{
+	display:grid;
+	grid-template-columns: 1.5fr 0.5fr;
+	grid-column-gap:15px;
+}

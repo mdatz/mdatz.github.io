@@ -1,0 +1,72 @@
+.header-label{
+	margin-left:2vw;
+	margin-top:3vh;
+	margin-bottom:-2vh;
+}
+
+.progress{
+	margin-left:2vw;
+	margin-right:2vw;
+	margin-top:2vh;
+	margin-bottom:2vh;
+}
+
+.main-container{
+	display:grid;
+	grid-template-columns: 1fr 1fr;
+	grid-template-rows:1fr 1fr;
+	grid-column-gap:10px;
+	grid-row-gap:10px;
+	margin:15px;
+}
+
+.footer-pagenation{
+	display:grid;
+	justify-content:center;
+	margin-top:2vh;
+}
+
+.panel-A{
+	grid-column-start:1;
+	grid-column-end:2;
+	grid-row-start:1;
+	grid-row-end:3;
+	
+}
+
+.panel-B{
+	
+}
+
+.panel-C{
+	display:grid;
+	grid-template-columns:0.75fr 1.25fr;
+}
+
+.attendance-group{
+	display:grid;
+	grid-template-columns: 1.3fr 0.9fr 0.9fr 0.9fr;
+	margin-top:30px;
+}
+
+.attendance-group-B{
+	display:grid;
+	grid-template-columns: 1.3fr 0.9fr 0.9fr 0.9fr;
+	margin-top:25px;
+}
+
+.header-group{
+	display:grid;
+	grid-template-columns: 1.3fr 0.9fr 0.9fr 0.9fr;
+}
+
+.attendance-button{
+	margin-left:25px;
+}
+
+.team-group{
+	display:grid;
+	grid-template-columns: 1.4fr 0.6fr;
+	grid-column-gap:10px;
+	margin-top:5px;
+}
