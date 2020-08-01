@@ -115,14 +115,33 @@ function loadForm(input){
 	
 	var reader = new FileReader();
 	reader.onload = function(){
-		var fields = pdfform().list_fields(reader.result);
-		console.log(fields);
+		
+		//Create Dictionary of Previous Values
+		var dict = {};
+		const matches = reader.result.match(/((obj)[\s\S]*?(endobj))/g);
+		matches.forEach(match => {
+			const tIndex = match.indexOf('/T (');
+			const vIndex = match.indexOf('/V (');
+			if(tIndex > -1 && vIndex > -1) {
+				const fieldNameSegment = match.substring(tIndex + 4);
+				const fieldNameValue = fieldNameSegment.substring(0,fieldNameSegment.indexOf(')'));
+				const valueSegment = match.substring(vIndex + 4);
+				const dataValue = valueSegment.substring(0, valueSegment.indexOf(')'));
+				dict[fieldNameValue] = dataValue;
+			}
+		});
+
+		//Populate Session Storage
+		child_name = dict['Child Name'].split(" ");
+		sessionStorage.setItem("Child First Name", child_name[0]);
+		sessionStorage.setItem("Child Middle Name", child_name[1]);
+		sessionStorage.setItem("Child Last Name", child_name[2]);
 		
 		//Refresh Page Contents
 		fillExisting();
 	}
 	
-	reader.readAsArrayBuffer(input_form);
+	reader.readAsText(input_form);
 }
 
 function previous() {
