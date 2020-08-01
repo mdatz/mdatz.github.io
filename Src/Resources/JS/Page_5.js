@@ -40,6 +40,8 @@ function fillExisting(){
 	if(sessionStorage.getItem("Accommodations and Strategies Goal 4.1") != null){document.getElementById("goalStrategy4_1").value = sessionStorage.getItem("Accommodations and Strategies Goal 4.1");}
 	if(sessionStorage.getItem("Accommodations and Strategies Goal 4.2") != null){document.getElementById("goalStrategy4_2").value = sessionStorage.getItem("Accommodations and Strategies Goal 4.2");}
 	if(sessionStorage.getItem("Accommodations and Strategies Goal 4.3") != null){document.getElementById("goalStrategy4_3").value = sessionStorage.getItem("Accommodations and Strategies Goal 4.3");}
+	
+	document.getElementById("EnviromentAccommodations").value = sessionStorage.getItem("Early Learning Accommodations");
 }
 
 function next(){
@@ -183,6 +185,8 @@ function next(){
 	var goalAccommodation4_3 = document.getElementById("goalStrategy4_3");
 	sessionStorage.setItem("Accommodations and Strategies Goal 4.3", goalAccommodation4_3.options[goalAccommodation4_3.selectedIndex].text);
 	
+	sessionStorage.removeItem("Early Learning Accommodations");
+	sessionStorage.setItem("Early Learning Accommodations", document.getElementById("EnviromentAccommodations").value);
 
 	return location.href = "./Page_6.html";
 }
@@ -328,6 +332,8 @@ function previous(){
 	var goalAccommodation4_3 = document.getElementById("goalStrategy4_3");
 	sessionStorage.setItem("Accommodations and Strategies Goal 4.3", goalAccommodation4_3.options[goalAccommodation4_3.selectedIndex].text);
 	
+	sessionStorage.removeItem("Early Learning Accommodations");
+	sessionStorage.setItem("Early Learning Accommodations", document.getElementById("EnviromentAccommodations").value);
 
 	return location.href = "./Page_4.html";
 }

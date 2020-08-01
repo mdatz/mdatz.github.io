@@ -13,10 +13,8 @@ function createForm(){
 	
 	//Create Buffer With Form Variables
 	//Page 1 --------------------------
-	fields['PUF Header Year'] = ["2020 - 2021"];
 	fields['Child Name'] = [sessionStorage.getItem("Child First Name") + " " + sessionStorage.getItem("Child Middle Name") + " " + sessionStorage.getItem("Child Last Name")]; 
 	fields['Child DOB'] = [sessionStorage.getItem("Child Date of Birth")];
-	fields['Next September Year'] = ["September 1, 2020"];
 	fields['Child September Age'] = [sessionStorage.getItem("Child Date on September")];
 	fields['Year of ECS'] = [sessionStorage.getItem("ECS Year")];
 	fields['Eligibility Code'] = [sessionStorage.getItem("Elegibility Code")];
@@ -318,6 +316,8 @@ function createForm(){
 		fields['Goal 4 Accommodation 3'] = [sessionStorage.getItem("Accommodations and Strategies Goal 4.3")];		
 	}
 	
+	fields['Early Learning Accommodations'] = [sessionStorage.getItem("Early Learning Accommodations")];
+	
 	//Page 6 --------------------------
 	fields['Transition Planning Date'] = [sessionStorage.getItem("Transition Program Date")];
 	fields['Transition Planning Program'] = [sessionStorage.getItem("Transition Program")];
@@ -338,11 +338,13 @@ function createForm(){
 	fields['Footer 10'] = [sessionStorage.getItem("Child Last Name") + ", " + sessionStorage.getItem("Child First Name")];
 	fields['Footer 11'] = [sessionStorage.getItem("Child Last Name") + ", " + sessionStorage.getItem("Child First Name")];
 	
-	//Fill Goal End Dates
+	//Fill Goal Dates
 	fields['Goal 1 End Date'] = ['2021'];
 	fields['Goal 2 End Date'] = ['2021'];
 	fields['Goal 3 End Date'] = ['2021'];
 	fields['Goal 4 End Date'] = ['2021'];
+	fields['PUF Header Year'] = ["2020 - 2021"];
+	fields['Next September Year'] = ["September 1, 2020"];
 	
 	//Create Output PDF	
 	var finalBuffer = pdfform().transform(templatePDF, fields);
@@ -385,10 +387,7 @@ function submitForm(){
 }
 
 function fillExisting(){
-	
-	final_zip = new JSZip();
-	sig_folder = final_zip.folder("Signatures");
-	
+		
 	//Check for Number of Goals
 	num_goals = 4;
 	
