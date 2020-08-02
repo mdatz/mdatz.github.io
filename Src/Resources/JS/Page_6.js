@@ -9,7 +9,7 @@ function createForm(){
 	var fields = pdfform().list_fields(templatePDF);
 	
 	//Debugging Output
-	//console.log(fields);
+	console.log(fields);
 	
 	//Create Buffer With Form Variables
 	//Page 1 --------------------------
@@ -339,10 +339,10 @@ function createForm(){
 	fields['Footer 11'] = [sessionStorage.getItem("Child Last Name") + ", " + sessionStorage.getItem("Child First Name")];
 	
 	//Fill Goal Dates
-	fields['Goal 1 End Date'] = ['2021'];
-	fields['Goal 2 End Date'] = ['2021'];
-	fields['Goal 3 End Date'] = ['2021'];
-	fields['Goal 4 End Date'] = ['2021'];
+	fields['Goal End Date 1'] = ['2021'];
+	fields['Goal End Date 2'] = ['2021'];
+	fields['Goal End Date 3'] = ['2021'];
+	fields['Goal End Date 4'] = ['2021'];
 	fields['PUF Header Year'] = ["2020 - 2021"];
 	fields['Next September Year'] = ["September 1, 2020"];
 	
@@ -378,6 +378,8 @@ function submitForm(){
 	if(num_goals == 1){
 		formURL = "https://mdatz.github.io/Src/Resources/Forms/Template_1_Goals.pdf";
 	}
+	
+	formURL = "https://mdatz.github.io/Src/Resources/Forms/Template_Master.pdf";
 	
 	//Send Request for Hosted PDF Template
 	pdfhttp.open("GET", formURL, true);
