@@ -364,6 +364,10 @@ function createForm(){
 	fields['Goal End Date 4'] = [yearFinish];
 	fields['PUF Header Year'] = [yearSpan];
 	fields['Next September Year'] = ["September 1, " + yearFinish];
+	fields['Academic Year Attendance Page'] = [yearSpan];
+	fields['Academic Year Signature Page'] = [yearSpan];
+	fields['Child Name Attendance Page'] = [sessionStorage.getItem("Child First Name") + " " + sessionStorage.getItem("Child Last Name")];
+	fields['Child Name Signature Page'] = [sessionStorage.getItem("Child First Name") + " " + sessionStorage.getItem("Child Last Name")];
 	
 	//Create Output PDF	
 	var finalBuffer = pdfform().transform(templatePDF, fields);
@@ -506,31 +510,102 @@ function previous(){
 	location.href = "./Page_5.html";
 }
 
-function markAttendance(currentAttendance){
+function markAttendance(currentAttendee){
+	
+	var attendance = new Date();
 	
 	//Update Signature Button If Signed
-	if(currentSignature == "Parent_1/Initial_Signature"){
-		document.getElementById("Parent_1_Initial").className = "btn btn-success";
-	}else if(currentSignature == "Parent_2/Initial_Signature"){
-		document.getElementById("Parent_2_Initial").className = "btn btn-success";
-	}else if(currentSignature == "Preschool_Teacher/Initial_Signature"){
-		document.getElementById("Preschool_Teacher_Initial").className = "btn btn-success";
-	}else if(currentSignature == "Certificated_Teacher/Initial_Signature"){
-		document.getElementById("Certificated_Teacher_Initial").className = "btn btn-success";
-	}else if(currentSignature == "Developmental_Assistant/Initial_Signature"){
-		document.getElementById("Developmental_Assistant_Initial").className = "btn btn-success";
-	}else if(currentSignature == "Speech_Language_Pathologist/Initial_Signature"){
-		document.getElementById("Speech_Pathologist_Initial").className = "btn btn-success";
-	}else if(currentSignature == "Occupational_Therapist/Initial_Signature"){
-		document.getElementById("Occupational_Therapist_Initial").className = "btn btn-success";
-	}else if(currentSignature == "Physiotherapist/Initial_Signature"){
-		document.getElementById("Physiotherapist_Initial").className = "btn btn-success";
-	}else if(currentSignature == "Psychologist/Initial_Signature"){
-		document.getElementById("Psychologist_Initial").className = "btn btn-success";
-	}else if(currentSignature == "Child_Developmental_Specialist/Initial_Signature"){
-		document.getElementById("Developmental_Specialist_Initial").className = "btn btn-success";
+	if(currentAttendee == "Parent 1 Initial"){
+		sessionStorage.setItem("Parent 1 Initial Attendance",[attendance.getDate() + "-" + attendance.getMonth() + "-" + attendance.getFullYear()]);
+		document.getElementById('parentGaurdian1Initial').className = "btn btn-success disabled";
+	}else if(currentAttendee == "Parent 1 Second"){
+		sessionStorage.setItem("Parent 1 Second Attendance",[attendance.getDate() + "-" + attendance.getMonth() + "-" + attendance.getFullYear()]);
+		document.getElementById("parentGaurdian1Second").className = "btn btn-success disabled";
+	}else if(currentAttendee == "Parent 1 Final"){
+		sessionStorage.setItem("Parent 1 Final Attendance",[attendance.getDate() + "-" + attendance.getMonth() + "-" + attendance.getFullYear()]);
+		document.getElementById("parentGaurdian1Final").className = "btn btn-success disabled";
+	}else if(currentAttendee == "Parent 2 Initial"){
+		sessionStorage.setItem("Parent 2 Initial Attendance",[attendance.getDate() + "-" + attendance.getMonth() + "-" + attendance.getFullYear()]);
+		document.getElementById("parentGaurdian2Initial").className = "btn btn-success disabled";
+	}else if(currentAttendee == "Parent 2 Second"){
+		sessionStorage.setItem("Parent 2 Second Attendance",[attendance.getDate() + "-" + attendance.getMonth() + "-" + attendance.getFullYear()]);
+		document.getElementById("parentGaurdian2Second").className = "btn btn-success disabled";
+	}else if(currentAttendee == "Parent 2 Final"){
+		sessionStorage.setItem("Parent 2 Final Attendance",[attendance.getDate() + "-" + attendance.getMonth() + "-" + attendance.getFullYear()]);
+		document.getElementById("parentGaurdian2Final").className = "btn btn-success disabled";
+	}else if(currentAttendee == "Preschool Teacher Initial"){
+		sessionStorage.setItem("",[attendance.getDate() + "-" + attendance.getMonth() + "-" + attendance.getFullYear()]);
+		document.getElementById("").className = "btn btn-success disabled";
+	}else if(currentAttendee == "Preschool Teacher Second"){
+		sessionStorage.setItem("",[attendance.getDate() + "-" + attendance.getMonth() + "-" + attendance.getFullYear()]);
+		document.getElementById("").className = "btn btn-success disabled";
+	}else if(currentAttendee == "Preschool Teacher Final"){
+		sessionStorage.setItem("",[attendance.getDate() + "-" + attendance.getMonth() + "-" + attendance.getFullYear()]);
+		document.getElementById("").className = "btn btn-success disabled";
+	}else if(currentAttendee == "Certificated Teacher Initial"){
+		sessionStorage.setItem("",[attendance.getDate() + "-" + attendance.getMonth() + "-" + attendance.getFullYear()]);
+		document.getElementById("").className = "btn btn-success disabled";
+	}else if(currentAttendee == "Certificated Teacher Second"){
+		sessionStorage.setItem("",[attendance.getDate() + "-" + attendance.getMonth() + "-" + attendance.getFullYear()]);
+		document.getElementById("").className = "btn btn-success disabled";
+	}else if(currentAttendee == "Certificated Teacher Final"){
+		sessionStorage.setItem("",[attendance.getDate() + "-" + attendance.getMonth() + "-" + attendance.getFullYear()]);
+		document.getElementById("").className = "btn btn-success disabled";
+	}else if(currentAttendee == "Developmental Assistant Initial"){
+		sessionStorage.setItem("",[attendance.getDate() + "-" + attendance.getMonth() + "-" + attendance.getFullYear()]);
+		document.getElementById("").className = "btn btn-success disabled";
+	}else if(currentAttendee == "Developmental Assistant Second"){
+		sessionStorage.setItem("",[attendance.getDate() + "-" + attendance.getMonth() + "-" + attendance.getFullYear()]);
+		document.getElementById("").className = "btn btn-success disabled";
+	}else if(currentAttendee == "Developmental Assistant Final"){
+		sessionStorage.setItem("",[attendance.getDate() + "-" + attendance.getMonth() + "-" + attendance.getFullYear()]);
+		document.getElementById("").className = "btn btn-success disabled";
+	}else if(currentAttendee == "Occupational Therapist Initial"){
+		sessionStorage.setItem("",[attendance.getDate() + "-" + attendance.getMonth() + "-" + attendance.getFullYear()]);
+		document.getElementById("").className = "btn btn-success disabled";
+	}else if(currentAttendee == "Occupational Therapist Second"){
+		sessionStorage.setItem("",[attendance.getDate() + "-" + attendance.getMonth() + "-" + attendance.getFullYear()]);
+		document.getElementById("").className = "btn btn-success disabled";
+	}else if(currentAttendee == "Occupational Therapist Final"){
+		sessionStorage.setItem("",[attendance.getDate() + "-" + attendance.getMonth() + "-" + attendance.getFullYear()]);
+		document.getElementById("").className = "btn btn-success disabled";
+	}else if(currentAttendee == "Physiotherapist Initial"){
+		sessionStorage.setItem("",[attendance.getDate() + "-" + attendance.getMonth() + "-" + attendance.getFullYear()]);
+		document.getElementById("").className = "btn btn-success disabled";
+	}else if(currentAttendee == "Physiotherapist Second"){
+		sessionStorage.setItem("",[attendance.getDate() + "-" + attendance.getMonth() + "-" + attendance.getFullYear()]);
+		document.getElementById("").className = "btn btn-success disabled";
+	}else if(currentAttendee == "Physiotherapist Final"){
+		sessionStorage.setItem("",[attendance.getDate() + "-" + attendance.getMonth() + "-" + attendance.getFullYear()]);
+		document.getElementById("").className = "btn btn-success disabled";
+	}else if(currentAttendee == "Psychologist Initial"){
+		sessionStorage.setItem("",[attendance.getDate() + "-" + attendance.getMonth() + "-" + attendance.getFullYear()]);
+		document.getElementById("").className = "btn btn-success disabled";
+	}else if(currentAttendee == "Psychologist Second"){
+		sessionStorage.setItem("",[attendance.getDate() + "-" + attendance.getMonth() + "-" + attendance.getFullYear()]);
+		document.getElementById("").className = "btn btn-success disabled";
+	}else if(currentAttendee == "Psychologist Final"){
+		sessionStorage.setItem("",[attendance.getDate() + "-" + attendance.getMonth() + "-" + attendance.getFullYear()]);
+		document.getElementById("").className = "btn btn-success disabled";
+	}else if(currentAttendee == "Speech-Language Pathologist Initial"){
+		sessionStorage.setItem("",[attendance.getDate() + "-" + attendance.getMonth() + "-" + attendance.getFullYear()]);
+		document.getElementById("").className = "btn btn-success disabled";
+	}else if(currentAttendee == "Speech-Language Pathologist Second"){
+		sessionStorage.setItem("",[attendance.getDate() + "-" + attendance.getMonth() + "-" + attendance.getFullYear()]);
+		document.getElementById("").className = "btn btn-success disabled";
+	}else if(currentAttendee == "Speech-Language Pathologist Final"){
+		sessionStorage.setItem("",[attendance.getDate() + "-" + attendance.getMonth() + "-" + attendance.getFullYear()]);
+		document.getElementById("").className = "btn btn-success disabled";
+	}else if(currentAttendee == "Child-Development Specialist Initial"){
+		sessionStorage.setItem("",[attendance.getDate() + "-" + attendance.getMonth() + "-" + attendance.getFullYear()]);
+		document.getElementById("").className = "btn btn-success disabled";
+	}else if(currentAttendee == "Child-Development Specialist Second"){
+		sessionStorage.setItem("",[attendance.getDate() + "-" + attendance.getMonth() + "-" + attendance.getFullYear()]);
+		document.getElementById("").className = "btn btn-success disabled";
+	}else if(currentAttendee == "Child-Development Specialist Final"){
+		sessionStorage.setItem("",[attendance.getDate() + "-" + attendance.getMonth() + "-" + attendance.getFullYear()]);
+		document.getElementById("").className = "btn btn-success disabled";
 	}
-	
 }
 
 
