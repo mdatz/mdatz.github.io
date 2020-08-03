@@ -123,7 +123,11 @@ function createForm(){
 	}else{
 		fields['Home Programming Friday'] = [true];
 	}	
-
+	
+	fields['Preschool Attendance Hidden'] = [sessionStorage.getItem("Preschool Attendance String")];
+	fields['Kids Playtime Attendance Hidden'] = [sessionStorage.getItem("KA Attendance String")];
+	fields['Home Programming Attendance Hidden'] = [sessionStorage.getItem("HA Attendance String")];
+	
 	fields['Preschool Teacher Name'] = [sessionStorage.getItem("Preschool Teacher")];
 	fields['Certificated Teacher Name'] = [sessionStorage.getItem("Certificated Teacher")];
 	fields['Developmental Assistant Name'] = [sessionStorage.getItem("Developmental Assistant")];
@@ -337,14 +341,29 @@ function createForm(){
 	fields['Footer 9'] = [sessionStorage.getItem("Child Last Name") + ", " + sessionStorage.getItem("Child First Name")];
 	fields['Footer 10'] = [sessionStorage.getItem("Child Last Name") + ", " + sessionStorage.getItem("Child First Name")];
 	fields['Footer 11'] = [sessionStorage.getItem("Child Last Name") + ", " + sessionStorage.getItem("Child First Name")];
+	fields['Footer 12'] = [sessionStorage.getItem("Child Last Name") + ", " + sessionStorage.getItem("Child First Name")];
+	
+	
+	//Generate Dates for Form Headers
+	//Turnover: (August 1)
+	var yearFinish;
+	var yearSpan;
+	var yearCheck = new Date();
+	if(yearCheck.getMonth() >= 6){
+		yearFinish = [yearCheck.getFullYear() + 1];
+		yearSpan = [yearCheck.getFullYear() + " - " + (yearCheck.getFullYear()+1)];
+	}else{
+		yearFinish = [yearCheck.getFullYear()];
+		yearSpan = [(yearCheck.getFullYear()-1) + " - " + yearCheck.getFullYear()];
+	}
 	
 	//Fill Goal Dates
-	fields['Goal End Date 1'] = ['2021'];
-	fields['Goal End Date 2'] = ['2021'];
-	fields['Goal End Date 3'] = ['2021'];
-	fields['Goal End Date 4'] = ['2021'];
-	fields['PUF Header Year'] = ["2020 - 2021"];
-	fields['Next September Year'] = ["September 1, 2020"];
+	fields['Goal End Date 1'] = [yearFinish];
+	fields['Goal End Date 2'] = [yearFinish];
+	fields['Goal End Date 3'] = [yearFinish];
+	fields['Goal End Date 4'] = [yearFinish];
+	fields['PUF Header Year'] = [yearSpan];
+	fields['Next September Year'] = ["September 1, " + yearFinish];
 	
 	//Create Output PDF	
 	var finalBuffer = pdfform().transform(templatePDF, fields);

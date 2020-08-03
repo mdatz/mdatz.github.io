@@ -163,11 +163,10 @@ function loadForm(input){
 		sessionStorage.setItem("Preschool Name", dict['Preschool Name']);
 		sessionStorage.setItem("Preschool Start Time", dict['Preschool Start']);
 		sessionStorage.setItem("Preschool End Time", dict['Preschool End']);
-		//sessionStorage.setItem("PAMonday", dict['Preschool Monday']);
-		//sessionStorage.setItem("PATuesday", dict['Preschool Tuesday']);
-		//sessionStorage.setItem("PAWednesday", dict['Preschool Wednesday']);
-		//sessionStorage.setItem("PAThursday", dict['Preschool Thursday']);
-		//sessionStorage.setItem("PAFriday", dict['Preschool Friday']);
+		
+		sessionStorage.setItem("Preschool Attendance String", dict['Preschool Attendance Hidden']);
+		sessionStorage.setItem("KA Attendance String", dict['Kids Playtime Attendance Hidden']);
+		sessionStorage.setItem("HA Attendance String", dict['Home Programming Attendance Hidden']);
 		
 		sessionStorage.setItem("KiDS Start Time", dict['Kids Playtime Start']);
 		sessionStorage.setItem("KiDS End Time", dict['Kids Playtime End']);

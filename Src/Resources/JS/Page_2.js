@@ -7,6 +7,64 @@ function fillExisting() {
 	flatpickr(document.getElementById("homeProgrammingStart"),{enableTime: true, noCalendar: true, dateFormat: "H:i", time_24hr: true});
 	flatpickr(document.getElementById("homeProgrammingEnd"),{enableTime: true, noCalendar: true, dateFormat: "H:i", time_24hr: true});
 	
+	var Preschool_Attendance = sessionStorage.getItem("Preschool Attendance String").split("");
+	var KA_Attendance = sessionStorage.getItem("KA Attendance String").split("");
+	var HA_Attendance = sessionStorage.getItem("HA Attendance String").split("");
+	
+	for(i = 0; i < (Preschool_Attendance.length); i++){
+		if(Preschool_Attendance[i] == 1){
+			sessionStorage.setItem("PAMonday", true);
+		}
+		if(Preschool_Attendance[i] == 2){
+			sessionStorage.setItem("PATuesday", true);
+		}
+		if(Preschool_Attendance[i] == 3){
+			sessionStorage.setItem("PAWednesday", true);
+		}
+		if(Preschool_Attendance[i] == 4){
+			sessionStorage.setItem("PAThursday", true);
+		}
+		if(Preschool_Attendance[i] == 5){
+			sessionStorage.setItem("PAFriday", true);
+		}
+	}
+	
+	for(i = 0; i < (KA_Attendance.length); i++){
+		if(KA_Attendance[i] == 1){
+			sessionStorage.setItem("KAMonday", true);
+		}
+		if(KA_Attendance[i] == 2){
+			sessionStorage.setItem("KATuesday", true);
+		}
+		if(KA_Attendance[i] == 3){
+			sessionStorage.setItem("KAWednesday", true);
+		}
+		if(KA_Attendance[i] == 4){
+			sessionStorage.setItem("KAThursday", true);
+		}
+		if(KA_Attendance[i] == 5){
+			sessionStorage.setItem("KAFriday", true);
+		}
+	}
+	
+	for(i = 0; i < (HA_Attendance.length); i++){
+		if(HA_Attendance[i] == 1){
+			sessionStorage.setItem("HAMonday", true);
+		}
+		if(HA_Attendance[i] == 2){
+			sessionStorage.setItem("HATuesday", true);
+		}
+		if(HA_Attendance[i] == 3){
+			sessionStorage.setItem("HAWednesday", true);
+		}
+		if(HA_Attendance[i] == 4){
+			sessionStorage.setItem("HAThursday", true);
+		}
+		if(HA_Attendance[i] == 5){
+			sessionStorage.setItem("HAFriday", true);
+		}
+	}
+	
 	if(sessionStorage.length != 0){
 		//If Form Variables still Exist, fill the HTML Elements with the Stored Values
 		document.getElementById("preschoolName").value = sessionStorage.getItem("Preschool Name");
@@ -40,7 +98,7 @@ function fillExisting() {
 		document.getElementById("psychologist").value = sessionStorage.getItem("Psychologist");	
 		document.getElementById("behaviouralSpecialist").value = sessionStorage.getItem("Behavioural Specialist");	
 	}else{
-		console.log("Session Storage length is 0!");
+		//console.log("Session Storage length is 0!");
 	}
 }
 		
@@ -50,6 +108,9 @@ function next() {
 	sessionStorage.removeItem("Preschool Name");
 	sessionStorage.setItem("Preschool Name", document.getElementById("preschoolName").value);
 	
+	//Reset Attendance Check Boxes
+	sessionStorage.removeItem("Preschool Attendance String");
+	sessionStorage.setItem("Preschool Attendance String", "");
 	sessionStorage.removeItem("PAMonday");
 	sessionStorage.removeItem("PATuesday");
 	sessionStorage.removeItem("PAWednesday");
@@ -57,11 +118,11 @@ function next() {
 	sessionStorage.removeItem("PAFriday");
 	var selection1 = document.getElementsByName("PAttendance");
 	for(i = 0; i < selection1.length; i++){
-		if(i == 0){if(selection1[i].checked){sessionStorage.setItem("PAMonday",true);}else{sessionStorage.setItem("PAMonday",false);}}
-		if(i == 1){if(selection1[i].checked){sessionStorage.setItem("PATuesday",true);}else{sessionStorage.setItem("PATuesday",false);}}
-		if(i == 2){if(selection1[i].checked){sessionStorage.setItem("PAWednesday",true);}else{sessionStorage.setItem("PAWednesday",false);}}
-		if(i == 3){if(selection1[i].checked){sessionStorage.setItem("PAThursday",true);}else{sessionStorage.setItem("PAThursday",false);}}
-		if(i == 4){if(selection1[i].checked){sessionStorage.setItem("PAFriday",true);}else{sessionStorage.setItem("PAFriday",false);}}
+		if(i == 0){if(selection1[i].checked){sessionStorage.setItem("PAMonday",true);sessionStorage.setItem("Preschool Attendance String",(sessionStorage.getItem("Preschool Attendance String") + "1"));}else{sessionStorage.setItem("PAMonday",false);}}
+		if(i == 1){if(selection1[i].checked){sessionStorage.setItem("PATuesday",true);sessionStorage.setItem("Preschool Attendance String",(sessionStorage.getItem("Preschool Attendance String") + "2"));}else{sessionStorage.setItem("PATuesday",false);}}
+		if(i == 2){if(selection1[i].checked){sessionStorage.setItem("PAWednesday",true);sessionStorage.setItem("Preschool Attendance String",(sessionStorage.getItem("Preschool Attendance String") + "3"));}else{sessionStorage.setItem("PAWednesday",false);}}
+		if(i == 3){if(selection1[i].checked){sessionStorage.setItem("PAThursday",true);sessionStorage.setItem("Preschool Attendance String",(sessionStorage.getItem("Preschool Attendance String") + "4"));}else{sessionStorage.setItem("PAThursday",false);}}
+		if(i == 4){if(selection1[i].checked){sessionStorage.setItem("PAFriday",true);sessionStorage.setItem("Preschool Attendance String",(sessionStorage.getItem("Preschool Attendance String") + "5"));}else{sessionStorage.setItem("PAFriday",false);}}
 	}
 	
 	sessionStorage.removeItem("Preschool Start Time");
@@ -69,7 +130,9 @@ function next() {
 
 	sessionStorage.removeItem("Preschool End Time");
 	sessionStorage.setItem("Preschool End Time", document.getElementById("preschoolEnd").value);
-
+	
+	sessionStorage.removeItem("KA Attendance String");
+	sessionStorage.setItem("KA Attendance String", "");
 	sessionStorage.removeItem("KAMonday");
 	sessionStorage.removeItem("KATuesday");
 	sessionStorage.removeItem("KAWednesday");
@@ -77,11 +140,11 @@ function next() {
 	sessionStorage.removeItem("KAFriday");
 	var selection2 = document.getElementsByName("KAttendance");
 	for(i = 0; i < selection2.length; i++){
-		if(i == 0){if(selection2[i].checked){sessionStorage.setItem("KAMonday",true);}else{sessionStorage.setItem("KAMonday",false);}}
-		if(i == 1){if(selection2[i].checked){sessionStorage.setItem("KATuesday",true);}else{sessionStorage.setItem("KATuesday",false);}}
-		if(i == 2){if(selection2[i].checked){sessionStorage.setItem("KAWednesday",true);}else{sessionStorage.setItem("KAWednesday",false);}}
-		if(i == 3){if(selection2[i].checked){sessionStorage.setItem("KAThursday",true);}else{sessionStorage.setItem("KAThursday",false);}}
-		if(i == 4){if(selection2[i].checked){sessionStorage.setItem("KAFriday",true);}else{sessionStorage.setItem("KAFriday",false);}}
+		if(i == 0){if(selection2[i].checked){sessionStorage.setItem("KAMonday",true);sessionStorage.setItem("KA Attendance String",(sessionStorage.getItem("KA Attendance String") + "1"));}else{sessionStorage.setItem("KAMonday",false);}}
+		if(i == 1){if(selection2[i].checked){sessionStorage.setItem("KATuesday",true);sessionStorage.setItem("KA Attendance String",(sessionStorage.getItem("KA Attendance String") + "2"));}else{sessionStorage.setItem("KATuesday",false);}}
+		if(i == 2){if(selection2[i].checked){sessionStorage.setItem("KAWednesday",true);sessionStorage.setItem("KA Attendance String",(sessionStorage.getItem("KA Attendance String") + "3"));}else{sessionStorage.setItem("KAWednesday",false);}}
+		if(i == 3){if(selection2[i].checked){sessionStorage.setItem("KAThursday",true);sessionStorage.setItem("KA Attendance String",(sessionStorage.getItem("KA Attendance String") + "4"));}else{sessionStorage.setItem("KAThursday",false);}}
+		if(i == 4){if(selection2[i].checked){sessionStorage.setItem("KAFriday",true);sessionStorage.setItem("KA Attendance String",(sessionStorage.getItem("KA Attendance String") + "5"));}else{sessionStorage.setItem("KAFriday",false);}}
 	}
 	
 	sessionStorage.removeItem("KiDS Start Time");
@@ -90,6 +153,8 @@ function next() {
 	sessionStorage.removeItem("KiDS End Time");
 	sessionStorage.setItem("KiDS End Time", document.getElementById("KiDSEnd").value);
 	
+	sessionStorage.removeItem("HA Attendance String");
+	sessionStorage.setItem("HA Attendance String", "");
 	sessionStorage.removeItem("HAMonday");
 	sessionStorage.removeItem("HATuesday");
 	sessionStorage.removeItem("HAWednesday");
@@ -97,11 +162,11 @@ function next() {
 	sessionStorage.removeItem("HAFriday");
 	var selection3 = document.getElementsByName("HAttendance");
 	for(i = 0; i < selection3.length; i++){
-		if(i == 0){if(selection3[i].checked){sessionStorage.setItem("HAMonday",true);}else{sessionStorage.setItem("HAMonday",false);}}
-		if(i == 1){if(selection3[i].checked){sessionStorage.setItem("HATuesday",true);}else{sessionStorage.setItem("HATuesday",false);}}
-		if(i == 2){if(selection3[i].checked){sessionStorage.setItem("HAWednesday",true);}else{sessionStorage.setItem("HAWednesday",false);}}
-		if(i == 3){if(selection3[i].checked){sessionStorage.setItem("HAThursday",true);}else{sessionStorage.setItem("HAThursday",false);}}
-		if(i == 4){if(selection3[i].checked){sessionStorage.setItem("HAFriday",true);}else{sessionStorage.setItem("HAFriday",false);}}
+		if(i == 0){if(selection3[i].checked){sessionStorage.setItem("HAMonday",true);sessionStorage.setItem("HA Attendance String",(sessionStorage.getItem("HA Attendance String") + "1"));}else{sessionStorage.setItem("HAMonday",false);}}
+		if(i == 1){if(selection3[i].checked){sessionStorage.setItem("HATuesday",true);sessionStorage.setItem("HA Attendance String",(sessionStorage.getItem("HA Attendance String") + "2"));}else{sessionStorage.setItem("HATuesday",false);}}
+		if(i == 2){if(selection3[i].checked){sessionStorage.setItem("HAWednesday",true);sessionStorage.setItem("HA Attendance String",(sessionStorage.getItem("HA Attendance String") + "3"));}else{sessionStorage.setItem("HAWednesday",false);}}
+		if(i == 3){if(selection3[i].checked){sessionStorage.setItem("HAThursday",true);sessionStorage.setItem("HA Attendance String",(sessionStorage.getItem("HA Attendance String") + "4"));}else{sessionStorage.setItem("HAThursday",false);}}
+		if(i == 4){if(selection3[i].checked){sessionStorage.setItem("HAFriday",true);sessionStorage.setItem("HA Attendance String",(sessionStorage.getItem("HA Attendance String") + "5"));}else{sessionStorage.setItem("HAFriday",false);}}
 	}
 	
 	sessionStorage.removeItem("Home Programming Start Time");
@@ -144,6 +209,9 @@ function previous() {
 	sessionStorage.removeItem("Preschool Name");
 	sessionStorage.setItem("Preschool Name", document.getElementById("preschoolName").value);
 	
+		//Reset Attendance Check Boxes
+	sessionStorage.removeItem("Preschool Attendance String");
+	sessionStorage.setItem("Preschool Attendance String", "");
 	sessionStorage.removeItem("PAMonday");
 	sessionStorage.removeItem("PATuesday");
 	sessionStorage.removeItem("PAWednesday");
@@ -151,11 +219,11 @@ function previous() {
 	sessionStorage.removeItem("PAFriday");
 	var selection1 = document.getElementsByName("PAttendance");
 	for(i = 0; i < selection1.length; i++){
-		if(i == 0){if(selection1[i].checked){sessionStorage.setItem("PAMonday",true);}else{sessionStorage.setItem("PAMonday",false);}}
-		if(i == 1){if(selection1[i].checked){sessionStorage.setItem("PATuesday",true);}else{sessionStorage.setItem("PATuesday",false);}}
-		if(i == 2){if(selection1[i].checked){sessionStorage.setItem("PAWednesday",true);}else{sessionStorage.setItem("PAWednesday",false);}}
-		if(i == 3){if(selection1[i].checked){sessionStorage.setItem("PAThursday",true);}else{sessionStorage.setItem("PAThursday",false);}}
-		if(i == 4){if(selection1[i].checked){sessionStorage.setItem("PAFriday",true);}else{sessionStorage.setItem("PAFriday",false);}}
+		if(i == 0){if(selection1[i].checked){sessionStorage.setItem("PAMonday",true);sessionStorage.setItem("Preschool Attendance String",(sessionStorage.getItem("Preschool Attendance String") + "1"));}else{sessionStorage.setItem("PAMonday",false);}}
+		if(i == 1){if(selection1[i].checked){sessionStorage.setItem("PATuesday",true);sessionStorage.setItem("Preschool Attendance String",(sessionStorage.getItem("Preschool Attendance String") + "2"));}else{sessionStorage.setItem("PATuesday",false);}}
+		if(i == 2){if(selection1[i].checked){sessionStorage.setItem("PAWednesday",true);sessionStorage.setItem("Preschool Attendance String",(sessionStorage.getItem("Preschool Attendance String") + "3"));}else{sessionStorage.setItem("PAWednesday",false);}}
+		if(i == 3){if(selection1[i].checked){sessionStorage.setItem("PAThursday",true);sessionStorage.setItem("Preschool Attendance String",(sessionStorage.getItem("Preschool Attendance String") + "4"));}else{sessionStorage.setItem("PAThursday",false);}}
+		if(i == 4){if(selection1[i].checked){sessionStorage.setItem("PAFriday",true);sessionStorage.setItem("Preschool Attendance String",(sessionStorage.getItem("Preschool Attendance String") + "5"));}else{sessionStorage.setItem("PAFriday",false);}}
 	}
 	
 	sessionStorage.removeItem("Preschool Start Time");
@@ -163,7 +231,9 @@ function previous() {
 
 	sessionStorage.removeItem("Preschool End Time");
 	sessionStorage.setItem("Preschool End Time", document.getElementById("preschoolEnd").value);
-
+	
+	sessionStorage.removeItem("KA Attendance String");
+	sessionStorage.setItem("KA Attendance String", "");
 	sessionStorage.removeItem("KAMonday");
 	sessionStorage.removeItem("KATuesday");
 	sessionStorage.removeItem("KAWednesday");
@@ -171,11 +241,11 @@ function previous() {
 	sessionStorage.removeItem("KAFriday");
 	var selection2 = document.getElementsByName("KAttendance");
 	for(i = 0; i < selection2.length; i++){
-		if(i == 0){if(selection2[i].checked){sessionStorage.setItem("KAMonday",true);}else{sessionStorage.setItem("KAMonday",false);}}
-		if(i == 1){if(selection2[i].checked){sessionStorage.setItem("KATuesday",true);}else{sessionStorage.setItem("KATuesday",false);}}
-		if(i == 2){if(selection2[i].checked){sessionStorage.setItem("KAWednesday",true);}else{sessionStorage.setItem("KAWednesday",false);}}
-		if(i == 3){if(selection2[i].checked){sessionStorage.setItem("KAThursday",true);}else{sessionStorage.setItem("KAThursday",false);}}
-		if(i == 4){if(selection2[i].checked){sessionStorage.setItem("KAFriday",true);}else{sessionStorage.setItem("KAFriday",false);}}
+		if(i == 0){if(selection2[i].checked){sessionStorage.setItem("KAMonday",true);sessionStorage.setItem("KA Attendance String",(sessionStorage.getItem("KA Attendance String") + "1"));}else{sessionStorage.setItem("KAMonday",false);}}
+		if(i == 1){if(selection2[i].checked){sessionStorage.setItem("KATuesday",true);sessionStorage.setItem("KA Attendance String",(sessionStorage.getItem("KA Attendance String") + "2"));}else{sessionStorage.setItem("KATuesday",false);}}
+		if(i == 2){if(selection2[i].checked){sessionStorage.setItem("KAWednesday",true);sessionStorage.setItem("KA Attendance String",(sessionStorage.getItem("KA Attendance String") + "3"));}else{sessionStorage.setItem("KAWednesday",false);}}
+		if(i == 3){if(selection2[i].checked){sessionStorage.setItem("KAThursday",true);sessionStorage.setItem("KA Attendance String",(sessionStorage.getItem("KA Attendance String") + "4"));}else{sessionStorage.setItem("KAThursday",false);}}
+		if(i == 4){if(selection2[i].checked){sessionStorage.setItem("KAFriday",true);sessionStorage.setItem("KA Attendance String",(sessionStorage.getItem("KA Attendance String") + "5"));}else{sessionStorage.setItem("KAFriday",false);}}
 	}
 	
 	sessionStorage.removeItem("KiDS Start Time");
@@ -184,6 +254,8 @@ function previous() {
 	sessionStorage.removeItem("KiDS End Time");
 	sessionStorage.setItem("KiDS End Time", document.getElementById("KiDSEnd").value);
 	
+	sessionStorage.removeItem("HA Attendance String");
+	sessionStorage.setItem("HA Attendance String", "");
 	sessionStorage.removeItem("HAMonday");
 	sessionStorage.removeItem("HATuesday");
 	sessionStorage.removeItem("HAWednesday");
@@ -191,11 +263,11 @@ function previous() {
 	sessionStorage.removeItem("HAFriday");
 	var selection3 = document.getElementsByName("HAttendance");
 	for(i = 0; i < selection3.length; i++){
-		if(i == 0){if(selection3[i].checked){sessionStorage.setItem("HAMonday",true);}else{sessionStorage.setItem("HAMonday",false);}}
-		if(i == 1){if(selection3[i].checked){sessionStorage.setItem("HATuesday",true);}else{sessionStorage.setItem("HATuesday",false);}}
-		if(i == 2){if(selection3[i].checked){sessionStorage.setItem("HAWednesday",true);}else{sessionStorage.setItem("HAWednesday",false);}}
-		if(i == 3){if(selection3[i].checked){sessionStorage.setItem("HAThursday",true);}else{sessionStorage.setItem("HAThursday",false);}}
-		if(i == 4){if(selection3[i].checked){sessionStorage.setItem("HAFriday",true);}else{sessionStorage.setItem("HAFriday",false);}}
+		if(i == 0){if(selection3[i].checked){sessionStorage.setItem("HAMonday",true);sessionStorage.setItem("HA Attendance String",(sessionStorage.getItem("HA Attendance String") + "1"));}else{sessionStorage.setItem("HAMonday",false);}}
+		if(i == 1){if(selection3[i].checked){sessionStorage.setItem("HATuesday",true);sessionStorage.setItem("HA Attendance String",(sessionStorage.getItem("HA Attendance String") + "2"));}else{sessionStorage.setItem("HATuesday",false);}}
+		if(i == 2){if(selection3[i].checked){sessionStorage.setItem("HAWednesday",true);sessionStorage.setItem("HA Attendance String",(sessionStorage.getItem("HA Attendance String") + "3"));}else{sessionStorage.setItem("HAWednesday",false);}}
+		if(i == 3){if(selection3[i].checked){sessionStorage.setItem("HAThursday",true);sessionStorage.setItem("HA Attendance String",(sessionStorage.getItem("HA Attendance String") + "4"));}else{sessionStorage.setItem("HAThursday",false);}}
+		if(i == 4){if(selection3[i].checked){sessionStorage.setItem("HAFriday",true);sessionStorage.setItem("HA Attendance String",(sessionStorage.getItem("HA Attendance String") + "5"));}else{sessionStorage.setItem("HAFriday",false);}}
 	}
 	
 	sessionStorage.removeItem("Home Programming Start Time");
