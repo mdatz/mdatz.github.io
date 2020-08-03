@@ -534,77 +534,77 @@ function markAttendance(currentAttendee){
 		sessionStorage.setItem("Parent 2 Final Attendance",[attendance.getDate() + "-" + attendance.getMonth() + "-" + attendance.getFullYear()]);
 		document.getElementById("parentGaurdian2Final").className = "btn btn-success disabled";
 	}else if(currentAttendee == "Preschool Teacher Initial"){
-		sessionStorage.setItem("",[attendance.getDate() + "-" + attendance.getMonth() + "-" + attendance.getFullYear()]);
-		document.getElementById("").className = "btn btn-success disabled";
+		sessionStorage.setItem("Preschool Teacher Initial Attendance",[attendance.getDate() + "-" + attendance.getMonth() + "-" + attendance.getFullYear()]);
+		document.getElementById("preschoolTeacherInitial").className = "btn btn-success disabled";
 	}else if(currentAttendee == "Preschool Teacher Second"){
-		sessionStorage.setItem("",[attendance.getDate() + "-" + attendance.getMonth() + "-" + attendance.getFullYear()]);
-		document.getElementById("").className = "btn btn-success disabled";
+		sessionStorage.setItem("Preschool Teacher Second Attendance",[attendance.getDate() + "-" + attendance.getMonth() + "-" + attendance.getFullYear()]);
+		document.getElementById("preschoolTeacherSecond").className = "btn btn-success disabled";
 	}else if(currentAttendee == "Preschool Teacher Final"){
-		sessionStorage.setItem("",[attendance.getDate() + "-" + attendance.getMonth() + "-" + attendance.getFullYear()]);
-		document.getElementById("").className = "btn btn-success disabled";
+		sessionStorage.setItem("Preschool Teacher Final Attendance",[attendance.getDate() + "-" + attendance.getMonth() + "-" + attendance.getFullYear()]);
+		document.getElementById("preschoolTeacherFinal").className = "btn btn-success disabled";
 	}else if(currentAttendee == "Certificated Teacher Initial"){
-		sessionStorage.setItem("",[attendance.getDate() + "-" + attendance.getMonth() + "-" + attendance.getFullYear()]);
-		document.getElementById("").className = "btn btn-success disabled";
+		sessionStorage.setItem("Certificated Teacher Initial Attendance",[attendance.getDate() + "-" + attendance.getMonth() + "-" + attendance.getFullYear()]);
+		document.getElementById("certificatedTeacherInitial").className = "btn btn-success disabled";
 	}else if(currentAttendee == "Certificated Teacher Second"){
-		sessionStorage.setItem("",[attendance.getDate() + "-" + attendance.getMonth() + "-" + attendance.getFullYear()]);
-		document.getElementById("").className = "btn btn-success disabled";
+		sessionStorage.setItem("Certificated Teacher Second Attendance",[attendance.getDate() + "-" + attendance.getMonth() + "-" + attendance.getFullYear()]);
+		document.getElementById("certificatedTeacherSecond").className = "btn btn-success disabled";
 	}else if(currentAttendee == "Certificated Teacher Final"){
-		sessionStorage.setItem("",[attendance.getDate() + "-" + attendance.getMonth() + "-" + attendance.getFullYear()]);
-		document.getElementById("").className = "btn btn-success disabled";
+		sessionStorage.setItem("Certificated Teacher Final Attendance",[attendance.getDate() + "-" + attendance.getMonth() + "-" + attendance.getFullYear()]);
+		document.getElementById("certificatedTeacherFinal").className = "btn btn-success disabled";
 	}else if(currentAttendee == "Developmental Assistant Initial"){
-		sessionStorage.setItem("",[attendance.getDate() + "-" + attendance.getMonth() + "-" + attendance.getFullYear()]);
-		document.getElementById("").className = "btn btn-success disabled";
+		sessionStorage.setItem("Developmental Assistant Initial Attendance",[attendance.getDate() + "-" + attendance.getMonth() + "-" + attendance.getFullYear()]);
+		document.getElementById("developmentalAssistantInitial").className = "btn btn-success disabled";
 	}else if(currentAttendee == "Developmental Assistant Second"){
-		sessionStorage.setItem("",[attendance.getDate() + "-" + attendance.getMonth() + "-" + attendance.getFullYear()]);
-		document.getElementById("").className = "btn btn-success disabled";
+		sessionStorage.setItem("Developmental Assistant Second Attendance",[attendance.getDate() + "-" + attendance.getMonth() + "-" + attendance.getFullYear()]);
+		document.getElementById("developmentalAssistantSecond").className = "btn btn-success disabled";
 	}else if(currentAttendee == "Developmental Assistant Final"){
-		sessionStorage.setItem("",[attendance.getDate() + "-" + attendance.getMonth() + "-" + attendance.getFullYear()]);
-		document.getElementById("").className = "btn btn-success disabled";
+		sessionStorage.setItem("Developmental Assistant Final Attendance",[attendance.getDate() + "-" + attendance.getMonth() + "-" + attendance.getFullYear()]);
+		document.getElementById("developmentalAssistantFinal").className = "btn btn-success disabled";
 	}else if(currentAttendee == "Occupational Therapist Initial"){
-		sessionStorage.setItem("",[attendance.getDate() + "-" + attendance.getMonth() + "-" + attendance.getFullYear()]);
-		document.getElementById("").className = "btn btn-success disabled";
+		sessionStorage.setItem("Occupational Therapist Initial Attendance",[attendance.getDate() + "-" + attendance.getMonth() + "-" + attendance.getFullYear()]);
+		document.getElementById("occupationalTherapistInitial").className = "btn btn-success disabled";
 	}else if(currentAttendee == "Occupational Therapist Second"){
-		sessionStorage.setItem("",[attendance.getDate() + "-" + attendance.getMonth() + "-" + attendance.getFullYear()]);
-		document.getElementById("").className = "btn btn-success disabled";
+		sessionStorage.setItem("Occupational Therapist Second Attendance",[attendance.getDate() + "-" + attendance.getMonth() + "-" + attendance.getFullYear()]);
+		document.getElementById("occupationalTherapistSecond").className = "btn btn-success disabled";
 	}else if(currentAttendee == "Occupational Therapist Final"){
-		sessionStorage.setItem("",[attendance.getDate() + "-" + attendance.getMonth() + "-" + attendance.getFullYear()]);
-		document.getElementById("").className = "btn btn-success disabled";
+		sessionStorage.setItem("Occupational Therapist Final Attendance",[attendance.getDate() + "-" + attendance.getMonth() + "-" + attendance.getFullYear()]);
+		document.getElementById("occupationalTherapistFinal").className = "btn btn-success disabled";
 	}else if(currentAttendee == "Physiotherapist Initial"){
-		sessionStorage.setItem("",[attendance.getDate() + "-" + attendance.getMonth() + "-" + attendance.getFullYear()]);
-		document.getElementById("").className = "btn btn-success disabled";
+		sessionStorage.setItem("Physiotherapist Initial Attendance",[attendance.getDate() + "-" + attendance.getMonth() + "-" + attendance.getFullYear()]);
+		document.getElementById("physiotherapistInitial").className = "btn btn-success disabled";
 	}else if(currentAttendee == "Physiotherapist Second"){
-		sessionStorage.setItem("",[attendance.getDate() + "-" + attendance.getMonth() + "-" + attendance.getFullYear()]);
-		document.getElementById("").className = "btn btn-success disabled";
+		sessionStorage.setItem("Physiotherapist Second Attendance",[attendance.getDate() + "-" + attendance.getMonth() + "-" + attendance.getFullYear()]);
+		document.getElementById("physiotherapistSecond").className = "btn btn-success disabled";
 	}else if(currentAttendee == "Physiotherapist Final"){
-		sessionStorage.setItem("",[attendance.getDate() + "-" + attendance.getMonth() + "-" + attendance.getFullYear()]);
-		document.getElementById("").className = "btn btn-success disabled";
+		sessionStorage.setItem("Physiotherapist Final Attendance",[attendance.getDate() + "-" + attendance.getMonth() + "-" + attendance.getFullYear()]);
+		document.getElementById("physiotherapistFinal").className = "btn btn-success disabled";
 	}else if(currentAttendee == "Psychologist Initial"){
-		sessionStorage.setItem("",[attendance.getDate() + "-" + attendance.getMonth() + "-" + attendance.getFullYear()]);
-		document.getElementById("").className = "btn btn-success disabled";
+		sessionStorage.setItem("Psychologist Initial Attendance",[attendance.getDate() + "-" + attendance.getMonth() + "-" + attendance.getFullYear()]);
+		document.getElementById("psychologistInitial").className = "btn btn-success disabled";
 	}else if(currentAttendee == "Psychologist Second"){
-		sessionStorage.setItem("",[attendance.getDate() + "-" + attendance.getMonth() + "-" + attendance.getFullYear()]);
-		document.getElementById("").className = "btn btn-success disabled";
+		sessionStorage.setItem("Psychologist Second Attendance",[attendance.getDate() + "-" + attendance.getMonth() + "-" + attendance.getFullYear()]);
+		document.getElementById("psychologistSecond").className = "btn btn-success disabled";
 	}else if(currentAttendee == "Psychologist Final"){
-		sessionStorage.setItem("",[attendance.getDate() + "-" + attendance.getMonth() + "-" + attendance.getFullYear()]);
-		document.getElementById("").className = "btn btn-success disabled";
+		sessionStorage.setItem("Psychologist Final Attendance",[attendance.getDate() + "-" + attendance.getMonth() + "-" + attendance.getFullYear()]);
+		document.getElementById("psychologistFinal").className = "btn btn-success disabled";
 	}else if(currentAttendee == "Speech-Language Pathologist Initial"){
-		sessionStorage.setItem("",[attendance.getDate() + "-" + attendance.getMonth() + "-" + attendance.getFullYear()]);
-		document.getElementById("").className = "btn btn-success disabled";
+		sessionStorage.setItem("Speech-Language Pathologist Initial Attendance",[attendance.getDate() + "-" + attendance.getMonth() + "-" + attendance.getFullYear()]);
+		document.getElementById("speechLangaugePathologistInitial").className = "btn btn-success disabled";
 	}else if(currentAttendee == "Speech-Language Pathologist Second"){
-		sessionStorage.setItem("",[attendance.getDate() + "-" + attendance.getMonth() + "-" + attendance.getFullYear()]);
-		document.getElementById("").className = "btn btn-success disabled";
+		sessionStorage.setItem("Speech-Language Pathologist Second Attendance",[attendance.getDate() + "-" + attendance.getMonth() + "-" + attendance.getFullYear()]);
+		document.getElementById("speechLangaugePathologistSecond").className = "btn btn-success disabled";
 	}else if(currentAttendee == "Speech-Language Pathologist Final"){
-		sessionStorage.setItem("",[attendance.getDate() + "-" + attendance.getMonth() + "-" + attendance.getFullYear()]);
-		document.getElementById("").className = "btn btn-success disabled";
+		sessionStorage.setItem("Speech-Language Pathologist Final Attendance",[attendance.getDate() + "-" + attendance.getMonth() + "-" + attendance.getFullYear()]);
+		document.getElementById("speechLangaugePathologistFinal").className = "btn btn-success disabled";
 	}else if(currentAttendee == "Child-Development Specialist Initial"){
-		sessionStorage.setItem("",[attendance.getDate() + "-" + attendance.getMonth() + "-" + attendance.getFullYear()]);
-		document.getElementById("").className = "btn btn-success disabled";
+		sessionStorage.setItem("Child-Development Specialist Initial Attendance",[attendance.getDate() + "-" + attendance.getMonth() + "-" + attendance.getFullYear()]);
+		document.getElementById("childDevelopmentSpecialistInitial").className = "btn btn-success disabled";
 	}else if(currentAttendee == "Child-Development Specialist Second"){
-		sessionStorage.setItem("",[attendance.getDate() + "-" + attendance.getMonth() + "-" + attendance.getFullYear()]);
-		document.getElementById("").className = "btn btn-success disabled";
+		sessionStorage.setItem("Child-Development Specialist Second Attendance",[attendance.getDate() + "-" + attendance.getMonth() + "-" + attendance.getFullYear()]);
+		document.getElementById("childDevelopmentSpecialistSecond").className = "btn btn-success disabled";
 	}else if(currentAttendee == "Child-Development Specialist Final"){
-		sessionStorage.setItem("",[attendance.getDate() + "-" + attendance.getMonth() + "-" + attendance.getFullYear()]);
-		document.getElementById("").className = "btn btn-success disabled";
+		sessionStorage.setItem("Child-Development Specialist Final Attendance",[attendance.getDate() + "-" + attendance.getMonth() + "-" + attendance.getFullYear()]);
+		document.getElementById("childDevelopmentSpecialistFinal").className = "btn btn-success disabled";
 	}
 }
 
