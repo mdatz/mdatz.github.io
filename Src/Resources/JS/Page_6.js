@@ -330,6 +330,167 @@ function createForm(){
 	fields['Kindergarten Consultant Date'] = [sessionStorage.getItem("Kindergarten Consultant/Strategist Final Date")];
 	fields['Kindergarten Representative Date'] = [sessionStorage.getItem("Kindergarten Representative Final Date")];
 	
+	//Attendance Fields
+	if(sessionStorage.getItem("Parent 1 Initial Attendance") != null){
+		fields['Parent 1 Attendance Initial'] = [sessionStorage.getItem("Parent 1 Initial Attendance")];
+	}else{
+		fields['Parent 1 Attendance Initial'] = ["-"];
+	}
+	if(sessionStorage.getItem("Parent 1 Second Attendance") != null){
+		fields['Parent 1 Attendance First'] = [sessionStorage.getItem("Parent 1 Second Attendance")];
+	}else{
+		fields['Parent 1 Attendance First'] = ["-"];
+	}
+	if(sessionStorage.getItem("Parent 1 Final Attendance") != null){
+		fields['Parent 1 Attendance Final'] = [sessionStorage.getItem("Parent 1 Final Attendance")];
+	}else{
+		fields['Parent 1 Attendance Final'] = ["-"];
+	}
+
+	if(sessionStorage.getItem("Parent 2 Initial Attendance") != null){
+		fields['Parent 2 Attendance Initial'] = [sessionStorage.getItem("Parent 2 Initial Attendance")];
+	}else{
+		fields['Parent 2 Attendance Initial'] = ["-"];
+	}
+	if(sessionStorage.getItem("Parent 2 Second Attendance") != null){
+		fields['Parent 2 Attendance First'] = [sessionStorage.getItem("Parent 2 Second Attendance")];
+	}else{
+		fields['Parent 2 Attendance First'] = ["-"];
+	}
+	if(sessionStorage.getItem("Parent 2 Final Attendance") != null){
+		fields['Parent 2 Attendance Final'] = [sessionStorage.getItem("Parent 2 Final Attendance")];
+	}else{
+		fields['Parent 2 Attendance Final'] = ["-"];
+	}
+	
+	if(sessionStorage.getItem("Preschool Teacher Initial Attendance") != null){
+		fields['Preschool Teacher Attendance Initial'] = [sessionStorage.getItem("Preschool Teacher Initial Attendance")];
+	}else{
+		fields['Preschool Teacher Attendance Initial'] = ["-"];
+	}
+	if(sessionStorage.getItem("Preschool Teacher Second Attendance") != null){
+		fields['Preschool Teacher Attendance First'] = [sessionStorage.getItem("Preschool Teacher Second Attendance")];
+	}else{
+		fields['Preschool Teacher Attendance First'] = ["-"];
+	}
+	if(sessionStorage.getItem("Preschool Teacher Final Attendance") != null){
+		fields['Preschool Teacher Attendance Final'] = [sessionStorage.getItem("Preschool Teacher Final Attendance")];
+	}else{
+		fields['Preschool Teacher Attendance Final'] = ["-"];
+	}
+	
+	if(sessionStorage.getItem("Certificated Teacher Initial Attendance") != null){
+		fields['Certificated Teacher Attendance Initial'] = [sessionStorage.getItem("Certificated Teacher Initial Attendance")];
+	}else{
+		fields['Certificated Teacher Attendance Initial'] = ["-"];
+	}
+	if(sessionStorage.getItem("Certificated Teacher Second Attendance") != null){
+		fields['Certificated Teacher Attendance First'] = [sessionStorage.getItem("Certificated Teacher Second Attendance")];
+	}else{
+		fields['Certificated Teacher Attendance First'] = ["-"];
+	}
+	if(sessionStorage.getItem("Certificated Teacher Final Attendance") != null){
+		fields['Certificated Teacher Attendance Final'] = [sessionStorage.getItem("Certificated Teacher Final Attendance")];
+	}else{
+		fields['Certificated Teacher Attendance Final'] = ["-"];
+	}
+	
+	if(sessionStorage.getItem("Developmental Assistant Initial Attendance") != null){
+		fields['Developmental Assistant Attendance Initial'] = [sessionStorage.getItem("Developmental Assistant Initial Attendance")];
+	}else{
+		fields['Developmental Assistant Attendance Initial'] = ["-"];
+	}
+	if(sessionStorage.getItem("Developmental Assistant Second Attendance") != null){
+		fields['Developmental Assistant Attendance First'] = [sessionStorage.getItem("Developmental Assistant Second Attendance")];
+	}else{
+		fields['Developmental Assistant Attendance First'] = ["-"];
+	}
+	if(sessionStorage.getItem("Developmental Assistant Final Attendance") != null){
+		fields['Developmental Assistant Attendance Final'] = [sessionStorage.getItem("Developmental Assistant Final Attendance")];
+	}else{
+		fields['Developmental Assistant Attendance Final'] = ["-"];
+	}
+		
+	if(sessionStorage.getItem("Occupational Therapist Initial Attendance") != null){
+		fields['Occupational Therapist Attendance Initial'] = [sessionStorage.getItem("Occupational Therapist Initial Attendance")];
+	}else{
+		fields['Occupational Therapist Attendance Initial'] = ["-"];
+	}
+	if(sessionStorage.getItem("Occupational Therapist Second Attendance") != null){
+		fields['Occupational Therapist Attendance First'] = [sessionStorage.getItem("Occupational Therapist Second Attendance")];
+	}else{
+		fields['Occupational Therapist Attendance First'] = ["-"];
+	}
+	if(sessionStorage.getItem("Occupational Therapist Final Attendance") != null){
+		fields['Occupational Therapist Attendance Final'] = [sessionStorage.getItem("Occupational Therapist Final Attendance")];
+	}else{
+		fields['Occupational Therapist Attendance Final'] = ["-"];
+	}
+	
+	if(sessionStorage.getItem("Physiotherapist Initial Attendance") != null){
+		fields['Physiotherapist Attendance Initial'] = [sessionStorage.getItem("Physiotherapist Initial Attendance")];
+	}else{
+		fields['Physiotherapist Attendance Initial'] = ["-"];
+	}
+	if(sessionStorage.getItem("Physiotherapist Second Attendance") != null){
+		fields['Physiotherapist Attendance First'] = [sessionStorage.getItem("Physiotherapist Second Attendance")];
+	}else{
+		fields['Physiotherapist Attendance First'] = ["-"];
+	}
+	if(sessionStorage.getItem("Physiotherapist Final Attendance") != null){
+		fields['Physiotherapist Attendance Final'] = [sessionStorage.getItem("Physiotherapist Final Attendance")];
+	}else{
+		fields['Physiotherapist Attendance Final'] = ["-"];
+	}
+	
+	if(sessionStorage.getItem("Psychologist Initial Attendance") != null){
+		fields['Psychologist Attendance Initial'] = [sessionStorage.getItem("Psychologist Initial Attendance")];
+	}else{
+		fields['Psychologist Attendance Initial'] = ["-"];
+	}
+	if(sessionStorage.getItem("Psychologist Second Attendance") != null){
+		fields['Psychologist Attendance First'] = [sessionStorage.getItem("Psychologist Second Attendance")];
+	}else{
+		fields['Psychologist Attendance First'] = ["-"];
+	}
+	if(sessionStorage.getItem("Psychologist Final Attendance") != null){
+		fields['Psychologist Attendance Final'] = [sessionStorage.getItem("Psychologist Final Attendance")];
+	}else{
+		fields['Psychologist Attendance Final'] = ["-"];
+	}
+	
+	if(sessionStorage.getItem("Speech-Language Pathologist Initial Attendance") != null){
+		fields['Speech-Language Pathologist Attendance Initial'] = [sessionStorage.getItem("Speech-Language Pathologist Initial Attendance")];
+	}else{
+		fields['Speech-Language Pathologist Attendance Initial'] = ["-"];
+	}
+	if(sessionStorage.getItem("Speech-Language Pathologist Second Attendance") != null){
+		fields['Speech-Language Pathologist Attendance First'] = [sessionStorage.getItem("Speech-Language Pathologist Second Attendance")];
+	}else{
+		fields['Speech-Language Pathologist Attendance First'] = ["-"];
+	}
+	if(sessionStorage.getItem("Speech-Language Pathologist Final Attendance") != null){
+		fields['Speech-Language Pathologist Attendance Final'] = [sessionStorage.getItem("Speech-Language Pathologist Final Attendance")];
+	}else{
+		fields['Speech-Language Pathologist Attendance Final'] = ["-"];
+	}
+	
+	if(sessionStorage.getItem("Child-Development Specialist Initial Attendance") != null){
+		fields['Child Development Specialist Attendance Initial'] = [sessionStorage.getItem("Child-Development Specialist Initial Attendance")];
+	}else{
+		fields['Child Development Specialist Attendance Initial'] = ["-"];
+	}
+	if(sessionStorage.getItem("Child-Development Specialist Second Attendance") != null){
+		fields['Child Development Specialist Attendance First'] = [sessionStorage.getItem("Child-Development Specialist Second Attendance")];
+	}else{
+		fields['Child Development Specialist Attendance First'] = ["-"];
+	}
+	if(sessionStorage.getItem("Child-Development Specialist Final Attendance") != null){
+		fields['Child Development Specialist Attendance Final'] = [sessionStorage.getItem("Child-Development Specialist Final Attendance")];
+	}else{
+		fields['Child Development Specialist Attendance Final'] = ["-"];
+	}	
+	
 	//Fill PDF Footers
 	fields['Footer 2'] = [sessionStorage.getItem("Child Last Name") + ", " + sessionStorage.getItem("Child First Name")];
 	fields['Footer 3'] = [sessionStorage.getItem("Child Last Name") + ", " + sessionStorage.getItem("Child First Name")];
@@ -440,6 +601,98 @@ function fillExisting(){
 	flatpickr(document.getElementById("kindergartenConsultantFinalDate"),{dateFormat: "Y-m-d"});
 	flatpickr(document.getElementById("kindergartenRepresentativeFinalDate"),{dateFormat: "Y-m-d"});
 	flatpickr(document.getElementById("date1"),{dateFormat: "Y-m-d"});
+	
+		//Attendance Fields
+	if(sessionStorage.getItem("Parent 1 Initial Attendance") != null){
+		document.getElementById('parentGaurdian1Initial').className = "btn btn-success disabled";
+	}
+	if(sessionStorage.getItem("Parent 1 Second Attendance") != null){
+		document.getElementById('parentGaurdian1Second').className = "btn btn-success disabled";
+	}
+	if(sessionStorage.getItem("Parent 1 Final Attendance") != null){
+		document.getElementById('parentGaurdian1Final').className = "btn btn-success disabled";
+	}
+	if(sessionStorage.getItem("Parent 2 Initial Attendance") != null){
+		document.getElementById('parentGaurdian2Initial').className = "btn btn-success disabled";
+	}
+	if(sessionStorage.getItem("Parent 2 Second Attendance") != null){
+		document.getElementById('parentGaurdian2Second').className = "btn btn-success disabled";
+	}
+	if(sessionStorage.getItem("Parent 2 Final Attendance") != null){
+		document.getElementById('parentGaurdian2Final').className = "btn btn-success disabled";
+	}
+	if(sessionStorage.getItem("Preschool Teacher Initial Attendance") != null){
+		document.getElementById('preschoolTeacherInitial').className = "btn btn-success disabled";
+	}
+	if(sessionStorage.getItem("Preschool Teacher Second Attendance") != null){
+		document.getElementById('preschoolTeacherSecond').className = "btn btn-success disabled";
+	}
+	if(sessionStorage.getItem("Preschool Teacher Final Attendance") != null){
+		document.getElementById('preschoolTeacherFinal').className = "btn btn-success disabled";
+	}
+	if(sessionStorage.getItem("Certificated Teacher Initial Attendance") != null){
+		document.getElementById('certificatedTeacherInitial').className = "btn btn-success disabled";
+	}
+	if(sessionStorage.getItem("Certificated Teacher Second Attendance") != null){
+		document.getElementById('certificatedTeacherSecond').className = "btn btn-success disabled";
+	}
+	if(sessionStorage.getItem("Certificated Teacher Final Attendance") != null){
+		document.getElementById('certificatedTeacherFinal').className = "btn btn-success disabled";
+	}
+	if(sessionStorage.getItem("Developmental Assistant Initial Attendance") != null){
+		document.getElementById('developmentalAssistantInitial').className = "btn btn-success disabled";
+	}
+	if(sessionStorage.getItem("Developmental Assistant Second Attendance") != null){
+		document.getElementById('developmentalAssistantSecond').className = "btn btn-success disabled";
+	}
+	if(sessionStorage.getItem("Developmental Assistant Final Attendance") != null){
+		document.getElementById('developmentalAssistantFinal').className = "btn btn-success disabled";
+	}
+	if(sessionStorage.getItem("Occupational Therapist Initial Attendance") != null){
+		document.getElementById('occupationalTherapistInitial').className = "btn btn-success disabled";
+	}
+	if(sessionStorage.getItem("Occupational Therapist Second Attendance") != null){
+		document.getElementById('occupationalTherapistSecond').className = "btn btn-success disabled";
+	}
+	if(sessionStorage.getItem("Occupational Therapist Final Attendance") != null){
+		document.getElementById('occupationalTherapistFinal').className = "btn btn-success disabled";
+	}
+	if(sessionStorage.getItem("Physiotherapist Initial Attendance") != null){
+		document.getElementById('physiotherapistInitial').className = "btn btn-success disabled";
+	}
+	if(sessionStorage.getItem("Physiotherapist Second Attendance") != null){
+		document.getElementById('physiotherapistSecond').className = "btn btn-success disabled";
+	}
+	if(sessionStorage.getItem("Physiotherapist Final Attendance") != null){
+		document.getElementById('physiotherapistFinal').className = "btn btn-success disabled";
+	}
+	if(sessionStorage.getItem("Psychologist Initial Attendance") != null){
+		document.getElementById('psychologistInitial').className = "btn btn-success disabled";
+	}
+	if(sessionStorage.getItem("Psychologist Second Attendance") != null){
+		document.getElementById('psychologistSecond').className = "btn btn-success disabled";
+	}
+	if(sessionStorage.getItem("Psychologist Final Attendance") != null){
+		document.getElementById('psychologistFinal').className = "btn btn-success disabled";
+	}
+	if(sessionStorage.getItem("Speech-Language Pathologist Initial Attendance") != null){
+		document.getElementById('speechLangaugePathologistInitial').className = "btn btn-success disabled";
+	}
+	if(sessionStorage.getItem("Speech-Language Pathologist Second Attendance") != null){
+		document.getElementById('speechLangaugePathologistSecond').className = "btn btn-success disabled";
+	}
+	if(sessionStorage.getItem("Speech-Language Pathologist Final Attendance") != null){
+		document.getElementById('speechLangaugePathologistFinal').className = "btn btn-success disabled";
+	}
+	if(sessionStorage.getItem("Child-Development Specialist Initial Attendance") != null){
+		document.getElementById('childDevelopmentSpecialistInitial').className = "btn btn-success disabled";
+	}
+	if(sessionStorage.getItem("Child-Development Specialist Second Attendance") != null){
+		document.getElementById('childDevelopmentSpecialistSecond').className = "btn btn-success disabled";
+	}
+	if(sessionStorage.getItem("Child-Development Specialist Final Attendance") != null){
+		document.getElementById('childDevelopmentSpecialistFinal').className = "btn btn-success disabled";
+	}	
 }
 
 function next(){

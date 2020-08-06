@@ -302,6 +302,107 @@ function loadForm(input){
 		sessionStorage.setItem("Kindergarten Consultant/Strategist Final Date", dict['Kindergarten Consultant Date']);
 		sessionStorage.setItem("Kindergarten Representative Final Date", dict['Kindergarten Representative Date']);
 		
+		//Attendance Fields
+		if(dict['Parent 1 Attendance Initial'] != ["-"]){
+			sessionStorage.setItem("Parent 1 Initial Attendance", dict['Parent 1 Attendance Initial']);
+		}
+		if(dict['Parent 1 Attendance First'] != ["-"]){
+			sessionStorage.setItem("Parent 1 Second Attendance", dict['Parent 1 Attendance First']);
+		}
+		if(dict['Parent 1 Attendance Final'] != ["-"]){
+			sessionStorage.setItem("Parent 1 Final Attendance", dict['Parent 1 Attendance Final']);
+		}
+		
+		if(dict['Parent 2 Attendance Initial'] != ["-"]){
+			sessionStorage.setItem("Parent 2 Initial Attendance", dict['Parent 2 Attendance Initial']);
+		}
+		if(dict['Parent 2 Attendance First'] != ["-"]){
+			sessionStorage.setItem("Parent 2 Second Attendance", dict['Parent 2 Attendance First']);
+		}
+		if(dict['Parent 2 Attendance Final'] != ["-"]){
+			sessionStorage.setItem("Parent 2 Final Attendance", dict['Parent 2 Attendance Final']);
+		}
+		
+		if(dict['Preschool Teacher Attendance Initial'] != ["-"]){
+			sessionStorage.setItem("Preschool Teacher Initial Attendance", dict['Preschool Teacher Attendance Initial']);
+		}
+		if(dict['Preschool Teacher Attendance First'] != ["-"]){
+			sessionStorage.setItem("Preschool Teacher Second Attendance", dict['Preschool Teacher Attendance First']);
+		}
+		if(dict['Preschool Teacher Attendance Final'] != ["-"]){
+			sessionStorage.setItem("Preschool Teacher Final Attendance", dict['Preschool Teacher Attendance Final']);
+		}
+		
+		if(dict['Certificated Teacher Attendance Initial'] != ["-"]){
+			sessionStorage.setItem("Certificated Teacher Initial Attendance", dict['Certificated Teacher Attendance Initial']);
+		}
+		if(dict['Certificated Teacher Attendance First'] != ["-"]){
+			sessionStorage.setItem("Certificated Teacher Second Attendance", dict['Certificated Teacher Attendance First']);
+		}
+		if(dict['Certificated Teacher Attendance Final'] != ["-"]){
+			sessionStorage.setItem("Certificated Teacher Final Attendance", dict['Certificated Teacher Attendance Final']);
+		}
+
+		if(dict['Developmental Assistant Attendance Initial'] != ["-"]){
+			sessionStorage.setItem("Developmental Assistant Initial Attendance", dict['Developmental Assistant Attendance Initial']);
+		}
+		if(dict['Developmental Assistant Attendance First'] != ["-"]){
+			sessionStorage.setItem("Developmental Assistant Second Attendance", dict['Developmental Assistant Attendance First']);
+		}
+		if(dict['Developmental Assistant Attendance Final'] != ["-"]){
+			sessionStorage.setItem("Developmental Assistant Final Attendance", dict['Developmental Assistant Attendance Final']);
+		}
+			
+		if(dict['Occupational Therapist Attendance Initial'] != ["-"]){
+			sessionStorage.setItem("Occupational Therapist Initial Attendance", dict['Occupational Therapist Attendance Initial']);
+		}
+		if(dict['Occupational Therapist Attendance First'] != ["-"]){
+			sessionStorage.setItem("Occupational Therapist Second Attendance", dict['Occupational Therapist Attendance First']);
+		}
+		if(dict['Occupational Therapist Attendance Final'] != ["-"]){
+			sessionStorage.setItem("Occupational Therapist Final Attendance", dict['Occupational Therapist Attendance Final']);
+		}			
+
+		if(dict['Physiotherapist Attendance Initial'] != ["-"]){
+			sessionStorage.setItem("Physiotherapist Initial Attendance", dict['Physiotherapist Attendance Initial']);
+		}
+		if(dict['Physiotherapist Attendance First'] != ["-"]){
+			sessionStorage.setItem("Physiotherapist Second Attendance", dict['Physiotherapist Attendance First']);
+		}
+		if(dict['Physiotherapist Attendance Final'] != ["-"]){
+			sessionStorage.setItem("Physiotherapist Final Attendance", dict['Physiotherapist Attendance Final']);
+		}
+
+		if(dict['Psychologist Attendance Initial'] != ["-"]){
+			sessionStorage.setItem("Psychologist Initial Attendance", dict['Psychologist Attendance Initial']);
+		}
+		if(dict['Psychologist Attendance First'] != ["-"]){
+			sessionStorage.setItem("Psychologist Second Attendance", dict['Psychologist Attendance First']);
+		}
+		if(dict['Psychologist Attendance Final'] != ["-"]){
+			sessionStorage.setItem("Psychologist Final Attendance", dict['Psychologist Attendance Final']);
+		}		
+		
+		if(dict['Speech-Language Pathologist Attendance Initial'] != ["-"]){
+			sessionStorage.setItem("Speech-Language Pathologist Initial Attendance", dict['Speech-Language Pathologist Attendance Initial']);
+		}
+		if(dict['Speech-Language Pathologist Attendance First'] != ["-"]){
+			sessionStorage.setItem("Speech-Language Pathologist Second Attendance", dict['Speech-Language Pathologist Attendance First']);
+		}
+		if(dict['Speech-Language Pathologist Attendance Final'] != ["-"]){
+			sessionStorage.setItem("Speech-Language Pathologist Final Attendance", dict['Speech-Language Pathologist Attendance Final']);
+		}
+		
+		if(dict['Child Development Specialist Attendance Initial'] != ["-"]){
+			sessionStorage.setItem("Child-Development Specialist Initial Attendance", dict['Child Development Specialist Attendance Initial']);
+		}
+		if(dict['Child Development Specialist Attendance First'] != ["-"]){
+			sessionStorage.setItem("Child-Development Specialist Second Attendance", dict['Child Development Specialist Attendance First']);
+		}
+		if(dict['Child Development Specialist Attendance Final'] != ["-"]){
+			sessionStorage.setItem("Child-Development Specialist Final Attendance", dict['Child Development Specialist Attendance Final']);
+		}
+		
 		//Refresh Page Contents
 		fillExisting();
 	}
