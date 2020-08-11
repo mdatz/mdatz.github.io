@@ -563,8 +563,6 @@ function submitForm(){
 		formURL = "https://mdatz.github.io/Src/Resources/Forms/Template_1_Goals.pdf";
 	}
 	
-	formURL = "https://mdatz.github.io/Src/Resources/Forms/Template_Master.pdf";
-	
 	//Send Request for Hosted PDF Template
 	pdfhttp.open("GET", formURL, true);
 	pdfhttp.responseType = "arraybuffer";
