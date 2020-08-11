@@ -523,8 +523,8 @@ function createForm(){
 	fields['Goal End Date 2'] = [yearFinish];
 	fields['Goal End Date 3'] = [yearFinish];
 	fields['Goal End Date 4'] = [yearFinish];
+	fields['Next September Year'] = [yearFinish];
 	fields['PUF Header Year'] = [yearSpan];
-	fields['Next September Year'] = ["September 1, " + yearFinish];
 	fields['Academic Year Attendance Page'] = [yearSpan];
 	fields['Academic Year Signature Page'] = [yearSpan];
 	fields['Child Name Attendance Page'] = [sessionStorage.getItem("Child First Name") + " " + sessionStorage.getItem("Child Last Name")];
