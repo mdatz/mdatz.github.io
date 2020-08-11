@@ -133,7 +133,6 @@ function loadForm(input){
 			}
 		});
 		
-		console.log(dict);
 		sessionStorage.clear();
 		
 		//Populate Session Storage
@@ -255,45 +254,53 @@ function loadForm(input){
 		sessionStorage.setItem("Final Review Date", dict['Final Assessment Review Date']);
 		
 		//Page 5
-		sessionStorage.setItem("Long Term Goal 1",dict['Long Term Goal 1']);
-		sessionStorage.setItem("Baseline Goal 1",dict['Baseline Goal 1']);
-		sessionStorage.setItem("Short Term Objective Goal 1.1",dict['Goal 1 Short Term 1']);
-		sessionStorage.setItem("Short Term Objective Goal 1.2",dict['Goal 1 Short Term 2']);
-		sessionStorage.setItem("Short Term Objective Goal 1.3",dict['Goal 1 Short Term 3']);
-		sessionStorage.setItem("Objective Review Goal 1",dict['Goal 1 Review']);
-		sessionStorage.setItem("Accommodations and Strategies Goal 1.1",dict['Goal 1 Accommodation 1']);
-		sessionStorage.setItem("Accommodations and Strategies Goal 1.2",dict['Goal 1 Accommodation 2']);
-		sessionStorage.setItem("Accommodations and Strategies Goal 1.3",dict['Goal 1 Accommodation 3']);
+		if(dict['Long Term Goal 1'] != null){
+			sessionStorage.setItem("Long Term Goal 1",dict['Long Term Goal 1']);
+			sessionStorage.setItem("Baseline Goal 1",dict['Baseline Goal 1']);
+			sessionStorage.setItem("Short Term Objective Goal 1.1",dict['Goal 1 Short Term 1']);
+			sessionStorage.setItem("Short Term Objective Goal 1.2",dict['Goal 1 Short Term 2']);
+			sessionStorage.setItem("Short Term Objective Goal 1.3",dict['Goal 1 Short Term 3']);
+			sessionStorage.setItem("Objective Review Goal 1",dict['Goal 1 Review']);
+			sessionStorage.setItem("Accommodations and Strategies Goal 1.1",dict['Goal 1 Accommodation 1']);
+			sessionStorage.setItem("Accommodations and Strategies Goal 1.2",dict['Goal 1 Accommodation 2']);
+			sessionStorage.setItem("Accommodations and Strategies Goal 1.3",dict['Goal 1 Accommodation 3']);
+		}
 		
-		sessionStorage.setItem("Long Term Goal 2",dict['Long Term Goal 2']);
-		sessionStorage.setItem("Baseline Goal 2",dict['Baseline Goal 2']);
-		sessionStorage.setItem("Short Term Objective Goal 2.1",dict['Goal 2 Short Term 1']);
-		sessionStorage.setItem("Short Term Objective Goal 2.2",dict['Goal 2 Short Term 2']);
-		sessionStorage.setItem("Short Term Objective Goal 2.3",dict['Goal 2 Short Term 3']);
-		sessionStorage.setItem("Objective Review Goal 2",dict['Goal 2 Review']);
-		sessionStorage.setItem("Accommodations and Strategies Goal 2.1",dict['Goal 2 Accommodation 1']);
-		sessionStorage.setItem("Accommodations and Strategies Goal 2.2",dict['Goal 2 Accommodation 2']);
-		sessionStorage.setItem("Accommodations and Strategies Goal 2.3",dict['Goal 2 Accommodation 3']);
+		if(dict['Long Term Goal 2'] != null){
+			sessionStorage.setItem("Long Term Goal 2",dict['Long Term Goal 2']);
+			sessionStorage.setItem("Baseline Goal 2",dict['Baseline Goal 2']);
+			sessionStorage.setItem("Short Term Objective Goal 2.1",dict['Goal 2 Short Term 1']);
+			sessionStorage.setItem("Short Term Objective Goal 2.2",dict['Goal 2 Short Term 2']);
+			sessionStorage.setItem("Short Term Objective Goal 2.3",dict['Goal 2 Short Term 3']);
+			sessionStorage.setItem("Objective Review Goal 2",dict['Goal 2 Review']);
+			sessionStorage.setItem("Accommodations and Strategies Goal 2.1",dict['Goal 2 Accommodation 1']);
+			sessionStorage.setItem("Accommodations and Strategies Goal 2.2",dict['Goal 2 Accommodation 2']);
+			sessionStorage.setItem("Accommodations and Strategies Goal 2.3",dict['Goal 2 Accommodation 3']);
+		}
 		
-		sessionStorage.setItem("Long Term Goal 3",dict['Long Term Goal 3']);
-		sessionStorage.setItem("Baseline Goal 3",dict['Baseline Goal 3']);
-		sessionStorage.setItem("Short Term Objective Goal 3.1",dict['Goal 3 Short Term 1']);
-		sessionStorage.setItem("Short Term Objective Goal 3.2",dict['Goal 3 Short Term 2']);
-		sessionStorage.setItem("Short Term Objective Goal 3.3",dict['Goal 3 Short Term 3']);
-		sessionStorage.setItem("Objective Review Goal 3",dict['Goal 3 Review']);
-		sessionStorage.setItem("Accommodations and Strategies Goal 3.1",dict['Goal 3 Accommodation 1']);
-		sessionStorage.setItem("Accommodations and Strategies Goal 3.2",dict['Goal 3 Accommodation 2']);
-		sessionStorage.setItem("Accommodations and Strategies Goal 3.3",dict['Goal 3 Accommodation 3']);
+		if(dict['Long Term Goal 3'] != null){
+			sessionStorage.setItem("Long Term Goal 3",dict['Long Term Goal 3']);
+			sessionStorage.setItem("Baseline Goal 3",dict['Baseline Goal 3']);
+			sessionStorage.setItem("Short Term Objective Goal 3.1",dict['Goal 3 Short Term 1']);
+			sessionStorage.setItem("Short Term Objective Goal 3.2",dict['Goal 3 Short Term 2']);
+			sessionStorage.setItem("Short Term Objective Goal 3.3",dict['Goal 3 Short Term 3']);
+			sessionStorage.setItem("Objective Review Goal 3",dict['Goal 3 Review']);
+			sessionStorage.setItem("Accommodations and Strategies Goal 3.1",dict['Goal 3 Accommodation 1']);
+			sessionStorage.setItem("Accommodations and Strategies Goal 3.2",dict['Goal 3 Accommodation 2']);
+			sessionStorage.setItem("Accommodations and Strategies Goal 3.3",dict['Goal 3 Accommodation 3']);
+		}
 		
-		sessionStorage.setItem("Long Term Goal 4",dict['Long Term Goal 4']);
-		sessionStorage.setItem("Baseline Goal 4",dict['Baseline Goal 4']);
-		sessionStorage.setItem("Short Term Objective Goal 4.1",dict['Goal 4 Short Term 1']);
-		sessionStorage.setItem("Short Term Objective Goal 4.2",dict['Goal 4 Short Term 2']);
-		sessionStorage.setItem("Short Term Objective Goal 4.3",dict['Goal 4 Short Term 3']);
-		sessionStorage.setItem("Objective Review Goal 4",dict['Goal 4 Review']);
-		sessionStorage.setItem("Accommodations and Strategies Goal 4.1",dict['Goal 4 Accommodation 1']);
-		sessionStorage.setItem("Accommodations and Strategies Goal 4.2",dict['Goal 4 Accommodation 2']);
-		sessionStorage.setItem("Accommodations and Strategies Goal 4.3",dict['Goal 4 Accommodation 3']);
+		if(dict['Long Term Goal 4'] != null){
+			sessionStorage.setItem("Long Term Goal 4",dict['Long Term Goal 4']);
+			sessionStorage.setItem("Baseline Goal 4",dict['Baseline Goal 4']);
+			sessionStorage.setItem("Short Term Objective Goal 4.1",dict['Goal 4 Short Term 1']);
+			sessionStorage.setItem("Short Term Objective Goal 4.2",dict['Goal 4 Short Term 2']);
+			sessionStorage.setItem("Short Term Objective Goal 4.3",dict['Goal 4 Short Term 3']);
+			sessionStorage.setItem("Objective Review Goal 4",dict['Goal 4 Review']);
+			sessionStorage.setItem("Accommodations and Strategies Goal 4.1",dict['Goal 4 Accommodation 1']);
+			sessionStorage.setItem("Accommodations and Strategies Goal 4.2",dict['Goal 4 Accommodation 2']);
+			sessionStorage.setItem("Accommodations and Strategies Goal 4.3",dict['Goal 4 Accommodation 3']);
+		}
 		
 		//Page 6
 		sessionStorage.setItem("Transition Program Date", dict['Transition Planning Date']);
