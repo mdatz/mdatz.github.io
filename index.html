@@ -115,6 +115,7 @@
 		camera.position.y = 15;
 		camera.lookAt(0,15,0);
 		
+		var loaded = false;
 		showBody();
 		
 		//Animation loop
@@ -127,7 +128,11 @@
 			water.material.uniforms['time'].value += 1.0/60.0;
 
 			renderer.render(scene,camera);
-			console.log(texture_count);
+			
+			if((texture_count == 7) && !loaded){
+				showBody();
+				loaded = true;
+			}
 		};
 
 		animate();
