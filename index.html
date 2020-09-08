@@ -115,11 +115,6 @@
 		camera.position.y = 15;
 		camera.lookAt(0,15,0);
 		
-		while(texture_count != 7){
-			//Wait for Textures to load
-			console.log(texture_count);
-		}
-		
 		showBody();
 		
 		//Animation loop
@@ -132,6 +127,7 @@
 			water.material.uniforms['time'].value += 1.0/60.0;
 
 			renderer.render(scene,camera);
+			console.log(texture_count);
 		};
 
 		animate();
