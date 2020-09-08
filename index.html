@@ -3,24 +3,30 @@
 <head>
 	<meta charset='UTF-8'></meta>
 	<title>Mdatz</title>
+	
 	<script src='./lib/three.min.js'></script>
 	<script src='./lib/Water.js'></script>
-	<style>
-		html, body { margin: 0; padding:0; overflow: hidden; }
-		.main-text {font-size:25px; color:white; position:absolute; top: 40%; width:100%; text-align:center;z-index:100;font-family:'Raleway', sans-serif; font-weight:100; letter-spacing: 40px; text-transform:uppercase;}
-	</style>
+	<link rel="stylesheet" href='./custom.css'>
 </head>
 <body>
-	<div class="main-text"> Matt Kadatz </div>
+	<div id="loader"></div>
+	<div id="main-body" style="display:none;">
+	<div id="main-text"> Matt Kadatz </div>
 
 	<script>
-
+		
+		//Show page contents once Textures Loaded
+		function showBody(){
+			document.getElementById("loader").style.display = "none";
+			document.getElementById("main-body").style.display = "block";
+		}
+		
 		//Create a texture loader
 		var loader = new THREE.TextureLoader();
 		
 		//Choose random sphere to display
 		var seed = Math.floor(Math.random()*10);
-
+		var texture_count = 0;
 		
 		var sphere_path = './assets/spheres/' + seed + '/';
 
@@ -28,13 +34,13 @@
 		var floorNormal = loader.load('./assets/floor/normal.png');
 		
 		//Load Sphere Textures
-		var sphereMap = loader.load(sphere_path + 'color.png');
-		var sphereNormal = loader.load(sphere_path + 'normal.png');
-		var sphereMetal = loader.load(sphere_path + 'metallic.png');
-		var sphereRoughness = loader.load(sphere_path + 'roughness.png');
-		var sphereEmissive = loader.load(sphere_path + 'emissive.png');
-		var sphereAo = loader.load(sphere_path + 'ao.png');
-		var sphereDisplacement = loader.load(sphere_path + 'height.png');
+		var sphereMap = loader.load(sphere_path + 'color.png', function(){texture_count += 1;});
+		var sphereNormal = loader.load(sphere_path + 'normal.png', function(){texture_count += 1;});
+		var sphereMetal = loader.load(sphere_path + 'metallic.png', function(){texture_count += 1;});
+		var sphereRoughness = loader.load(sphere_path + 'roughness.png', function(){texture_count += 1;});
+		var sphereEmissive = loader.load(sphere_path + 'emissive.png', function(){texture_count += 1;});
+		var sphereAo = loader.load(sphere_path + 'ao.png', function(){texture_count += 1;});
+		var sphereDisplacement = loader.load(sphere_path + 'height.png', function(){texture_count += 1;});
 
 		//Create renderer & attach to HTML DOM
 		var renderer = new THREE.WebGLRenderer();
@@ -109,6 +115,12 @@
 		camera.position.y = 15;
 		camera.lookAt(0,15,0);
 		
+		while(texture_count != 7){
+			//Wait for Textures to load
+		}
+		
+		showBody();
+		
 		//Animation loop
 		var animate = function() {
 
@@ -124,5 +136,6 @@
 		animate();
 
 	</script>
+	</div>
 </body>
 </html>
