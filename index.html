@@ -34,13 +34,13 @@
 		var floorNormal = loader.load('./assets/floor/normal.png');
 		
 		//Load Sphere Textures
-		var sphereMap = loader.load(sphere_path + 'color.png', function(){texture_count += 1;});
-		var sphereNormal = loader.load(sphere_path + 'normal.png', function(){texture_count += 1;});
-		var sphereMetal = loader.load(sphere_path + 'metallic.png', function(){texture_count += 1;});
-		var sphereRoughness = loader.load(sphere_path + 'roughness.png', function(){texture_count += 1;});
-		var sphereEmissive = loader.load(sphere_path + 'emissive.png', function(){texture_count += 1;});
-		var sphereAo = loader.load(sphere_path + 'ao.png', function(){texture_count += 1;});
-		var sphereDisplacement = loader.load(sphere_path + 'height.png', function(){texture_count += 1;});
+		var sphereMap = loader.load(sphere_path + 'color.png', function(){texture_count++;});
+		var sphereNormal = loader.load(sphere_path + 'normal.png', function(){texture_count++;});
+		var sphereMetal = loader.load(sphere_path + 'metallic.png', function(){texture_count++;});
+		var sphereRoughness = loader.load(sphere_path + 'roughness.png', function(){texture_count++;});
+		var sphereEmissive = loader.load(sphere_path + 'emissive.png', function(){texture_count++;});
+		var sphereAo = loader.load(sphere_path + 'ao.png', function(){texture_count++;});
+		var sphereDisplacement = loader.load(sphere_path + 'height.png', function(){texture_count++;});
 
 		//Create renderer & attach to HTML DOM
 		var renderer = new THREE.WebGLRenderer();
@@ -117,6 +117,7 @@
 		
 		while(texture_count != 7){
 			//Wait for Textures to load
+			console.log(texture_count);
 		}
 		
 		showBody();
