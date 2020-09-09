@@ -1,6 +1,7 @@
 html, body { 
 	margin: 0; 
 	padding:0; 
+	height:100%;
 	overflow: hidden; 
 }
 		
@@ -19,10 +20,7 @@ html, body {
 }
 
 #curtains {
-	position: absolute;
-	left: 0;
-	right: 0;
-	bottom: 0;
+	height:100%;
 	z-index:10;
 	background-color: black;
 }
