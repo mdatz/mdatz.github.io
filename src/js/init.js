@@ -32,7 +32,8 @@
 		renderer.shadowMap.enabled = true;
 		
 		//Add renderer to HTML
-		document.body.appendChild(renderer.domElement);
+		body = document.getElementById("main-body");
+		body.appendChild(renderer.domElement);
 
 		//Create camera & scene
 		var scene = new THREE.Scene();
