@@ -4,9 +4,9 @@
 	<meta charset='UTF-8'></meta>
 	<title>Mdatz</title>
 	
-	<script src='./lib/three.min.js'></script>
-	<script src='./lib/Water.js'></script>
-	<link rel="stylesheet" href='./custom.css'>
+	<script src='../../lib/three.min.js'></script>
+	<script src='../../lib/Water.js'></script>
+	<link rel="stylesheet" href='../css/custom.css'>
 </head>
 <body>
 	<div id="loader"></div>
@@ -30,10 +30,10 @@
 		var seed = Math.floor(Math.random()*10);
 		var texture_count = 0;
 		
-		var sphere_path = './assets/spheres/' + seed + '/';
+		var sphere_path = '../../assets/spheres/' + seed + '/';
 
 		//Load Floor Textures
-		var floorNormal = loader.load('./assets/floor/normal.png');
+		var floorNormal = loader.load('../../assets/floor/normal.png');
 		
 		//Load Sphere Textures
 		var sphereMap = loader.load(sphere_path + 'color.png', function(){texture_count++;});
