@@ -3,6 +3,7 @@
 			document.getElementById("loader").style.display = "none";
 			document.getElementById("curtains").style.display = "none";
 			document.getElementById("main-body").style.display = "block";
+			document.getElementById("main-text").style.display = "block";
 		}
 		
 		//Create a texture loader
