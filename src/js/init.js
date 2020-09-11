@@ -68,7 +68,7 @@
 		var sphere = new THREE.Mesh(sphereGeometry, sphereMaterial);
 		
 		//Toggle sphere shadow
-		sphere.position.y = 20;
+		sphere.position.y = 18;
 		sphere.castShadow = true;
 
 		//Add cubes to scene
