@@ -62,7 +62,7 @@
 			emissiveMap:sphereEmissive,
 			aoMap:sphereAo,
 			displacementMap:sphereDisplacement,
-			displacementScale:10.0});
+			displacementScale:2.5});
 		
 		//Generate 3D sphere
 		var sphere = new THREE.Mesh(sphereGeometry, sphereMaterial);
@@ -107,7 +107,7 @@
 		var animate = function() {
 
 			requestAnimationFrame(animate);
-			sphere.rotation.y += 0.0025;
+			sphere.rotation.y += 0.001;
 			
 			var time = performance.now() * 0.0001;
 			water.material.uniforms['time'].value += 1.0/60.0;
