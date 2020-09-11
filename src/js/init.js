@@ -62,7 +62,7 @@
 			emissiveMap:sphereEmissive,
 			aoMap:sphereAo,
 			displacementMap:sphereDisplacement,
-			displacementScale:0.25});
+			displacementScale:0.5});
 		
 		//Generate 3D sphere
 		var sphere = new THREE.Mesh(sphereGeometry, sphereMaterial);
