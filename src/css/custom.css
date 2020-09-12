@@ -20,6 +20,7 @@ html, body {
 
 #item:hover{
 	color:white;
+	cursor:pointer;
 }
 
 #main-body{
@@ -51,9 +52,23 @@ html, body {
 	background-color: black;
 }
 
-#container {
+#container-A {
 	position:absolute;
-	top:110%;
+	top:30%;
+	margin-left:20%;
+	margin-right:20%;
+	display:grid;
+	grid-gap:10px;
+	grid-template-columns: 0.5fr 1.5fr;
+	background-color:rgba(15, 15, 15, 0.5);
+	border-radius:25px;
+	border-style:solid;
+	border-color:rgba(73, 73, 73, 0.5);
+}
+
+#container-B {
+	position:absolute;
+	top:30%;
 	margin-left:20%;
 	margin-right:20%;
 	display:grid;
