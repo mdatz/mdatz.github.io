@@ -63,3 +63,11 @@ function display_Contact(){
 	document.getElementById("container-A").style.display = "none";
 	document.getElementById("container-B").style.display = "block";
 }
+
+function sendMessage(){
+	document.getElementById("messageName").value = "";
+	document.getElementById("messageEmail").value = "";
+	document.getElementById("messageBody").value = "";
+
+	display_Home();
+}
