@@ -75,6 +75,7 @@ a:hover {
 	border-style:solid;
 	border-color:rgba(73, 73, 73, 0.5);
 	font-family:'Raleway', sans-serif;
+	z-index:100;
 }
 
 #container-B {
@@ -86,6 +87,7 @@ a:hover {
 	border-radius:25px;
 	border-style:solid;
 	border-color:rgba(73, 73, 73, 0.5);
+	z-index:100;
 }
 
 #container-B input{

@@ -5,6 +5,15 @@
 			document.getElementById("main-body").style.display = "block";
 			document.getElementById("main-text").style.display = "block";
 		}
+
+		//Resize Window Canva on Resize 
+		function onWindowResize(){
+
+			camera.aspect = window.innerWidth / window.innerHeight;
+			camera.updateProjectionMatrix();
+
+			renderer.setSize(window.innerWidth, window.innerHeight);
+		}
 		
 		//Create a texture loader
 		var loader = new THREE.TextureLoader();
@@ -119,5 +128,9 @@
 				loaded = true;
 			}
 		};
+		
+		window.addEventListener('resize', onWindowResize, false);
 
 		animate();
+
+		
