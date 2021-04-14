@@ -67,7 +67,7 @@ a:hover {
 	margin-left:20%;
 	margin-right:20%;
 	display:grid;
-	grid-template-rows: 1fr 1fr 1fr;
+	grid-template-rows: 1fr 1fr;
 	background-color:rgba(15, 15, 15, 0.5);
 	line-height:1.75;
 	padding-left:1%;
@@ -76,55 +76,6 @@ a:hover {
 	border-color:rgba(73, 73, 73, 0.5);
 	font-family:'Raleway', sans-serif;
 	z-index:100;
-}
-
-#container-B {
-	position:absolute;
-	top:25%;
-	margin-left:30%;
-	margin-right:30%;
-	background-color:rgba(15, 15, 15, 0.5);
-	border-radius:25px;
-	border-style:solid;
-	border-color:rgba(73, 73, 73, 0.5);
-	z-index:100;
-}
-
-#container-B input{
-	width:81%;
-	margin-left:9%;
-	margin-right:10%;
-	margin-top:2%;
-	font-size:14px;
-	border-radius:10px;
-	padding-left:1%;
-	line-height:1.75;
-	background-color:rgba(255,255,255,0.4);
-	border-color:rgba(73, 73, 73, 0.5);
-}
-
-#container-B textarea{
-	width:81%;
-	margin-left:9%;
-	margin-right:10%;
-	margin-top:5%;
-	border-radius:10px;
-	resize:none;
-	line-height:1.75;
-	font-size:14px;
-	padding-left:1%;
-	background-color:rgba(255,255,255,0.4);
-	border-color:rgba(73, 73, 73, 0.5);
-}
-
-#container-B button{
-	width:20%;
-	margin-left:40%;
-	margin-right:40%;
-	margin-top:2%;
-	margin-bottom:4%;
-	padding:0px;
-	font-weight:bold;
 }
 
 #about-me {
@@ -147,8 +98,9 @@ a:hover {
 	margin-top:3%;
 }
 
-#contact-info {
-	color:white;
+#contact-link {
+	margin-left:40%;
+	margin-right:40%;
 }
 
 #loader {
