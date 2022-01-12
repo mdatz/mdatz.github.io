@@ -6,6 +6,6 @@
 <hr></hr>
 <h2>Repo Showcase</h2>
 <p>
-  [![Readme Card](https://github-readme-stats.vercel.app/api/pin/?username=mdatz&repo=mdatz.github.io)](https://mdatz.github.io)
+  <img src="https://github-readme-stats.vercel.app/api/pin/?username=mdatz&repo=mdatz.github.io" alt="Portfolio Page">
 </p>
   
