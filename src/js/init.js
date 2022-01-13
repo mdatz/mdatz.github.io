@@ -4,6 +4,7 @@
 			document.getElementById("curtains").style.display = "none";
 			document.getElementById("main-body").style.display = "block";
 			document.getElementById("main-text").style.display = "block";
+			document.getElementById("main-header").style.display = "block";
 		}
 
 		//Resize Window Canva on Resize 
