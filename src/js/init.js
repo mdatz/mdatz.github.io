@@ -17,7 +17,8 @@
 		}
 
     function toggleCameraPositionB() {
-      camera.translateZ( - distance );
+      console.log('Click detected.');
+      camera.translateZ( -0.1 );
     }
 
 		//Create a texture loader
