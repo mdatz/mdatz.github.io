@@ -18,7 +18,8 @@
 
     function toggleCameraPositionB() {
       console.log('Click detected.');
-      camera.translateZ( -0.1 );
+      camera.translateY( -0.1 );
+      camera.translateZ( -10 );    
     }
 
 		//Create a texture loader
