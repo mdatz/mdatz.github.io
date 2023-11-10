@@ -15,7 +15,11 @@
 
 			renderer.setSize(window.innerWidth, window.innerHeight);
 		}
-		
+
+    function toggleCameraPositionB() {
+      camera.translateZ( - distance );
+    }
+
 		//Create a texture loader
 		var loader = new THREE.TextureLoader();
 		
